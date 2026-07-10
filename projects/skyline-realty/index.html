@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Skyline Realty — Luxury Homes & Estates</title>
+<meta name="description" content="Skyline Realty is a boutique luxury real-estate agency pairing deep local expertise with white-glove service. Discover exceptional homes and book a private viewing." />
+<meta name="keywords" content="luxury real estate, luxury homes, estate agency, property for sale, home valuation, Skyline Realty" />
+<meta name="author" content="Mustaisim Memon" />
+<meta name="theme-color" content="#0F5132" />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Skyline Realty — Luxury Homes & Estates" />
+<meta property="og:description" content="Boutique luxury real-estate agency. Exceptional homes, white-glove service, and a free home valuation." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=72&w=1200" />
+<meta property="og:url" content="https://skyline-realty.example.com/" />
+<meta property="og:site_name" content="Skyline Realty" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Skyline Realty — Luxury Homes & Estates" />
+<meta name="twitter:description" content="Boutique luxury real-estate agency. Exceptional homes, white-glove service, and a free home valuation." />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=72&w=1200" />
+
+<link rel="canonical" href="https://skyline-realty.example.com/" />
+
+<!-- Inline SVG favicon: emerald skyline monogram -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F5132'/%3E%3Cpath d='M12 46V30l8-6 8 6v16z M28 46V22l10-8 10 8v24z' fill='none' stroke='%2310B981' stroke-width='2.6' stroke-linejoin='round'/%3E%3Crect x='17' y='34' width='4' height='4' fill='%2310B981'/%3E%3Crect x='35' y='26' width='4' height='4' fill='%2310B981'/%3E%3Crect x='41' y='34' width='4' height='4' fill='%2310B981'/%3E%3C/svg%3E" />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --emerald:#0F5132;
+    --emerald-bright:#10B981;
+    --charcoal:#111827;
+    --offwhite:#FAFAF8;
+    --gold:#B79A5B;
+    --line:rgba(17,24,39,.12);
+    --muted:#5b6270;
+    --shadow-sm:0 2px 10px rgba(17,24,39,.06);
+    --shadow-md:0 18px 50px rgba(15,81,50,.14);
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --nav-h:76px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    color:var(--charcoal);
+    background:#fff;
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--emerald-bright);color:#fff;}
+
+  .wrap{width:min(1200px,92vw);margin-inline:auto;}
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:.74rem;font-weight:600;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--emerald-bright);
+    display:inline-flex;align-items:center;gap:.6rem;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);display:inline-block;}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.01em;color:var(--charcoal);}
+  .section{padding:clamp(4.5rem,9vw,8rem) 0;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    font-family:var(--sans);font-weight:600;font-size:.94rem;
+    padding:.9rem 1.7rem;border-radius:999px;cursor:pointer;border:1px solid transparent;
+    transition:transform .3s var(--ease), background .3s var(--ease), color .3s var(--ease), box-shadow .3s var(--ease);
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--emerald);color:#fff;box-shadow:0 10px 24px rgba(15,81,50,.22);}
+  .btn-primary:hover{background:var(--emerald-bright);transform:translateY(-2px);box-shadow:0 16px 34px rgba(16,185,129,.32);}
+  .btn-ghost{background:transparent;color:var(--charcoal);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--emerald);color:var(--emerald);transform:translateY(-2px);}
+  .btn-light{background:#fff;color:var(--emerald);}
+  .btn-light:hover{background:var(--offwhite);transform:translateY(-2px);}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:100;
+    display:flex;align-items:center;
+    transition:background .4s var(--ease), box-shadow .4s var(--ease), backdrop-filter .4s var(--ease);
+  }
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;width:min(1280px,94vw);}
+  .wordmark{display:flex;align-items:center;gap:.7rem;font-family:var(--serif);font-size:1.28rem;font-weight:600;letter-spacing:.02em;color:#fff;transition:color .4s var(--ease);}
+  .wordmark svg{width:30px;height:30px;flex:none;}
+  .nav-links{display:flex;align-items:center;gap:2.1rem;}
+  .nav-links a{font-size:.9rem;font-weight:500;color:rgba(255,255,255,.86);position:relative;transition:color .3s var(--ease);}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1.5px;background:var(--emerald-bright);transition:width .3s var(--ease);}
+  .nav-links a:hover{color:#fff;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex;align-items:center;gap:.9rem;}
+
+  header.nav.scrolled{background:rgba(255,255,255,.9);backdrop-filter:saturate(160%) blur(14px);box-shadow:0 1px 0 var(--line),0 10px 30px rgba(17,24,39,.06);}
+  header.nav.scrolled .wordmark,
+  header.nav.scrolled .nav-links a{color:var(--charcoal);}
+  header.nav.scrolled .nav-links a{color:var(--muted);}
+  header.nav.scrolled .nav-links a:hover{color:var(--emerald);}
+  header.nav.scrolled .wordmark svg .sky-fill{fill:var(--emerald);}
+  header.nav.scrolled .btn-book{background:var(--emerald);color:#fff;}
+  .btn-book{background:#fff;color:var(--emerald);}
+  .btn-book:hover{background:var(--emerald-bright);color:#fff;transform:translateY(-2px);}
+
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:110;}
+  .hamburger span{width:24px;height:2px;background:#fff;border-radius:2px;transition:transform .3s var(--ease),opacity .3s var(--ease),background .3s var(--ease);}
+  header.nav.scrolled .hamburger span{background:var(--charcoal);}
+  body.menu-open .hamburger span{background:var(--charcoal);}
+  body.menu-open .hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  body.menu-open .hamburger span:nth-child(2){opacity:0;}
+  body.menu-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding-bottom:clamp(3rem,6vw,5.5rem);overflow:hidden;background:var(--emerald);}
+  .hero .media{position:absolute;inset:0;overflow:hidden;background:var(--emerald);}
+  .hero .media img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);}
+  .hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,24,39,.5) 0%,rgba(17,24,39,.18) 32%,rgba(17,24,39,.28) 60%,rgba(11,44,27,.82) 100%);}
+  .hero .wrap{position:relative;z-index:2;color:#fff;width:min(1200px,92vw);}
+  .hero .eyebrow{color:#fff;}
+  .hero .eyebrow::before{background:var(--emerald-bright);}
+  .hero h1{color:#fff;font-size:clamp(2.7rem,7.2vw,5.4rem);max-width:14ch;margin:1.1rem 0 1.2rem;font-weight:400;}
+  .hero h1 em{font-style:italic;color:#d6f5e6;}
+  .hero p.sub{font-size:clamp(1rem,1.6vw,1.22rem);max-width:52ch;color:rgba(255,255,255,.9);margin-bottom:2rem;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:2.4rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.2);}
+  .hero-meta div span{display:block;}
+  .hero-meta .n{font-family:var(--serif);font-size:1.9rem;color:#fff;line-height:1;}
+  .hero-meta .l{font-size:.82rem;letter-spacing:.05em;color:rgba(255,255,255,.72);margin-top:.4rem;text-transform:uppercase;}
+
+  /* ---------- SECTION HEADINGS ---------- */
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem;}
+  .sec-head h2{font-size:clamp(2rem,4.2vw,3.2rem);max-width:16ch;}
+  .sec-head p{color:var(--muted);max-width:44ch;}
+
+  /* ---------- LISTINGS ---------- */
+  .listings{background:var(--offwhite);}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;}
+  .card{
+    background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:var(--shadow-sm);transition:transform .45s var(--ease),box-shadow .45s var(--ease);
+    display:flex;flex-direction:column;
+  }
+  .card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);}
+  .card .photo{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--emerald);}
+  .card .photo img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease);}
+  .card:hover .photo img{transform:scale(1.08);}
+  .card .tag{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.94);color:var(--emerald);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.4rem .8rem;border-radius:999px;backdrop-filter:blur(4px);}
+  .card .body{padding:1.5rem 1.5rem 1.7rem;display:flex;flex-direction:column;flex:1;}
+  .card .price{font-family:var(--serif);font-size:1.7rem;color:var(--emerald);line-height:1;}
+  .card h3{font-size:1.28rem;margin:.7rem 0 .3rem;font-weight:600;}
+  .card .loc{color:var(--muted);font-size:.92rem;display:flex;align-items:center;gap:.4rem;}
+  .card .loc svg{width:15px;height:15px;flex:none;color:var(--emerald-bright);}
+  .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 1.3rem;}
+  .chip{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:500;color:var(--charcoal);background:var(--offwhite);border:1px solid var(--line);padding:.4rem .7rem;border-radius:8px;}
+  .chip svg{width:14px;height:14px;color:var(--emerald);}
+  .card .view{margin-top:auto;font-weight:600;color:var(--emerald);font-size:.92rem;display:inline-flex;align-items:center;gap:.5rem;transition:gap .3s var(--ease),color .3s var(--ease);border-top:1px solid var(--line);padding-top:1.1rem;}
+  .card .view:hover{gap:.85rem;color:var(--emerald-bright);}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;}
+  .about-media{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--emerald);box-shadow:var(--shadow-md);}
+  .about-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease);}
+  .about-media:hover img{transform:scale(1.05);}
+  .about-media .badge-float{position:absolute;bottom:20px;left:20px;right:20px;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-radius:14px;padding:1.1rem 1.3rem;display:flex;gap:1rem;align-items:center;}
+  .about-media .badge-float .est{font-family:var(--serif);font-size:2rem;color:var(--emerald);line-height:1;}
+  .about-media .badge-float p{font-size:.86rem;color:var(--muted);line-height:1.35;}
+  .about-copy h2{font-size:clamp(2rem,4.2vw,3.1rem);margin:1rem 0 1.3rem;}
+  .about-copy p{color:var(--muted);margin-bottom:1.1rem;font-size:1.02rem;}
+  .ethos{display:grid;gap:1rem;margin-top:1.8rem;}
+  .ethos li{display:flex;gap:.9rem;align-items:flex-start;list-style:none;}
+  .ethos li .ic{flex:none;width:38px;height:38px;border-radius:10px;background:rgba(16,185,129,.12);display:grid;place-items:center;color:var(--emerald);}
+  .ethos li .ic svg{width:19px;height:19px;}
+  .ethos li strong{display:block;font-family:var(--serif);font-weight:600;font-size:1.05rem;margin-bottom:.15rem;}
+  .ethos li span{color:var(--muted);font-size:.92rem;}
+
+  /* ---------- WHY / STATS ---------- */
+  .why{background:var(--emerald);color:#fff;position:relative;overflow:hidden;}
+  .why::after{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 85% -10%,rgba(16,185,129,.35),transparent 60%);pointer-events:none;}
+  .why .wrap{position:relative;z-index:1;}
+  .why .eyebrow{color:#a7f3d0;}
+  .why .eyebrow::before{background:var(--emerald-bright);}
+  .why h2{color:#fff;font-size:clamp(2rem,4.2vw,3.1rem);max-width:18ch;margin:1rem 0 0;}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:3.5rem 0;border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18);padding:2.6rem 0;}
+  .stat .n{font-family:var(--serif);font-size:clamp(2.6rem,5vw,3.6rem);line-height:1;color:#fff;}
+  .stat .n em{color:var(--emerald-bright);font-style:normal;}
+  .stat .l{margin-top:.7rem;color:rgba(255,255,255,.82);font-size:.95rem;}
+  .why-points{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+  .why-points .pt h3{color:#fff;font-size:1.25rem;font-weight:600;display:flex;align-items:center;gap:.7rem;margin-bottom:.6rem;}
+  .why-points .pt h3 svg{width:22px;height:22px;color:var(--emerald-bright);flex:none;}
+  .why-points .pt p{color:rgba(255,255,255,.8);font-size:.94rem;}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;}
+  .tst{background:#fff;border:1px solid var(--line);border-radius:18px;padding:2rem 1.9rem;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease);}
+  .tst:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
+  .tst .quote-mark{font-family:var(--serif);font-size:3.2rem;line-height:.6;color:var(--emerald-bright);height:1.4rem;}
+  .tst .stars{color:var(--gold);letter-spacing:.15em;font-size:.95rem;margin-bottom:1rem;}
+  .tst p.q{font-family:var(--serif);font-size:1.12rem;line-height:1.5;color:var(--charcoal);flex:1;}
+  .tst .who{display:flex;align-items:center;gap:.85rem;margin-top:1.6rem;padding-top:1.3rem;border-top:1px solid var(--line);}
+  .tst .who .av{width:44px;height:44px;border-radius:50%;background:var(--emerald);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-weight:600;flex:none;}
+  .tst .who .nm{font-weight:600;font-size:.96rem;}
+  .tst .who .rl{color:var(--muted);font-size:.82rem;}
+
+  /* ---------- CTA BAND ---------- */
+  .cta-band{background:var(--offwhite);}
+  .cta-inner{background:linear-gradient(135deg,var(--emerald) 0%,#0b3d26 100%);border-radius:26px;overflow:hidden;position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;box-shadow:var(--shadow-md);}
+  .cta-inner::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 100% 0,rgba(16,185,129,.4),transparent 55%);pointer-events:none;}
+  .cta-copy{padding:clamp(2.4rem,5vw,4rem);color:#fff;position:relative;z-index:1;}
+  .cta-copy .eyebrow{color:#a7f3d0;}
+  .cta-copy .eyebrow::before{background:var(--emerald-bright);}
+  .cta-copy h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.8rem);margin:1rem 0 1rem;}
+  .cta-copy p{color:rgba(255,255,255,.85);max-width:40ch;margin-bottom:1.6rem;}
+  .trust-row{display:flex;flex-wrap:wrap;gap:1.4rem 2rem;margin-top:2rem;}
+  .trust-row div{display:flex;align-items:center;gap:.55rem;color:rgba(255,255,255,.9);font-size:.88rem;}
+  .trust-row svg{width:18px;height:18px;color:var(--emerald-bright);flex:none;}
+  .form-card{background:#fff;padding:clamp(2rem,4vw,3rem);position:relative;z-index:1;}
+  .form-card h3{font-size:1.5rem;margin-bottom:.4rem;}
+  .form-card > p{color:var(--muted);font-size:.92rem;margin-bottom:1.5rem;}
+  .field{margin-bottom:1.05rem;}
+  .field label{display:block;font-size:.8rem;font-weight:600;letter-spacing:.02em;color:var(--charcoal);margin-bottom:.45rem;}
+  .field input,.field select,.field textarea{
+    width:100%;font-family:var(--sans);font-size:.94rem;color:var(--charcoal);
+    padding:.8rem .9rem;border:1px solid var(--line);border-radius:10px;background:var(--offwhite);
+    transition:border-color .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease);
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--emerald);background:#fff;box-shadow:0 0 0 3px rgba(16,185,129,.14);}
+  .field textarea{resize:vertical;min-height:78px;}
+  .form-card .btn-primary{width:100%;margin-top:.4rem;}
+  .form-note{font-size:.78rem;color:var(--muted);margin-top:1rem;text-align:center;}
+  .form-success{display:none;text-align:center;padding:1.6rem .5rem;}
+  .form-success.show{display:block;animation:pop .5s var(--ease);}
+  .form-success .ok{width:60px;height:60px;border-radius:50%;background:rgba(16,185,129,.14);color:var(--emerald);display:grid;place-items:center;margin:0 auto 1rem;}
+  .form-success .ok svg{width:30px;height:30px;}
+  .form-success h3{margin-bottom:.5rem;}
+  .form-success p{color:var(--muted);font-size:.94rem;}
+  @keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+
+  /* ---------- FOOTER ---------- */
+  footer.ft{background:var(--charcoal);color:#fff;padding:clamp(3.5rem,6vw,5rem) 0 2rem;}
+  .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.12);}
+  .ft .wordmark{color:#fff;margin-bottom:1rem;}
+  .ft-brand p{color:rgba(255,255,255,.6);font-size:.92rem;max-width:34ch;}
+  .ft-col h4{font-family:var(--sans);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald-bright);margin-bottom:1.1rem;font-weight:600;}
+  .ft-col a,.ft-col p{display:block;color:rgba(255,255,255,.66);font-size:.92rem;margin-bottom:.7rem;transition:color .25s var(--ease);}
+  .ft-col a:hover{color:#fff;}
+  .ft-bottom{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:1.8rem;}
+  .ft-bottom p{color:rgba(255,255,255,.55);font-size:.85rem;}
+  .ft-bottom a{color:var(--emerald-bright);font-weight:600;}
+  .ft-bottom a:hover{text-decoration:underline;}
+
+  /* ---------- CONCEPT BADGE ---------- */
+  .concept-badge{
+    position:fixed;right:16px;bottom:16px;z-index:90;
+    background:rgba(17,24,39,.9);color:#fff;backdrop-filter:blur(8px);
+    font-size:.72rem;font-weight:600;letter-spacing:.06em;
+    padding:.55rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.16);
+    display:flex;align-items:center;gap:.5rem;box-shadow:0 8px 24px rgba(0,0,0,.2);
+  }
+  .concept-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--emerald-bright);}
+  .illustrative{font-size:.72rem;color:var(--muted);font-style:italic;}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+  .reveal.d1{transition-delay:.08s;}
+  .reveal.d2{transition-delay:.16s;}
+  .reveal.d3{transition-delay:.24s;}
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width:960px){
+    .cards,.tst-grid,.why-points,.stats{grid-template-columns:1fr 1fr;}
+    .about-grid,.cta-inner{grid-template-columns:1fr;}
+    .about-media{aspect-ratio:16/11;order:-1;}
+    .ft-top{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:760px){
+    .nav-links{
+      position:fixed;inset:var(--nav-h) 0 auto 0;flex-direction:column;align-items:flex-start;
+      gap:0;background:#fff;padding:1rem 6vw 1.6rem;box-shadow:0 20px 40px rgba(17,24,39,.12);
+      transform:translateY(-140%);transition:transform .45s var(--ease);border-top:1px solid var(--line);
+    }
+    body.menu-open .nav-links{transform:translateY(0);}
+    .nav-links a{color:var(--charcoal);width:100%;padding:1rem 0;border-bottom:1px solid var(--line);font-size:1.05rem;}
+    .nav-links a::after{display:none;}
+    .nav-cta{display:none;}
+    .hamburger{display:flex;}
+    .cards,.tst-grid,.why-points,.stats{grid-template-columns:1fr;}
+    .ft-top{grid-template-columns:1fr;gap:1.8rem;}
+    .hero-meta{gap:1.6rem;}
+    .concept-badge{left:16px;right:auto;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+    .reveal{opacity:1!important;transform:none!important;}
+    .card:hover .photo img,.about-media:hover img{transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="wordmark" href="#top" aria-label="Skyline Realty home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="none"/><path class="sky-fill" d="M10 50V30l9-7 9 7v20z M28 50V20l11-9 11 9v30z" fill="#fff" opacity=".95"/><rect x="15" y="34" width="4" height="4" fill="#10B981"/><rect x="36" y="24" width="4" height="4" fill="#10B981"/><rect x="43" y="33" width="4" height="4" fill="#10B981"/></svg>
+      SKYLINE REALTY
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#listings">Listings</a>
+      <a href="#about">About</a>
+      <a href="#why">Why Skyline</a>
+      <a href="#stories">Stories</a>
+      <a href="#valuation">Valuation</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#valuation" class="btn btn-book">Book a Viewing</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="media">
+    <img
+      src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=72&w=1600"
+      srcset="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=72&w=1100 1100w, https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=72&w=2000 2000w"
+      sizes="100vw"
+      alt="Grand contemporary luxury home at dusk with warm interior lighting and manicured lawn"
+      fetchpriority="high" decoding="async"
+      onerror="this.style.display='none'">
+  </div>
+  <div class="scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">Boutique Luxury Estate Agency</span>
+    <h1>Find a home that <em>moves you</em></h1>
+    <p class="sub">Curated residences, architectural landmarks and private estates — matched to how you actually want to live. Discreet representation, deep local knowledge, and a standard of service that never slips.</p>
+    <div class="hero-actions">
+      <a href="#listings" class="btn btn-primary">Explore Listings</a>
+      <a href="#valuation" class="btn btn-light">Get a Free Valuation</a>
+    </div>
+    <div class="hero-meta">
+      <div><span class="n">$1.4B+</span><span class="l">In Sales Closed</span></div>
+      <div><span class="n">320+</span><span class="l">Homes Placed</span></div>
+      <div><span class="n">18</span><span class="l">Years in the Market</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTINGS -->
+<section class="section listings" id="listings">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="eyebrow">Featured Listings</span>
+        <h2 style="margin-top:1rem;">A handpicked selection of exceptional homes</h2>
+      </div>
+      <p>Every property we represent is personally vetted for craftsmanship, location and long-term value. Here are three currently on the market.</p>
+    </div>
+
+    <div class="cards">
+      <!-- Card 1 -->
+      <article class="card reveal">
+        <div class="photo">
+          <span class="tag">For Sale</span>
+          <img loading="lazy" decoding="async"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=72&w=800"
+            srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=72&w=600 600w, https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=72&w=1000 1000w"
+            sizes="(max-width:960px) 100vw, 33vw"
+            alt="Modern white-facade villa with clean lines, glass frontage and landscaped entrance"
+            onerror="this.style.display='none'">
+        </div>
+        <div class="body">
+          <div class="price">$4,250,000</div>
+          <h3>The Aspen Ridge Residence</h3>
+          <p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Hillcrest Heights, Aspen</p>
+          <div class="chips">
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12V7a2 2 0 0 1 2-2h4v4"/><path d="M3 12h18v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>5 Beds</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 2-2"/></svg>6 Baths</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>6,400 sqft</span>
+          </div>
+          <a href="#valuation" class="view">View Property <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card reveal d1">
+        <div class="photo">
+          <span class="tag">New</span>
+          <img loading="lazy" decoding="async"
+            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=72&w=800"
+            srcset="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=72&w=600 600w, https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=72&w=1000 1000w"
+            sizes="(max-width:960px) 100vw, 33vw"
+            alt="Elegant two-storey family home with warm timber accents and a wide covered porch"
+            onerror="this.style.display='none'">
+        </div>
+        <div class="body">
+          <div class="price">$2,895,000</div>
+          <h3>Willow Lane Estate</h3>
+          <p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Old Grove, Montclair</p>
+          <div class="chips">
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12V7a2 2 0 0 1 2-2h4v4"/><path d="M3 12h18v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>4 Beds</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 2-2"/></svg>4 Baths</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>4,100 sqft</span>
+          </div>
+          <a href="#valuation" class="view">View Property <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card reveal d2">
+        <div class="photo">
+          <span class="tag">Exclusive</span>
+          <img loading="lazy" decoding="async"
+            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&q=72&w=800"
+            srcset="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&q=72&w=600 600w, https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&q=72&w=1000 1000w"
+            sizes="(max-width:960px) 100vw, 33vw"
+            alt="Bright architectural home with floor-to-ceiling windows and minimalist landscaping"
+            onerror="this.style.display='none'">
+        </div>
+        <div class="body">
+          <div class="price">$6,750,000</div>
+          <h3>The Glasshouse at Marlow</h3>
+          <p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Marlow Bay, Coastline</p>
+          <div class="chips">
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12V7a2 2 0 0 1 2-2h4v4"/><path d="M3 12h18v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>6 Beds</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V6a2 2 0 0 1 2-2"/></svg>7 Baths</span>
+            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>8,900 sqft</span>
+          </div>
+          <a href="#valuation" class="view">View Property <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-media reveal">
+        <img loading="lazy" decoding="async"
+          src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&q=72&w=900"
+          srcset="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&q=72&w=700 700w, https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&q=72&w=1200 1200w"
+          sizes="(max-width:960px) 100vw, 46vw"
+          alt="Sunlit luxury living space with warm neutral interiors, natural wood and large windows"
+          onerror="this.style.display='none'">
+        <div class="badge-float">
+          <span class="est">98%</span>
+          <p>of our sellers achieve at or above their guide price — because we price to the market, not the moment.</p>
+        </div>
+      </div>
+      <div class="about-copy reveal d1">
+        <span class="eyebrow">About the Agency</span>
+        <h2>Rooted locally. Trusted at the highest level.</h2>
+        <p>Skyline Realty was founded on a simple conviction: a home is the most personal purchase most people ever make, and it deserves representation that treats it that way. We are a deliberately small team of specialists who know our neighbourhoods street by street.</p>
+        <p>We don't chase volume. We take on a limited number of listings each season so every client gets the full attention of a senior advisor — from the first valuation to the final signature and the handover of keys.</p>
+        <ul class="ethos">
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6 5.7 21l2.3-7.2-6-4.4h7.6z"/></svg></span>
+            <div><strong>Genuinely local expertise</strong><span>Micro-market knowledge that translates into sharper pricing and faster, cleaner sales.</span></div>
+          </li>
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <div><strong>Discretion by default</strong><span>Off-market introductions and private viewings for clients who value privacy.</span></div>
+          </li>
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+            <div><strong>One advisor, start to finish</strong><span>No hand-offs to a call centre — the person you meet is the person who closes your deal.</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section why" id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Why Skyline</span>
+      <h2>Numbers that reflect a way of working</h2>
+    </div>
+    <div class="stats reveal d1">
+      <div class="stat">
+        <div class="n" data-count="320" data-suffix="+">0</div>
+        <div class="l">Homes sold in the last five years</div>
+      </div>
+      <div class="stat">
+        <div class="n" data-count="21" data-suffix="">0</div>
+        <div class="l">Average days on market</div>
+      </div>
+      <div class="stat">
+        <div class="n" data-count="99" data-suffix="%">0</div>
+        <div class="l">Client satisfaction rating</div>
+      </div>
+    </div>
+    <div class="why-points reveal d2">
+      <div class="pt">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>Pricing that performs</h3>
+        <p>We combine live comparable data with on-the-ground reading of demand, so homes list at the right number and rarely need a reduction.</p>
+      </div>
+      <div class="pt">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>A vetted buyer network</h3>
+        <p>Years of relationships mean we can often introduce serious, qualified buyers before a home is ever publicly listed.</p>
+      </div>
+      <div class="pt">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg>Presentation that sells</h3>
+        <p>In-house styling, architectural photography and cinematic tours — every listing is presented like the asset it is.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="stories">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="eyebrow">Client Stories <span class="illustrative">· Illustrative</span></span>
+        <h2 style="margin-top:1rem;">The people behind the moves</h2>
+      </div>
+      <p>A few words from buyers and sellers we've had the privilege to represent. Names and details are illustrative for this concept.</p>
+    </div>
+    <div class="tst-grid">
+      <div class="tst reveal">
+        <div class="quote-mark">&ldquo;</div>
+        <div class="stars">★★★★★</div>
+        <p class="q">They sold our home in eleven days, above asking, and made a stressful moment feel completely handled. I never once felt like just another listing.</p>
+        <div class="who">
+          <span class="av">ER</span>
+          <div><div class="nm">Eleanor Ross</div><div class="rl">Seller · Old Grove</div></div>
+        </div>
+      </div>
+      <div class="tst reveal d1">
+        <div class="quote-mark">&ldquo;</div>
+        <div class="stars">★★★★★</div>
+        <p class="q">We were relocating from overseas and saw the house before it hit the market. That early access is exactly why you work with a firm like Skyline.</p>
+        <div class="who">
+          <span class="av">MH</span>
+          <div><div class="nm">Marcus &amp; Priya Hale</div><div class="rl">Buyers · Marlow Bay</div></div>
+        </div>
+      </div>
+      <div class="tst reveal d2">
+        <div class="quote-mark">&ldquo;</div>
+        <div class="stars">★★★★★</div>
+        <p class="q">Honest advice, even when it cost them a quicker sale. They told us to wait a season and we ended up with three competing offers. Rare integrity.</p>
+        <div class="who">
+          <span class="av">DC</span>
+          <div><div class="nm">David Chen</div><div class="rl">Seller · Hillcrest Heights</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / VALUATION -->
+<section class="section cta-band" id="valuation">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <div class="cta-copy">
+        <span class="eyebrow">Free Home Valuation</span>
+        <h2>Curious what your home is really worth?</h2>
+        <p>Get a considered, no-obligation valuation from a senior Skyline advisor — grounded in current market data and what buyers are actually paying near you.</p>
+        <div class="trust-row">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>No obligation, ever</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg>Reply within 24 hours</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Fully confidential</div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form id="valForm" novalidate>
+          <h3>Request your valuation</h3>
+          <p>Tell us a little about your property and we'll be in touch.</p>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Jordan Avery" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="address">Property address</label>
+            <input id="address" name="address" type="text" placeholder="Street, area or postcode" required />
+          </div>
+          <div class="field">
+            <label for="type">Property type</label>
+            <select id="type" name="type">
+              <option>Detached house</option>
+              <option>Townhouse</option>
+              <option>Apartment / Penthouse</option>
+              <option>Estate / Land</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="msg">Anything we should know? (optional)</label>
+            <textarea id="msg" name="msg" placeholder="Timeline, recent upgrades, or questions…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Request Free Valuation</button>
+          <p class="form-note">Concept demo — no data is stored or sent.</p>
+        </form>
+
+        <div class="form-success" id="valSuccess" role="status" aria-live="polite">
+          <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3>Thank you — request received</h3>
+          <p>A senior Skyline advisor will be in touch within 24 hours to arrange your valuation. (This is a concept demo, so no message was actually sent.)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <span class="wordmark">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 50V30l9-7 9 7v20z M28 50V20l11-9 11 9v30z" fill="#fff" opacity=".95"/><rect x="15" y="34" width="4" height="4" fill="#10B981"/><rect x="36" y="24" width="4" height="4" fill="#10B981"/><rect x="43" y="33" width="4" height="4" fill="#10B981"/></svg>
+          SKYLINE REALTY
+        </span>
+        <p>A boutique luxury estate agency pairing deep local knowledge with a genuinely personal standard of service.</p>
+      </div>
+      <div class="ft-col">
+        <h4>Explore</h4>
+        <a href="#listings">Featured Listings</a>
+        <a href="#about">About the Agency</a>
+        <a href="#why">Why Skyline</a>
+        <a href="#stories">Client Stories</a>
+      </div>
+      <div class="ft-col">
+        <h4>Services</h4>
+        <a href="#valuation">Home Valuation</a>
+        <a href="#valuation">Book a Viewing</a>
+        <a href="#valuation">Sell With Us</a>
+        <a href="#valuation">Off-Market Access</a>
+      </div>
+      <div class="ft-col">
+        <h4>Contact</h4>
+        <p>12 Marlow Parade, Suite 400</p>
+        <a href="tel:+15550142200">+1 (555) 014-2200</a>
+        <a href="mailto:hello@skyline-realty.example.com">hello@skyline-realty.example.com</a>
+        <p>Mon–Sat · 9am–7pm</p>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>&copy; <span id="year"></span> Skyline Realty. Concept project — not a real agency.</p>
+      <p>Designed &amp; developed by <a href="../../index.html">Mustaisim Memon</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- CONCEPT BADGE -->
+<div class="concept-badge"><span class="dot"></span>Concept Project</div>
+
+<script>
+  (function(){
+    "use strict";
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+    /* Year */
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    /* Sticky nav background on scroll */
+    var nav = document.getElementById('nav');
+    function onScroll(){
+      if (window.scrollY > 40) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+
+    /* Mobile menu */
+    var ham = document.getElementById('hamburger');
+    var links = document.getElementById('navLinks');
+    function closeMenu(){
+      document.body.classList.remove('menu-open');
+      ham.setAttribute('aria-expanded','false');
+    }
+    ham.addEventListener('click', function(){
+      var open = document.body.classList.toggle('menu-open');
+      ham.setAttribute('aria-expanded', open ? 'true':'false');
+    });
+    links.addEventListener('click', function(e){
+      if (e.target.closest('a')) closeMenu();
+    });
+
+    /* Reveal on scroll */
+    var reveals = document.querySelectorAll('.reveal');
+    if (reduceMotion || !('IntersectionObserver' in window)){
+      reveals.forEach(function(el){ el.classList.add('in'); });
+    } else {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if (en.isIntersecting){
+            en.target.classList.add('in');
+            io.unobserve(en.target);
+          }
+        });
+      }, {threshold:0.14, rootMargin:'0px 0px -8% 0px'});
+      reveals.forEach(function(el){ io.observe(el); });
+    }
+
+    /* Animated stat counters */
+    var counters = document.querySelectorAll('[data-count]');
+    function animateCount(el){
+      var target = parseFloat(el.getAttribute('data-count'));
+      var suffix = el.getAttribute('data-suffix') || '';
+      if (reduceMotion){ el.textContent = target + suffix; return; }
+      var start = null, dur = 1400;
+      function step(ts){
+        if (!start) start = ts;
+        var p = Math.min((ts - start)/dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    if ('IntersectionObserver' in window){
+      var co = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if (en.isIntersecting){ animateCount(en.target); co.unobserve(en.target); }
+        });
+      }, {threshold:0.6});
+      counters.forEach(function(el){ co.observe(el); });
+    } else {
+      counters.forEach(animateCount);
+    }
+
+    /* Form success */
+    var form = document.getElementById('valForm');
+    var success = document.getElementById('valSuccess');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (!form.checkValidity()){ form.reportValidity(); return; }
+      form.style.display = 'none';
+      success.classList.add('show');
+      success.scrollIntoView({behavior: reduceMotion ? 'auto':'smooth', block:'center'});
+    });
+  })();
+</script>
+</body>
+</html>

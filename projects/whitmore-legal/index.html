@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Whitmore Legal — Trusted Counsel. Proven Results.</title>
+<meta name="description" content="Whitmore Legal is an established full-service law firm delivering trusted counsel across corporate, litigation, real estate, family, employment and intellectual property law. Book a free consultation." />
+<meta name="keywords" content="law firm, attorneys, corporate law, litigation, real estate law, family law, employment law, intellectual property, legal counsel, Whitmore Legal" />
+<meta name="author" content="Whitmore Legal" />
+<meta name="theme-color" content="#0E1C33" />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Whitmore Legal — Trusted Counsel. Proven Results." />
+<meta property="og:description" content="An established full-service law firm delivering trusted counsel and proven results. Book a free consultation." />
+<meta property="og:site_name" content="Whitmore Legal" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=72&w=1200" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Whitmore Legal — Trusted Counsel. Proven Results." />
+<meta name="twitter:description" content="An established full-service law firm delivering trusted counsel and proven results." />
+
+<!-- Favicon: navy + gold monogram -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230E1C33'/%3E%3Cpath d='M12 20 L20 46 L28 26 L32 40 L36 26 L44 46 L52 20' fill='none' stroke='%23B99653' stroke-width='3.5' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --navy:#0E1C33;
+    --navy-2:#152743;
+    --white:#FFFFFF;
+    --gold:#B99653;
+    --gold-soft:#cbaf7d;
+    --slate:#33415A;
+    --slate-soft:#5c6880;
+    --bg:#F5F6F8;
+    --line:rgba(185,150,83,.35);
+    --shadow:0 18px 50px -24px rgba(14,28,51,.35);
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--slate);
+    background:var(--white);
+    line-height:1.65;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.serif{font-family:'Libre Baskerville',Georgia,'Times New Roman',serif;color:var(--navy);line-height:1.2;font-weight:700}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+  .eyebrow{
+    font-family:'Inter';font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--gold);display:inline-flex;align-items:center;gap:.7em;margin-bottom:1.1rem;
+  }
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);display:inline-block}
+  .section{padding:clamp(64px,9vw,120px) 0}
+  .section-head{max-width:660px;margin-bottom:clamp(38px,5vw,60px)}
+  .section-head h2{font-size:clamp(1.85rem,4vw,2.9rem);margin-bottom:1rem}
+  .section-head p{color:var(--slate-soft);font-size:1.05rem}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+    font-family:'Inter';font-weight:600;font-size:.94rem;letter-spacing:.02em;
+    padding:.92em 1.6em;border-radius:2px;cursor:pointer;border:1px solid transparent;
+    transition:transform .3s ease,background .3s ease,color .3s ease,box-shadow .3s ease;white-space:nowrap;
+  }
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px);box-shadow:0 12px 30px -12px rgba(185,150,83,.6)}
+  .btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.4)}
+  .btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+  .btn-navy{background:var(--navy);color:var(--white)}
+  .btn-navy:hover{background:var(--navy-2);transform:translateY(-2px)}
+  .btn-arrow{color:var(--gold);font-weight:600;font-size:.9rem;letter-spacing:.03em;display:inline-flex;align-items:center;gap:.5em}
+  .btn-arrow span{transition:transform .3s ease}
+  .btn-arrow:hover span{transform:translateX(5px)}
+
+  /* Image frame */
+  .imgframe{position:relative;overflow:hidden;background:var(--navy);border-radius:3px}
+  .imgframe img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.6,.2,1)}
+  .imgframe:hover img{transform:scale(1.06)}
+
+  /* NAV */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s ease,box-shadow .4s ease,padding .4s ease;padding:18px 0}
+  header.nav.scrolled{background:rgba(14,28,51,.96);box-shadow:0 1px 0 rgba(185,150,83,.25),0 12px 30px -20px rgba(0,0,0,.6);padding:12px 0;backdrop-filter:blur(6px)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .wordmark{display:flex;align-items:center;gap:12px;color:var(--white)}
+  .wordmark .mono{width:34px;height:34px;flex:none}
+  .wordmark .name{font-family:'Libre Baskerville';font-weight:700;color:#fff;font-size:1.05rem;letter-spacing:.14em}
+  .wordmark .name .amp{color:var(--gold)}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a.lnk{color:rgba(255,255,255,.82);font-size:.9rem;font-weight:500;letter-spacing:.02em;position:relative;padding:4px 0}
+  .nav-links a.lnk::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--gold);transition:width .3s ease}
+  .nav-links a.lnk:hover{color:#fff}
+  .nav-links a.lnk:hover::after{width:100%}
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;z-index:120}
+  .hamburger span{width:24px;height:2px;background:#fff;transition:transform .3s ease,opacity .3s ease}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* HERO */
+  .hero{position:relative;background:var(--navy);color:#fff;padding:clamp(130px,20vh,180px) 0 clamp(70px,10vw,110px);overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(1000px 600px at 78% 12%,rgba(185,150,83,.16),transparent 55%),
+    linear-gradient(180deg,var(--navy),var(--navy-2));z-index:0}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:center}
+  .hero-copy .eyebrow{color:var(--gold)}
+  .hero h1{color:#fff;font-size:clamp(2.3rem,5.4vw,4rem);letter-spacing:-.5px}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero .sub{color:rgba(255,255,255,.78);font-size:clamp(1.02rem,1.6vw,1.18rem);margin:1.4rem 0 2.2rem;max-width:540px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+  .hero-media{position:relative}
+  .hero-media .imgframe{aspect-ratio:4/5;box-shadow:var(--shadow)}
+  .hero-media::after{content:"";position:absolute;inset:-14px -14px auto auto;width:120px;height:120px;border-top:1px solid var(--gold);border-right:1px solid var(--gold);z-index:1;opacity:.7}
+  .hero-badge{position:absolute;left:-14px;bottom:26px;background:var(--white);color:var(--navy);padding:16px 20px;border-left:3px solid var(--gold);box-shadow:var(--shadow);z-index:3;max-width:210px}
+  .hero-badge strong{font-family:'Libre Baskerville';font-size:1.5rem;display:block}
+  .hero-badge small{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--slate-soft)}
+  .trust-row{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:clamp(22px,4vw,52px);margin-top:clamp(48px,6vw,70px);padding-top:34px;border-top:1px solid rgba(255,255,255,.14)}
+  .trust-row div{color:rgba(255,255,255,.72);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+  .trust-row div b{color:var(--gold);font-family:'Libre Baskerville';font-size:1.05rem;display:block;letter-spacing:.02em;margin-bottom:2px}
+
+  /* PRACTICE */
+  .practice{background:var(--bg)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,26px)}
+  .card{
+    background:#fff;padding:clamp(26px,3vw,38px) clamp(24px,2.4vw,32px);border:1px solid #e7e9ee;border-top:2px solid transparent;
+    transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;position:relative;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-top-color:var(--gold)}
+  .card .num{font-family:'Libre Baskerville';font-size:.85rem;color:var(--gold);letter-spacing:.1em}
+  .card h3{font-size:1.28rem;margin:.7rem 0 .6rem}
+  .card p{color:var(--slate-soft);font-size:.95rem}
+  .card .ico{width:44px;height:44px;margin-bottom:16px;color:var(--gold)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(32px,5vw,66px);align-items:center}
+  .about-media .imgframe{aspect-ratio:5/6;box-shadow:var(--shadow)}
+  .about-media{position:relative}
+  .about-media .accent{position:absolute;left:-16px;bottom:-16px;width:110px;height:110px;border-bottom:1px solid var(--gold);border-left:1px solid var(--gold);opacity:.7}
+  .about h2{font-size:clamp(1.8rem,3.8vw,2.7rem);margin-bottom:1.2rem}
+  .about p{color:var(--slate-soft);margin-bottom:1.1rem}
+  .ethos{list-style:none;margin-top:1.6rem;display:grid;gap:14px}
+  .ethos li{display:flex;gap:13px;align-items:flex-start;font-size:.98rem;color:var(--slate)}
+  .ethos li::before{content:"";flex:none;width:8px;height:8px;margin-top:8px;background:var(--gold);transform:rotate(45deg)}
+
+  /* ATTORNEYS */
+  .attorneys{background:var(--navy);color:#fff}
+  .attorneys .section-head h2{color:#fff}
+  .attorneys .section-head p{color:rgba(255,255,255,.72)}
+  .att-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,30px)}
+  .att{background:var(--navy-2);border:1px solid rgba(255,255,255,.08);transition:transform .35s ease,border-color .35s ease}
+  .att:hover{transform:translateY(-6px);border-color:var(--gold)}
+  .att .imgframe{aspect-ratio:4/5;background:#0a1526}
+  .att .att-body{padding:22px 24px 26px}
+  .att h3{color:#fff;font-size:1.25rem}
+  .att .title{color:var(--gold);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin:.35rem 0 .8rem}
+  .att p{color:rgba(255,255,255,.7);font-size:.92rem}
+
+  /* WHY / STATS */
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,70px);align-items:center}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px)}
+  .stat{background:#fff;border:1px solid #e7e9ee;border-bottom:2px solid var(--gold);padding:clamp(22px,3vw,32px) 18px;text-align:center}
+  .stat b{font-family:'Libre Baskerville';font-size:clamp(2rem,4.4vw,2.9rem);color:var(--navy);display:block;line-height:1}
+  .stat span{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate-soft);margin-top:10px;display:block}
+  .why-points{list-style:none;display:grid;gap:22px;margin-top:8px}
+  .why-points li h3{font-size:1.18rem;margin-bottom:.35rem;display:flex;align-items:center;gap:.6em}
+  .why-points li h3::before{content:"";width:26px;height:1px;background:var(--gold);display:inline-block}
+  .why-points li p{color:var(--slate-soft);font-size:.96rem;padding-left:calc(26px + .6em)}
+
+  /* TESTIMONIALS */
+  .testi{background:var(--bg)}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,26px)}
+  .quote{background:#fff;border:1px solid #e7e9ee;padding:clamp(26px,3vw,36px);position:relative}
+  .quote .mark{font-family:'Libre Baskerville';font-size:3.4rem;color:var(--gold);line-height:.6;opacity:.35}
+  .quote p{color:var(--slate);font-size:1rem;margin:1rem 0 1.4rem;font-style:italic}
+  .quote .who{display:flex;align-items:center;gap:12px;border-top:1px solid #eceef2;padding-top:16px}
+  .quote .who .av{width:42px;height:42px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Libre Baskerville';font-weight:700;flex:none}
+  .quote .who b{display:block;color:var(--navy);font-size:.95rem}
+  .quote .who small{color:var(--slate-soft);font-size:.82rem}
+  .illus{display:inline-block;margin-top:26px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--slate-soft);border:1px solid #dcdfe6;padding:5px 12px;border-radius:2px}
+
+  /* CTA BAND */
+  .cta-band{background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#fff;position:relative;overflow:hidden}
+  .cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 85% 30%,rgba(185,150,83,.18),transparent 60%)}
+  .cta-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,64px);align-items:center}
+  .cta-inner h2{color:#fff;font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:1rem}
+  .cta-inner .lead{color:rgba(255,255,255,.78);margin-bottom:1.6rem}
+  .cta-inner .contacts{display:grid;gap:12px;margin-top:1.8rem}
+  .cta-inner .contacts a{color:rgba(255,255,255,.85);font-size:.95rem;display:flex;align-items:center;gap:.6em}
+  .cta-inner .contacts a b{color:var(--gold)}
+  /* FORM */
+  .form-card{background:#fff;color:var(--slate);padding:clamp(26px,3vw,38px);box-shadow:var(--shadow);border-top:3px solid var(--gold)}
+  .form-card h3{font-size:1.3rem;margin-bottom:.4rem}
+  .form-card .fnote{color:var(--slate-soft);font-size:.88rem;margin-bottom:1.4rem}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-bottom:6px}
+  .field input,.field select,.field textarea{
+    width:100%;padding:12px 14px;border:1px solid #d7dae1;border-radius:2px;font-family:'Inter';font-size:.95rem;color:var(--navy);background:#fbfbfc;transition:border-color .25s ease,box-shadow .25s ease;
+  }
+  .field textarea{resize:vertical;min-height:96px}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(185,150,83,.15)}
+  .form-card .btn{width:100%;margin-top:6px}
+  .form-success{display:none;text-align:center;padding:30px 10px}
+  .form-success.show{display:block}
+  .form-success .check{width:58px;height:58px;border-radius:50%;background:rgba(185,150,83,.15);color:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+  .form-success h3{color:var(--navy);margin-bottom:.5rem}
+  .form-success p{color:var(--slate-soft);font-size:.95rem}
+  .privacy{font-size:.76rem;color:var(--slate-soft);margin-top:12px;text-align:center}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:rgba(255,255,255,.72);padding:clamp(54px,7vw,80px) 0 34px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:clamp(26px,4vw,44px);padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .foot-brand .wordmark{margin-bottom:16px}
+  .foot-brand p{font-size:.9rem;max-width:280px;color:rgba(255,255,255,.6)}
+  footer h4{color:#fff;font-family:'Inter';font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;font-weight:600}
+  footer ul{list-style:none;display:grid;gap:10px}
+  footer ul a{color:rgba(255,255,255,.68);font-size:.9rem;transition:color .25s ease}
+  footer ul a:hover{color:var(--gold)}
+  .foot-contact li{font-size:.9rem;color:rgba(255,255,255,.68);margin-bottom:10px}
+  .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;padding-top:26px;font-size:.82rem;color:rgba(255,255,255,.5)}
+  .foot-bottom a{color:var(--gold)}
+  .disclaimer{font-size:.78rem;color:rgba(255,255,255,.45);margin-top:18px;max-width:100%;line-height:1.6}
+
+  /* Concept badge */
+  .concept-badge{
+    position:fixed;right:14px;bottom:14px;z-index:90;background:var(--gold);color:var(--navy);
+    font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 13px;border-radius:2px;
+    box-shadow:0 10px 24px -10px rgba(14,28,51,.6);
+  }
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* Mobile menu backdrop */
+  .nav-backdrop{display:none}
+
+  @media(max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:44px}
+    .hero-media{max-width:420px}
+    .about-grid,.why-grid,.cta-inner{grid-template-columns:1fr;gap:40px}
+    .cards,.att-grid,.testi-grid{grid-template-columns:repeat(2,1fr)}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:34px}
+  }
+  @media(max-width:760px){
+    .nav-links{
+      position:fixed;top:0;right:0;height:100vh;width:min(80%,320px);background:var(--navy);
+      flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;padding:40px;
+      transform:translateX(100%);transition:transform .4s cubic-bezier(.2,.7,.2,1);box-shadow:-20px 0 60px -20px rgba(0,0,0,.6);z-index:110;
+    }
+    .nav-links.open{transform:translateX(0)}
+    .nav-links a.lnk{font-size:1.05rem}
+    .nav-links .btn{width:100%}
+    .hamburger{display:flex}
+    .nav-backdrop.show{display:block;position:fixed;inset:0;background:rgba(6,12,24,.5);z-index:105}
+  }
+  @media(max-width:560px){
+    .cards,.att-grid,.testi-grid,.stats,.foot-grid{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(3,1fr)}
+    .hero-badge{position:static;margin-top:16px;max-width:none}
+    .trust-row{gap:20px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none}
+    .imgframe:hover img{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="wordmark" aria-label="Whitmore Legal home">
+      <svg class="mono" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="8" fill="#B99653" opacity="0"/><path d="M10 18 L20 48 L30 24 L34 40 L38 24 L48 48 L58 18" fill="none" stroke="#B99653" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="name">WHITMORE<span class="amp"> </span>LEGAL</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a class="lnk" href="#practice">Practice Areas</a>
+      <a class="lnk" href="#about">About</a>
+      <a class="lnk" href="#attorneys">Attorneys</a>
+      <a class="lnk" href="#why">Why Whitmore</a>
+      <a class="lnk" href="#contact" onclick="closeMenu()">Contact</a>
+      <a class="btn btn-gold" href="#contact" onclick="closeMenu()">Free Consultation</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="navBackdrop" onclick="closeMenu()"></div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Est. 1988 · Full-Service Law Firm</span>
+        <h1>Trusted counsel.<br><em>Proven results.</em></h1>
+        <p class="sub">For more than three decades, Whitmore Legal has represented businesses, families and individuals with clarity, discretion and an unwavering commitment to outcomes that matter.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#contact">Request a Free Consultation</a>
+          <a class="btn btn-outline" href="#practice">Explore Practice Areas</a>
+        </div>
+        <div class="trust-row">
+          <div><b>35+</b> Years Practicing</div>
+          <div><b>2,400+</b> Matters Resolved</div>
+          <div><b>98%</b> Client Retention</div>
+        </div>
+      </div>
+      <div class="hero-media reveal">
+        <div class="imgframe">
+          <img
+            src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=72&w=760"
+            srcset="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=72&w=760 760w, https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=72&w=1200 1200w"
+            sizes="(max-width:960px) 90vw, 460px"
+            alt="Interior of a distinguished law firm office with classical columns and warm natural light"
+            width="760" height="950" fetchpriority="high" decoding="async"
+            onerror="this.style.display='none'" />
+        </div>
+        <div class="hero-badge">
+          <strong>AV® Preeminent</strong>
+          <small>Peer-rated for legal ability &amp; ethics</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section class="section practice" id="practice">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Practice areas built on depth</h2>
+      <p>Focused expertise across the disciplines that define modern legal life — supported by a team that collaborates across specialties on every matter.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+        <span class="num">01</span><h3>Corporate &amp; M&amp;A</h3>
+        <p>Formation, governance, financing and complex transactions — structured to protect and advance your enterprise.</p>
+      </article>
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v18M7 7l-4 6h8L7 7zm10 0l-4 6h8l-4-6zM5 21h14"/></svg>
+        <span class="num">02</span><h3>Litigation &amp; Disputes</h3>
+        <p>Assertive advocacy in the courtroom and the boardroom, from commercial disputes to high-stakes appeals.</p>
+      </article>
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 10l9-7 9 7M5 9v11h14V9M9 20v-6h6v6"/></svg>
+        <span class="num">03</span><h3>Real Estate</h3>
+        <p>Acquisitions, leasing, development and land use — guiding property matters from diligence to closing.</p>
+      </article>
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 018-1 4 4 0 018 1c0 5.5-7 10-7 10z"/></svg>
+        <span class="num">04</span><h3>Family Law</h3>
+        <p>Compassionate, discreet counsel through divorce, custody and estate matters — protecting what matters most.</p>
+      </article>
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 21v-2a4 4 0 00-8 0v2M12 11a4 4 0 100-8 4 4 0 000 8zM3 21v-1a5 5 0 015-5"/></svg>
+        <span class="num">05</span><h3>Employment Law</h3>
+        <p>Workforce compliance, contracts and dispute resolution for employers and executives alike.</p>
+      </article>
+      <article class="card reveal">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 12l2 2 4-4M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/></svg>
+        <span class="num">06</span><h3>Intellectual Property</h3>
+        <p>Trademarks, licensing and IP strategy that safeguard the ideas driving your competitive edge.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-media reveal">
+      <div class="imgframe">
+        <img
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=72&w=760"
+          srcset="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=72&w=760 760w, https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=72&w=1100 1100w"
+          sizes="(max-width:960px) 90vw, 440px"
+          alt="Whitmore Legal attorneys collaborating around a conference table in a modern office"
+          width="760" height="912" loading="lazy" decoding="async"
+          onerror="this.style.display='none'" />
+      </div>
+      <span class="accent" aria-hidden="true"></span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">About the Firm</span>
+      <h2>A tradition of judgment, earned over decades</h2>
+      <p>Founded in 1988, Whitmore Legal has grown from a two-partner practice into one of the region's most respected full-service firms — without ever losing the personal attention that defined its beginnings. We measure our work not in billable hours, but in the confidence our clients feel when they hand us the matters that keep them awake at night.</p>
+      <p>Our attorneys combine the resources of a large firm with the responsiveness of a boutique. Every engagement is led by a senior lawyer, informed by rigorous preparation, and guided by a single principle: your interests come first.</p>
+      <ul class="ethos">
+        <li>Senior-led representation on every matter, start to finish.</li>
+        <li>Transparent counsel and fee structures — no surprises.</li>
+        <li>Discretion and confidentiality held to the highest standard.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ATTORNEYS -->
+<section class="section attorneys" id="attorneys">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our People</span>
+      <h2>Attorneys who lead with counsel</h2>
+      <p>Meet a few of the partners who set the standard for how we practice — and how we treat the people we represent.</p>
+    </div>
+    <div class="att-grid">
+      <article class="att reveal">
+        <div class="imgframe">
+          <img
+            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=72&w=560"
+            srcset="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=72&w=560 560w, https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=72&w=820 820w"
+            sizes="(max-width:560px) 90vw, 360px"
+            alt="Portrait of Eleanor Whitmore, Managing Partner at Whitmore Legal"
+            width="560" height="700" loading="lazy" decoding="async"
+            onerror="this.style.display='none'" />
+        </div>
+        <div class="att-body">
+          <h3>Eleanor Whitmore</h3>
+          <div class="title">Managing Partner · Corporate</div>
+          <p>Thirty years advising boards and founders through the transactions that shape their companies.</p>
+        </div>
+      </article>
+      <article class="att reveal">
+        <div class="imgframe">
+          <img
+            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=72&w=560"
+            srcset="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=72&w=560 560w, https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=72&w=820 820w"
+            sizes="(max-width:560px) 90vw, 360px"
+            alt="Portrait of Marcus Reid, Partner and head of Litigation at Whitmore Legal"
+            width="560" height="700" loading="lazy" decoding="async"
+            onerror="this.style.display='none'" />
+        </div>
+        <div class="att-body">
+          <h3>Marcus Reid</h3>
+          <div class="title">Partner · Litigation</div>
+          <p>A trial lawyer's instinct paired with a negotiator's patience across complex commercial disputes.</p>
+        </div>
+      </article>
+      <article class="att reveal">
+        <div class="imgframe">
+          <img
+            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=72&w=560"
+            srcset="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=72&w=560 560w, https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=72&w=820 820w"
+            sizes="(max-width:560px) 90vw, 360px"
+            alt="Portrait of Priya Anand, Partner in Real Estate and Employment law at Whitmore Legal"
+            width="560" height="700" loading="lazy" decoding="async"
+            onerror="this.style.display='none'" />
+        </div>
+        <div class="att-body">
+          <h3>Priya Anand</h3>
+          <div class="title">Partner · Real Estate &amp; Employment</div>
+          <p>Trusted by developers and employers for pragmatic guidance on their most consequential decisions.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY WHITMORE -->
+<section class="section" id="why">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <span class="eyebrow">Why Whitmore</span>
+      <h2 style="font-size:clamp(1.8rem,3.8vw,2.7rem);margin-bottom:1.2rem">Results our clients can measure</h2>
+      <p style="color:var(--slate-soft);margin-bottom:2rem">The numbers reflect a simple philosophy: prepare relentlessly, communicate clearly, and never lose sight of the outcome our client actually needs.</p>
+      <div class="stats">
+        <div class="stat"><b data-count="35" data-suffix="+">0</b><span>Years Practicing</span></div>
+        <div class="stat"><b data-count="2400" data-suffix="+">0</b><span>Cases Won</span></div>
+        <div class="stat"><b data-count="1800" data-suffix="+">0</b><span>Clients Served</span></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <ul class="why-points">
+        <li>
+          <h3>Senior attention, every time</h3>
+          <p>You work directly with an experienced partner — not a rotating cast of junior associates learning on your matter.</p>
+        </li>
+        <li>
+          <h3>Strategy before tactics</h3>
+          <p>We define the outcome you want first, then build the most efficient path to reach it — in or out of court.</p>
+        </li>
+        <li>
+          <h3>Responsiveness you can rely on</h3>
+          <p>Calls returned the same day and plain-language updates, so you are never left wondering where your matter stands.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testi">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Client Voices</span>
+      <h2>What our clients say</h2>
+      <p>A reputation built one relationship at a time.</p>
+    </div>
+    <div class="testi-grid">
+      <blockquote class="quote reveal">
+        <div class="mark">&ldquo;</div>
+        <p>Whitmore Legal guided our acquisition with a steadiness that made a complicated deal feel manageable. They were three steps ahead the entire time.</p>
+        <div class="who"><span class="av">JT</span><div><b>Jonathan Tanaka</b><small>CEO, Meridian Holdings</small></div></div>
+      </blockquote>
+      <blockquote class="quote reveal">
+        <div class="mark">&ldquo;</div>
+        <p>During the hardest year of my life, they handled my case with real compassion and total professionalism. I never once felt like just another file.</p>
+        <div class="who"><span class="av">SM</span><div><b>Sarah Mullins</b><small>Family Law Client</small></div></div>
+      </blockquote>
+      <blockquote class="quote reveal">
+        <div class="mark">&ldquo;</div>
+        <p>Their litigation team prepared as if every detail mattered — because it did. The result exceeded what we thought was realistically possible.</p>
+        <div class="who"><span class="av">DK</span><div><b>David Kessler</b><small>General Counsel, Vantage Group</small></div></div>
+      </blockquote>
+    </div>
+    <span class="illus">Illustrative — testimonials shown are fictional for this concept demo</span>
+  </div>
+</section>
+
+<!-- CONSULTATION CTA + FORM -->
+<section class="section cta-band" id="contact">
+  <div class="wrap cta-inner">
+    <div class="reveal">
+      <span class="eyebrow">Free Consultation</span>
+      <h2>Let's talk about your matter</h2>
+      <p class="lead">Every strong outcome begins with a conversation. Tell us what you're facing and a member of our team will respond within one business day — confidentially and without obligation.</p>
+      <div class="contacts">
+        <a href="tel:+18005551988"><b>Call</b> +1 (800) 555-1988</a>
+        <a href="mailto:counsel@whitmorelegal.example"><b>Email</b> counsel@whitmorelegal.example</a>
+        <a href="#top"><b>Visit</b> 1200 Marbury Avenue, Suite 40, New York</a>
+      </div>
+    </div>
+    <div class="form-card reveal">
+      <form id="consultForm" novalidate>
+        <h3>Request your consultation</h3>
+        <p class="fnote">Complete the form and we'll be in touch shortly.</p>
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="Jane Doe" required autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="jane@example.com" required autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="area">Area of Interest</label>
+          <select id="area" name="area" required>
+            <option value="" disabled selected>Select a practice area</option>
+            <option>Corporate &amp; M&amp;A</option>
+            <option>Litigation &amp; Disputes</option>
+            <option>Real Estate</option>
+            <option>Family Law</option>
+            <option>Employment Law</option>
+            <option>Intellectual Property</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" placeholder="Briefly describe your situation…" required></textarea>
+        </div>
+        <button class="btn btn-navy" type="submit">Submit Request</button>
+        <p class="privacy">Submitting this form does not create an attorney-client relationship.</p>
+      </form>
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+        <div class="check">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3>Thank you — request received</h3>
+        <p>A member of the Whitmore Legal team will contact you within one business day. For urgent matters, please call +1 (800) 555-1988.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="wordmark" aria-label="Whitmore Legal home">
+          <svg class="mono" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 18 L20 48 L30 24 L34 40 L38 24 L48 48 L58 18" fill="none" stroke="#B99653" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="name">WHITMORE LEGAL</span>
+        </a>
+        <p>Trusted counsel and proven results for businesses, families and individuals since 1988.</p>
+      </div>
+      <div>
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="#practice">Corporate &amp; M&amp;A</a></li>
+          <li><a href="#practice">Litigation</a></li>
+          <li><a href="#practice">Real Estate</a></li>
+          <li><a href="#practice">Family Law</a></li>
+          <li><a href="#practice">Employment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Firm</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#attorneys">Attorneys</a></li>
+          <li><a href="#why">Why Whitmore</a></li>
+          <li><a href="#contact">Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="foot-contact">
+          <li>1200 Marbury Avenue, Suite 40<br>New York, NY 10018</li>
+          <li><a href="tel:+18005551988">+1 (800) 555-1988</a></li>
+          <li><a href="mailto:counsel@whitmorelegal.example">counsel@whitmorelegal.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Disclaimer: Whitmore Legal is a fictional firm created for a web-design portfolio. The content on this website is provided for illustrative purposes only, does not constitute legal advice, and should not be relied upon as such. Viewing this site or contacting the firm does not create an attorney-client relationship.</p>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Whitmore Legal. All rights reserved. · Concept Project.</span>
+      <span>Designed &amp; developed by <a href="../../index.html">Mustaisim Memon</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="concept-badge" aria-label="Concept project">Concept Project</div>
+
+<script>
+  (function(){
+    "use strict";
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Sticky nav background on scroll
+    var nav = document.getElementById('nav');
+    function onScroll(){
+      if(window.scrollY > 40){ nav.classList.add('scrolled'); }
+      else{ nav.classList.remove('scrolled'); }
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+
+    // Mobile menu
+    var hamburger = document.getElementById('hamburger');
+    var navLinks = document.getElementById('navLinks');
+    var backdrop = document.getElementById('navBackdrop');
+    function openMenu(){ navLinks.classList.add('open'); hamburger.classList.add('open'); backdrop.classList.add('show'); hamburger.setAttribute('aria-expanded','true'); }
+    window.closeMenu = function(){ navLinks.classList.remove('open'); hamburger.classList.remove('open'); backdrop.classList.remove('show'); hamburger.setAttribute('aria-expanded','false'); };
+    hamburger.addEventListener('click', function(){
+      if(navLinks.classList.contains('open')){ closeMenu(); } else { openMenu(); }
+    });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeMenu(); } });
+
+    // Reveal on scroll
+    var reveals = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){
+      reveals.forEach(function(el){ el.classList.add('in'); });
+    } else {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, {threshold:0.14, rootMargin:'0px 0px -40px 0px'});
+      reveals.forEach(function(el){ io.observe(el); });
+    }
+
+    // Animated stat counters
+    var counters = document.querySelectorAll('[data-count]');
+    function animateCount(el){
+      var target = parseInt(el.getAttribute('data-count'),10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      if(reduce){ el.textContent = target.toLocaleString() + suffix; return; }
+      var start = null, dur = 1400;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start)/dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.floor(eased * target).toLocaleString() + suffix;
+        if(p < 1){ requestAnimationFrame(step); }
+        else { el.textContent = target.toLocaleString() + suffix; }
+      }
+      requestAnimationFrame(step);
+    }
+    if('IntersectionObserver' in window){
+      var co = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){ animateCount(en.target); co.unobserve(en.target); }
+        });
+      }, {threshold:0.5});
+      counters.forEach(function(el){ co.observe(el); });
+    } else {
+      counters.forEach(animateCount);
+    }
+
+    // Form success (client-side only)
+    var form = document.getElementById('consultForm');
+    var success = document.getElementById('formSuccess');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!form.checkValidity()){ form.reportValidity(); return; }
+      form.style.display = 'none';
+      success.classList.add('show');
+      success.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'center'});
+    });
+  })();
+</script>
+</body>
+</html>

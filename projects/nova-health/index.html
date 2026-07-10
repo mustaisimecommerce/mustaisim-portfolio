@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nova Health Clinic — Compassionate Family Care Close to Home</title>
+<meta name="description" content="Nova Health Clinic is a modern family medical practice offering same-day appointments, pediatrics, cardiology, dermatology, diagnostics and preventive care. Book your visit today." />
+<meta name="keywords" content="Nova Health Clinic, family medicine, pediatrics, cardiology, dermatology, preventive care, same-day appointments, medical clinic" />
+<meta name="author" content="Nova Health Clinic" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#2563EB" />
+<link rel="canonical" href="https://novahealthclinic.example/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nova Health Clinic — Compassionate Family Care" />
+<meta property="og:description" content="A modern family clinic with same-day appointments and a patient-first team. Book your visit today." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=72&w=1200" />
+<meta property="og:url" content="https://novahealthclinic.example/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nova Health Clinic — Compassionate Family Care" />
+<meta name="twitter:description" content="A modern family clinic with same-day appointments and a patient-first team." />
+
+<!-- Favicon: blue medical cross / pulse mark -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3Cpath d='M6 16h4l2-5 4 10 2-5h8' fill='none' stroke='%23ffffff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --blue:#2563EB;
+    --sky:#0EA5E9;
+    --mint:#E6F7F4;
+    --navy:#0F2540;
+    --gray:#64748B;
+    --white:#ffffff;
+    --line:#E6ECF5;
+    --shadow-sm:0 2px 10px rgba(15,37,64,.06);
+    --shadow-md:0 14px 40px rgba(15,37,64,.10);
+    --shadow-lg:0 24px 60px rgba(37,99,235,.16);
+    --radius:20px;
+    --radius-lg:28px;
+    --maxw:1180px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    color:var(--navy);
+    background:var(--white);
+    line-height:1.65;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.logo-text{font-family:'Poppins',sans-serif;line-height:1.15;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  ul{list-style:none}
+  .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+  section{padding:clamp(64px,9vw,110px) 0}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--blue);background:var(--mint);
+    padding:7px 15px;border-radius:999px;margin-bottom:18px;
+  }
+  .section-head{max-width:640px;margin:0 auto clamp(38px,5vw,58px);text-align:center}
+  .section-head h2{font-size:clamp(1.85rem,4.4vw,2.75rem);letter-spacing:-.02em}
+  .section-head p{color:var(--gray);font-size:1.06rem;margin-top:14px}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-family:'Poppins',sans-serif;font-weight:600;font-size:.98rem;
+    padding:14px 26px;border-radius:999px;border:none;cursor:pointer;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(37,99,235,.28)}
+  .btn-primary:hover{background:#1d55d4;transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+  .btn-ghost{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+  .btn-light{background:#fff;color:var(--blue)}
+  .btn-light:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+
+  /* NAV */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
+    padding:16px 0;
+  }
+  header.nav.scrolled{
+    background:rgba(255,255,255,.86);
+    backdrop-filter:saturate(160%) blur(14px);
+    box-shadow:0 4px 22px rgba(15,37,64,.07);
+    padding:11px 0;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{display:flex;align-items:center;gap:11px}
+  .logo-mark{
+    width:40px;height:40px;border-radius:12px;flex-shrink:0;
+    background:linear-gradient(135deg,var(--blue),var(--sky));
+    display:grid;place-items:center;box-shadow:0 6px 16px rgba(37,99,235,.32);
+  }
+  .logo-text{font-size:1.25rem;font-weight:700;color:var(--navy);letter-spacing:-.01em}
+  .logo-text span{color:var(--blue)}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:.96rem;font-weight:500;color:var(--navy);transition:color .2s}
+  .nav-links a:hover{color:var(--blue)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .hamburger{
+    display:none;flex-direction:column;gap:5px;background:none;border:none;
+    cursor:pointer;padding:8px;
+  }
+  .hamburger span{width:24px;height:2.5px;background:var(--navy);border-radius:2px;transition:.3s}
+  .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+  /* HERO */
+  .hero{padding-top:clamp(120px,17vw,168px);position:relative;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;top:-160px;right:-140px;width:520px;height:520px;
+    background:radial-gradient(circle,rgba(14,165,233,.16),transparent 68%);z-index:0;
+  }
+  .hero::after{
+    content:"";position:absolute;bottom:-200px;left:-160px;width:480px;height:480px;
+    background:radial-gradient(circle,rgba(230,247,244,.9),transparent 66%);z-index:0;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(34px,5vw,64px);
+    align-items:center;position:relative;z-index:1;
+  }
+  .hero-copy h1{font-size:clamp(2.3rem,5.4vw,3.75rem);letter-spacing:-.03em;font-weight:700}
+  .hero-copy h1 .grad{
+    background:linear-gradient(120deg,var(--blue),var(--sky));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .hero-copy p.lead{color:var(--gray);font-size:clamp(1.05rem,2vw,1.22rem);margin:20px 0 30px;max-width:520px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px}
+  .trust-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;color:var(--gray);font-size:.94rem;font-weight:500}
+  .trust-row .dot{display:inline-flex;align-items:center;gap:8px}
+  .trust-row svg{color:var(--sky)}
+
+  .media{
+    position:relative;border-radius:var(--radius-lg);overflow:hidden;
+    background:linear-gradient(135deg,var(--blue),var(--sky));
+    box-shadow:var(--shadow-md);
+  }
+  .media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+  .media:hover img{transform:scale(1.05)}
+  .hero-media{aspect-ratio:4/4.4}
+  .hero-badge{
+    position:absolute;left:18px;bottom:18px;z-index:2;
+    background:rgba(255,255,255,.94);backdrop-filter:blur(6px);
+    border-radius:16px;padding:14px 18px;box-shadow:var(--shadow-sm);
+    display:flex;align-items:center;gap:13px;max-width:calc(100% - 36px);
+  }
+  .hero-badge .ic{width:42px;height:42px;border-radius:12px;background:var(--mint);display:grid;place-items:center;color:var(--blue);flex-shrink:0}
+  .hero-badge b{display:block;font-family:'Poppins',sans-serif;font-size:1.02rem;color:var(--navy)}
+  .hero-badge small{color:var(--gray);font-size:.83rem}
+
+  /* SERVICES */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 28px;box-shadow:var(--shadow-sm);
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent}
+  .service-ic{
+    width:56px;height:56px;border-radius:16px;background:var(--mint);color:var(--blue);
+    display:grid;place-items:center;margin-bottom:18px;transition:.3s;
+  }
+  .service-card:hover .service-ic{background:var(--blue);color:#fff}
+  .service-card h3{font-size:1.2rem;margin-bottom:8px}
+  .service-card p{color:var(--gray);font-size:.96rem}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(34px,5vw,64px);align-items:center}
+  .about-media{aspect-ratio:4/3.4;border-radius:var(--radius-lg)}
+  .about-copy h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.02em;margin-bottom:16px}
+  .about-copy > p{color:var(--gray);font-size:1.06rem;margin-bottom:22px}
+  .ethos-list{display:grid;gap:16px}
+  .ethos-item{display:flex;gap:14px;align-items:flex-start}
+  .ethos-item .check{
+    width:30px;height:30px;border-radius:9px;background:var(--mint);color:var(--blue);
+    display:grid;place-items:center;flex-shrink:0;margin-top:2px;
+  }
+  .ethos-item b{font-family:'Poppins',sans-serif;font-weight:600;display:block;margin-bottom:2px}
+  .ethos-item p{color:var(--gray);font-size:.95rem}
+
+  /* DOCTORS */
+  .doctors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .doctor-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .3s ease, box-shadow .3s ease}
+  .doctor-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+  .doctor-media{aspect-ratio:4/3.6}
+  .doctor-info{padding:22px 24px}
+  .doctor-info h3{font-size:1.2rem}
+  .doctor-info .spec{color:var(--blue);font-weight:600;font-size:.9rem;margin:3px 0 10px}
+  .doctor-info p{color:var(--gray);font-size:.93rem}
+
+  /* WHY / STATS */
+  .why{background:linear-gradient(180deg,var(--mint),#fff);}
+  .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:44px}
+  .stat{
+    background:#fff;border-radius:var(--radius);padding:30px 26px;text-align:center;
+    box-shadow:var(--shadow-sm);border:1px solid var(--line);
+  }
+  .stat .num{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3rem);
+    background:linear-gradient(120deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.02em}
+  .stat .label{color:var(--gray);font-weight:500;margin-top:4px}
+  .reassure-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .reassure{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm)}
+  .reassure .ic{width:48px;height:48px;border-radius:14px;background:var(--mint);color:var(--blue);display:grid;place-items:center;margin-bottom:14px}
+  .reassure h3{font-size:1.1rem;margin-bottom:6px}
+  .reassure p{color:var(--gray);font-size:.94rem}
+
+  /* TESTIMONIALS */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .testi{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:16px}
+  .stars{color:#F5B916;display:flex;gap:2px}
+  .testi p.quote{color:var(--navy);font-size:1.02rem;line-height:1.7}
+  .testi .who{display:flex;align-items:center;gap:12px;margin-top:auto}
+  .avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--sky));color:#fff;display:grid;place-items:center;font-family:'Poppins',sans-serif;font-weight:600;flex-shrink:0}
+  .testi .who b{font-family:'Poppins',sans-serif;font-size:.98rem;display:block}
+  .testi .who small{color:var(--gray)}
+  .illus{font-size:.76rem;color:var(--gray);text-align:center;margin-top:26px;font-style:italic}
+
+  /* APPOINTMENT CTA + FORM */
+  .appt{background:linear-gradient(135deg,var(--blue),var(--sky));color:#fff;border-radius:0}
+  .appt-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,60px);align-items:center}
+  .appt-copy h2{font-size:clamp(1.9rem,4.4vw,2.7rem);letter-spacing:-.02em;margin-bottom:14px}
+  .appt-copy p.sub{opacity:.92;font-size:1.08rem;margin-bottom:28px;max-width:480px}
+  .appt-info{display:grid;gap:16px;margin-bottom:8px}
+  .appt-info li{display:flex;align-items:center;gap:14px}
+  .appt-info .ic{width:46px;height:46px;border-radius:13px;background:rgba(255,255,255,.16);display:grid;place-items:center;flex-shrink:0}
+  .appt-info b{font-family:'Poppins',sans-serif;display:block;font-size:1.05rem}
+  .appt-info small{opacity:.85}
+
+  .form-card{background:#fff;border-radius:var(--radius-lg);padding:clamp(26px,4vw,38px);box-shadow:var(--shadow-lg);color:var(--navy)}
+  .form-card h3{font-size:1.35rem;margin-bottom:6px}
+  .form-card > p{color:var(--gray);font-size:.94rem;margin-bottom:22px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.86rem;font-weight:600;margin-bottom:6px}
+  .field input,.field select,.field textarea{
+    width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:13px;
+    font-family:inherit;font-size:.96rem;color:var(--navy);background:#fff;transition:border-color .2s, box-shadow .2s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.14)}
+  .field textarea{resize:vertical;min-height:84px}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .form-card .btn-primary{width:100%;margin-top:6px}
+  .form-success{
+    display:none;text-align:center;padding:26px 10px;
+  }
+  .form-success.show{display:block;animation:pop .4s ease}
+  @keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+  .form-success .tick{width:64px;height:64px;border-radius:50%;background:var(--mint);color:var(--blue);display:grid;place-items:center;margin:0 auto 16px}
+  .form-success h3{margin-bottom:8px}
+  .form-success p{color:var(--gray)}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:#cdd8e6;padding:clamp(52px,7vw,72px) 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;margin-bottom:44px}
+  .foot-brand .logo-text{color:#fff}
+  .foot-brand p{color:#9fb0c6;font-size:.95rem;margin-top:16px;max-width:280px}
+  footer h4{font-family:'Poppins',sans-serif;color:#fff;font-size:1rem;margin-bottom:16px}
+  footer .fcol a,footer .fcol li{display:block;color:#9fb0c6;font-size:.93rem;margin-bottom:10px;transition:color .2s}
+  footer .fcol a:hover{color:#fff}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:.9rem;color:#9fb0c6}
+  .foot-bottom a{color:#fff;font-weight:600}
+
+  .concept-badge{
+    position:fixed;right:16px;bottom:16px;z-index:90;
+    background:var(--navy);color:#fff;font-size:.78rem;font-weight:600;
+    padding:9px 15px;border-radius:999px;box-shadow:var(--shadow-md);
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .concept-badge .pulse{width:8px;height:8px;border-radius:50%;background:var(--sky);box-shadow:0 0 0 0 rgba(14,165,233,.6);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(14,165,233,.6)}70%{box-shadow:0 0 0 10px rgba(14,165,233,0)}100%{box-shadow:0 0 0 0 rgba(14,165,233,0)}}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.visible{opacity:1;transform:none}
+
+  /* RESPONSIVE */
+  @media (max-width:960px){
+    .hero-grid,.about-grid,.appt-grid{grid-template-columns:1fr}
+    .about-media{order:-1;aspect-ratio:16/10}
+    .services-grid,.doctors-grid,.stats-grid,.reassure-grid,.testi-grid{grid-template-columns:repeat(2,1fr)}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .hero-media{aspect-ratio:16/11;max-width:560px;margin:0 auto}
+  }
+  @media (max-width:760px){
+    .nav-links{
+      position:fixed;top:0;right:0;height:100vh;width:min(78%,300px);
+      background:#fff;flex-direction:column;align-items:flex-start;justify-content:flex-start;
+      gap:6px;padding:92px 30px 30px;box-shadow:-12px 0 40px rgba(15,37,64,.12);
+      transform:translateX(100%);transition:transform .35s ease;z-index:99;
+    }
+    .nav-links.open{transform:translateX(0)}
+    .nav-links a{width:100%;padding:12px 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+    .nav-cta .btn{display:none}
+    .hamburger{display:flex;z-index:101}
+    .services-grid,.doctors-grid,.stats-grid,.reassure-grid,.testi-grid,.foot-grid,.form-row{grid-template-columns:1fr}
+  }
+  @media (max-width:420px){
+    .hero-actions .btn{width:100%}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none}
+    .media:hover img{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo" aria-label="Nova Health home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>
+      </span>
+      <span class="logo-text">Nova<span>Health</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#why">Why Nova</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#book">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#book" class="btn btn-primary">Book Appointment</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Family Medical Clinic</span>
+      <h1>Compassionate care, <span class="grad">close to home.</span></h1>
+      <p class="lead">Nova Health Clinic brings modern, patient-first medicine to your neighborhood — from checkups to specialist care, delivered by a team that truly listens.</p>
+      <div class="hero-actions">
+        <a href="#book" class="btn btn-primary">Book an Appointment
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+      <div class="trust-row">
+        <span class="dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Same-day appointments</span>
+        <span class="dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Most insurance accepted</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="media hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=72&w=800"
+          srcset="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=72&w=800 800w, https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=72&w=1200 1200w"
+          sizes="(max-width:960px) 90vw, 45vw"
+          alt="Friendly Nova Health doctor smiling and welcoming a patient in a bright clinic"
+          width="800" height="880" fetchpriority="high" decoding="async"
+          onerror="this.style.display='none'" />
+        <div class="hero-badge">
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8.5C1 9 2.5 6 6 6c2 0 3.2 1.2 4 2.5C10.8 7.2 12 6 14 6c3.5 0 5 3 3.5 6.5C19 16.65 12 21 12 21z"/></svg></span>
+          <div><b>4,600+ families</b><small>trust their care to Nova</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Specialties</span>
+      <h2>Complete care for every stage of life</h2>
+      <p>One trusted clinic for your whole family — comprehensive services under one welcoming roof.</p>
+    </div>
+    <div class="services-grid">
+      <article class="card service-card reveal">
+        <div class="service-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8.5C1 9 2.5 6 6 6c2 0 3.2 1.2 4 2.5C10.8 7.2 12 6 14 6c3.5 0 5 3 3.5 6.5C19 16.65 12 21 12 21z"/></svg></div>
+        <h3>Family Medicine</h3>
+        <p>Primary care for all ages — annual physicals, chronic condition management and everyday health needs.</p>
+      </article>
+      <article class="card service-card reveal">
+        <div class="service-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-3.87 3.13-7 7-7s7 3.13 7 7"/></svg></div>
+        <h3>Pediatrics</h3>
+        <p>Gentle, attentive care for infants, children and teens — wellness visits, vaccines and growth tracking.</p>
+      </article>
+      <article class="card service-card reveal">
+        <div class="service-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div>
+        <h3>Cardiology</h3>
+        <p>Heart health screening, blood pressure management and personalized cardiovascular care plans.</p>
+      </article>
+      <article class="card service-card reveal">
+        <div class="service-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
+        <h3>Dermatology</h3>
+        <p>Skin exams, acne and eczema treatment, and mole checks to keep your skin healthy year-round.</p>
+      </article>
+      <article class="card service-card reveal">
+        <div class="service-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v6l-5 8a2 2 0 0 0 1.7 3h12.6A2 2 0 0 0 20 17l-5-8V3M9 3h6M8 14h8"/></svg></div>
+        <h3>Diagnostics &amp; Labs</h3>
+        <p>On-site bloodwork, imaging referrals and rapid testing with results explained clearly and quickly.</p>
+      </article>
+      <article class="card service-card reveal">
+        <div class="service-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/></svg></div>
+        <h3>Preventive Care</h3>
+        <p>Screenings, immunizations and wellness coaching that keep small concerns from becoming big ones.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <div class="media about-media">
+        <img
+          src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=72&w=800"
+          srcset="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=72&w=800 800w, https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=72&w=1200 1200w"
+          sizes="(max-width:960px) 90vw, 45vw"
+          alt="Bright, modern and welcoming Nova Health clinic waiting area"
+          width="800" height="680" loading="lazy" decoding="async"
+          onerror="this.style.display='none'" />
+      </div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">About Nova Health</span>
+      <h2>Medicine that puts people first</h2>
+      <p>We built Nova Health around a simple belief: healthcare should feel personal, unhurried and genuinely kind. Every visit starts with listening — because the best care begins with understanding you.</p>
+      <div class="ethos-list">
+        <div class="ethos-item">
+          <span class="check" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <div><b>Time to truly listen</b><p>Longer appointments so you never feel rushed and every question gets answered.</p></div>
+        </div>
+        <div class="ethos-item">
+          <span class="check" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <div><b>One team, whole-family care</b><p>From your toddler's first checkup to grandparents' heart health — coordinated in one place.</p></div>
+        </div>
+        <div class="ethos-item">
+          <span class="check" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <div><b>Clear, honest guidance</b><p>Plain-language explanations and transparent pricing, so you always know your next step.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section id="doctors">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Meet the Team</span>
+      <h2>Doctors who feel like family</h2>
+      <p>Board-certified physicians dedicated to compassionate, evidence-based care for your loved ones.</p>
+    </div>
+    <div class="doctors-grid">
+      <article class="doctor-card reveal">
+        <div class="media doctor-media">
+          <img
+            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=72&w=600"
+            srcset="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=72&w=600 600w, https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=72&w=900 900w"
+            sizes="(max-width:960px) 90vw, 33vw"
+            alt="Portrait of Dr. Elena Rivas, family medicine physician at Nova Health"
+            width="600" height="540" loading="lazy" decoding="async"
+            onerror="this.style.display='none'" />
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Elena Rivas</h3>
+          <p class="spec">Family Medicine &amp; Preventive Care</p>
+          <p>Fifteen years helping families stay healthy with warm, practical guidance for every generation.</p>
+        </div>
+      </article>
+      <article class="doctor-card reveal">
+        <div class="media doctor-media">
+          <img
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=72&w=600"
+            srcset="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=72&w=600 600w, https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=72&w=900 900w"
+            sizes="(max-width:960px) 90vw, 33vw"
+            alt="Portrait of Dr. Marcus Bell, cardiologist at Nova Health"
+            width="600" height="540" loading="lazy" decoding="async"
+            onerror="this.style.display='none'" />
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Marcus Bell</h3>
+          <p class="spec">Cardiology &amp; Internal Medicine</p>
+          <p>Focused on heart health and prevention, with a calm, reassuring approach patients trust.</p>
+        </div>
+      </article>
+      <article class="doctor-card reveal">
+        <div class="media doctor-media">
+          <img
+            src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=72&w=600"
+            srcset="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=72&w=600 600w, https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=72&w=900 900w"
+            sizes="(max-width:960px) 90vw, 33vw"
+            alt="Portrait of Dr. Aisha Khan, pediatrician at Nova Health"
+            width="600" height="540" loading="lazy" decoding="async"
+            onerror="this.style.display='none'" />
+        </div>
+        <div class="doctor-info">
+          <h3>Dr. Aisha Khan</h3>
+          <p class="spec">Pediatrics &amp; Dermatology</p>
+          <p>A gentle favorite with young patients, making every child's visit feel safe and friendly.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY NOVA -->
+<section id="why" class="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Nova Health</span>
+      <h2>Care you can count on</h2>
+      <p>Numbers only tell part of the story — but they reflect the trust our community places in us every day.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="num" data-target="4600" data-suffix="+">0</div><div class="label">Patients cared for</div></div>
+      <div class="stat reveal"><div class="num" data-target="18" data-suffix=" yrs">0</div><div class="label">Serving our community</div></div>
+      <div class="stat reveal"><div class="num" data-target="98" data-suffix="%">0</div><div class="label">Patient satisfaction</div></div>
+    </div>
+    <div class="reassure-grid">
+      <div class="reassure reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Same-day availability</h3>
+        <p>Feeling unwell today? We keep appointments open so you can be seen when it matters most.</p>
+      </div>
+      <div class="reassure reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Most insurance accepted</h3>
+        <p>We work with major providers and offer clear, upfront pricing so there are no surprises.</p>
+      </div>
+      <div class="reassure reveal">
+        <div class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8.5C1 9 2.5 6 6 6c2 0 3.2 1.2 4 2.5C10.8 7.2 12 6 14 6c3.5 0 5 3 3.5 6.5C19 16.65 12 21 12 21z"/></svg></div>
+        <h3>Genuinely caring team</h3>
+        <p>From the front desk to your doctor, every person here is here to make your visit easier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Patient Stories</span>
+      <h2>Loved by the families we serve</h2>
+      <p>Real warmth, real relationships — here's what our patients say about their experience at Nova.</p>
+    </div>
+    <div class="testi-grid">
+      <article class="testi reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="quote">"For the first time I didn't feel like just another appointment. Dr. Rivas took the time to explain everything and I left actually understanding my health."</p>
+        <div class="who"><span class="avatar" aria-hidden="true">SM</span><div><b>Sarah M.</b><small>Family Medicine patient</small></div></div>
+      </article>
+      <article class="testi reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="quote">"My kids used to dread the doctor. Now they ask when we're going back. The pediatric team is patient, kind and wonderful with little ones."</p>
+        <div class="who"><span class="avatar" aria-hidden="true">JT</span><div><b>James T.</b><small>Parent of two</small></div></div>
+      </article>
+      <article class="testi reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="quote">"Booking was easy, the clinic is spotless, and I got same-day care when I needed it. Nova Health has completely changed how I feel about visiting a doctor."</p>
+        <div class="who"><span class="avatar" aria-hidden="true">PN</span><div><b>Priya N.</b><small>Preventive Care patient</small></div></div>
+      </article>
+    </div>
+    <p class="illus">Illustrative testimonials — this is a concept project and the patients shown are fictional.</p>
+  </div>
+</section>
+
+<!-- APPOINTMENT CTA + FORM -->
+<section id="book" class="appt">
+  <div class="container appt-grid">
+    <div class="appt-copy reveal">
+      <span class="eyebrow" style="background:rgba(255,255,255,.18);color:#fff">Book Your Visit</span>
+      <h2>Ready when you are</h2>
+      <p class="sub">Schedule an appointment in minutes, or reach out directly — our friendly front desk is happy to help you find a time that works.</p>
+      <ul class="appt-info">
+        <li>
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div><b>(555) 019-4820</b><small>Call our care team directly</small></div>
+        </li>
+        <li>
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div><b>Mon–Fri 8am–7pm · Sat 9am–2pm</b><small>Same-day slots reserved daily</small></div>
+        </li>
+        <li>
+          <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><b>128 Maplewood Avenue, Suite 200</b><small>Free on-site patient parking</small></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-card reveal">
+      <form id="apptForm" novalidate>
+        <h3>Request an appointment</h3>
+        <p>Fill in a few details and we'll confirm your visit shortly.</p>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="jane@email.com" required />
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Choose a service</option>
+              <option>Family Medicine</option>
+              <option>Pediatrics</option>
+              <option>Cardiology</option>
+              <option>Dermatology</option>
+              <option>Diagnostics &amp; Labs</option>
+              <option>Preventive Care</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="date">Preferred date</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="notes">Anything we should know? (optional)</label>
+          <textarea id="notes" name="notes" placeholder="Briefly describe your reason for visiting."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Request Appointment</button>
+      </form>
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+        <div class="tick" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Request received!</h3>
+        <p>Thank you — a member of our care team will call to confirm your appointment shortly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="logo">
+          <span class="logo-mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>
+          <span class="logo-text">Nova<span style="color:var(--sky)">Health</span></span>
+        </a>
+        <p>Compassionate, patient-first family medicine — caring for your neighborhood, one visit at a time.</p>
+      </div>
+      <div class="fcol">
+        <h4>Services</h4>
+        <a href="#services">Family Medicine</a>
+        <a href="#services">Pediatrics</a>
+        <a href="#services">Cardiology</a>
+        <a href="#services">Preventive Care</a>
+      </div>
+      <div class="fcol">
+        <h4>Clinic</h4>
+        <a href="#about">About Us</a>
+        <a href="#doctors">Our Doctors</a>
+        <a href="#why">Why Nova</a>
+        <a href="#testimonials">Reviews</a>
+      </div>
+      <div class="fcol">
+        <h4>Visit Us</h4>
+        <ul>
+          <li>128 Maplewood Avenue</li>
+          <li>Suite 200</li>
+          <li>(555) 019-4820</li>
+          <li>Mon–Fri 8am–7pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Nova Health Clinic. Concept project — not a real medical practice.</span>
+      <span>Designed &amp; developed by <a href="../../index.html">Mustaisim Memon</a></span>
+    </div>
+  </div>
+</footer>
+
+<a href="#book" class="concept-badge"><span class="pulse" aria-hidden="true"></span> Concept Project</a>
+
+<script>
+(function(){
+  "use strict";
+
+  // Sticky nav background on scroll
+  var nav = document.getElementById('nav');
+  function onScroll(){
+    if(window.scrollY > 30){ nav.classList.add('scrolled'); }
+    else{ nav.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Mobile menu
+  var hamburger = document.getElementById('hamburger');
+  var navLinks = document.getElementById('navLinks');
+  function closeMenu(){
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded','false');
+  }
+  hamburger.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeMenu);
+  });
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Reveal on scroll
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:0.14, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('visible'); });
+  }
+
+  // Animated stat counters
+  var counters = document.querySelectorAll('.num[data-target]');
+  function animate(el){
+    var target = parseFloat(el.getAttribute('data-target'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    if(reduce){ el.textContent = target.toLocaleString() + suffix; return; }
+    var start = null, dur = 1600;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start)/dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(eased * target).toLocaleString() + suffix;
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString() + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ animate(e.target); cio.unobserve(e.target); }
+      });
+    }, {threshold:0.5});
+    counters.forEach(function(c){ cio.observe(c); });
+  } else {
+    counters.forEach(animate);
+  }
+
+  // Appointment form
+  var form = document.getElementById('apptForm');
+  var success = document.getElementById('formSuccess');
+  var dateInput = document.getElementById('date');
+  if(dateInput){
+    var today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  }
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if(!form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+    form.style.display = 'none';
+    success.classList.add('show');
+    success.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'center'});
+  });
+})();
+</script>
+</body>
+</html>

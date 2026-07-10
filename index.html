@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ============================ SEO ============================ -->
+<title>Mustaisim Memon — Premium Website Designer &amp; AI Web Developer</title>
+<meta name="description" content="Mustaisim Memon is a Premium Website Designer &amp; AI Web Developer in Pakistan, building modern, responsive, SEO-friendly, high-converting websites for businesses, startups, and entrepreneurs worldwide." />
+<meta name="author" content="Mustaisim Memon" />
+<meta name="theme-color" content="#0A0A0B" />
+<link rel="canonical" href="https://yourdomain.com/" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-9 -5 141 78' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232F6BFF'/%3E%3Cstop offset='1' stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 64 L0 6 L28 40 L56 6 L56 64' stroke='url(%23g)' stroke-width='13'/%3E%3Cpath d='M66 64 L66 6 L94 40 L122 6 L122 64' stroke='%23E9EEFB' stroke-width='13'/%3E%3C/svg%3E" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Mustaisim Memon — Premium Website Designer &amp; AI Web Developer" />
+<meta property="og:description" content="Modern, responsive, SEO-friendly, high-converting websites for businesses, startups, and entrepreneurs. Premium design meets AI-powered development." />
+<meta property="og:url" content="https://yourdomain.com/" />
+<meta property="og:image" content="https://yourdomain.com/assets/images/founder-portrait-1122.jpg" />
+<meta property="og:site_name" content="Mustaisim Memon" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Mustaisim Memon — Premium Website Designer &amp; AI Web Developer" />
+<meta name="twitter:description" content="Modern, responsive, SEO-friendly, high-converting websites for businesses, startups, and entrepreneurs." />
+<meta name="twitter:image" content="https://yourdomain.com/assets/images/founder-portrait-1122.jpg" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- EmailJS SDK — powers the contact form (no backend needed) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- JSON-LD Schema: Person + ProfessionalService -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Mustaisim Memon",
+      "jobTitle": "Premium Website Designer & AI Web Developer",
+      "url": "https://yourdomain.com/",
+      "email": "mustaisim.ecommerce@gmail.com",
+      "address": { "@type": "PostalAddress", "addressCountry": "Pakistan" },
+      "sameAs": [
+        "https://linkedin.com/in/your-handle",
+        "https://github.com/your-handle",
+        "https://upwork.com/freelancers/your-handle"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "name": "Mustaisim Memon — Website Design & AI Web Development",
+      "description": "Premium website design and AI-powered web development for businesses, startups, and entrepreneurs worldwide.",
+      "url": "https://yourdomain.com/",
+      "email": "mustaisim.ecommerce@gmail.com",
+      "telephone": "+92-305-3443116",
+      "areaServed": "Worldwide",
+      "provider": { "@type": "Person", "name": "Mustaisim Memon" }
+    }
+  ]
+}
+</script>
+
+<style>
+/* =====================================================================
+   DESIGN SYSTEM  —  edit tokens here to restyle the entire site
+   ===================================================================== */
+:root{
+  /* Colors */
+  --bg:          #0A0A0B;
+  --bg-2:        #0E0E11;
+  --bg-elev:     #131318;
+  --navy:        #0B1220;
+  --text:        #F4F5F7;
+  --text-soft:   #A7ADBB;
+  --text-dim:    #6B7180;
+  --border:      rgba(255,255,255,0.08);
+  --border-2:    rgba(255,255,255,0.14);
+  --accent:      #6D5EF6;
+  --accent-2:    #22D3EE;
+  --grad:        linear-gradient(135deg,#6D5EF6 0%,#22D3EE 100%);
+  --grad-soft:   linear-gradient(135deg,rgba(109,94,246,.16),rgba(34,211,238,.10));
+
+  /* Type */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body:    "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Radii + shadow */
+  --r-sm: 12px;
+  --r:    18px;
+  --r-lg: 26px;
+  --shadow:    0 20px 50px -20px rgba(0,0,0,.7);
+  --shadow-lg: 0 40px 90px -30px rgba(0,0,0,.85);
+  --glow:      0 0 0 1px rgba(109,94,246,.35), 0 20px 60px -15px rgba(109,94,246,.45);
+
+  /* Layout */
+  --maxw: 1200px;
+  --nav-h: 72px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 12px);}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:var(--font-body); font-size:16px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body::before{ /* subtle top ambient glow */
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+  background:
+    radial-gradient(60% 40% at 50% -8%, rgba(109,94,246,.18), transparent 70%),
+    radial-gradient(40% 30% at 85% 10%, rgba(34,211,238,.10), transparent 70%);
+}
+h1,h2,h3,h4{font-family:var(--font-display); font-weight:600; line-height:1.08; letter-spacing:-0.02em; margin:0;}
+p{margin:0}
+a{color:inherit; text-decoration:none}
+img{max-width:100%; display:block}
+ul{margin:0; padding:0; list-style:none}
+:focus-visible{outline:2px solid var(--accent-2); outline-offset:3px; border-radius:6px;}
+
+/* Layout helpers */
+.wrap{width:min(100% - 40px, var(--maxw)); margin-inline:auto; position:relative; z-index:1;}
+.section{padding:clamp(64px,9vw,120px) 0; position:relative; z-index:1;}
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px; font-family:var(--font-display);
+  font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent-2);
+  padding:7px 14px; border:1px solid var(--border-2); border-radius:100px;
+  background:rgba(255,255,255,.03); margin-bottom:22px;
+}
+.eyebrow::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--grad);}
+.section-head{max-width:680px; margin-bottom:52px;}
+.section-head.center{margin-inline:auto; text-align:center;}
+.section-head h2{font-size:clamp(30px,4.4vw,46px);}
+.section-head p{color:var(--text-soft); font-size:18px; margin-top:16px;}
+.grad-text{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+
+/* Buttons */
+.btn{
+  --pad:14px 26px;
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  font-family:var(--font-display); font-weight:500; font-size:15px; padding:var(--pad);
+  border-radius:100px; border:1px solid transparent; cursor:pointer; white-space:nowrap;
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease;
+}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--grad); color:#08080B; box-shadow:0 10px 30px -10px rgba(109,94,246,.6);}
+.btn-primary:hover{transform:translateY(-2px); box-shadow:0 18px 44px -12px rgba(109,94,246,.75);}
+.btn-secondary{background:rgba(255,255,255,.04); color:var(--text); border-color:var(--border-2); backdrop-filter:blur(8px);}
+.btn-secondary:hover{background:rgba(255,255,255,.09); transform:translateY(-2px);}
+.btn-ghost{background:transparent; color:var(--text-soft);}
+.btn-ghost:hover{color:var(--text)}
+.btn svg{width:17px;height:17px}
+
+/* Card base */
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
+  border:1px solid var(--border); border-radius:var(--r-lg); padding:28px;
+  position:relative; overflow:hidden; transition:transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+.card:hover{transform:translateY(-6px); border-color:var(--border-2); box-shadow:var(--shadow);}
+
+/* =====================================================================
+   NAVBAR
+   ===================================================================== */
+header.nav{
+  position:fixed; inset:0 0 auto 0; height:var(--nav-h); z-index:50;
+  display:flex; align-items:center;
+  background:rgba(10,10,11,.55); backdrop-filter:blur(16px) saturate(140%);
+  border-bottom:1px solid transparent; transition:border-color .3s, background .3s;
+}
+header.nav.scrolled{border-bottom-color:var(--border); background:rgba(10,10,11,.8);}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; width:100%;}
+.logo{display:flex; align-items:center; gap:12px; font-family:var(--font-display); letter-spacing:-.02em;}
+.brand-logo{height:34px; width:auto; display:block; flex:0 0 auto;}
+.logo-text{display:flex; flex-direction:column; line-height:1.05;}
+.logo-name{font-weight:700; font-size:18.5px; color:var(--text);}
+.logo-sub{font-size:9px; letter-spacing:.15em; text-transform:uppercase; color:var(--text-dim); margin-top:3px; font-weight:500; white-space:nowrap;}
+@media (max-width:520px){ .logo-sub{display:none;} .brand-logo{height:30px;} .logo-name{font-size:16.5px;} }
+.nav-links{display:flex; align-items:center; gap:4px;}
+.nav-links a{padding:9px 14px; font-size:14.5px; color:var(--text-soft); border-radius:100px; transition:color .2s, background .2s;}
+.nav-links a:hover{color:var(--text); background:rgba(255,255,255,.05);}
+.nav-cta{display:flex; align-items:center; gap:10px;}
+.nav-toggle{display:none; background:none; border:1px solid var(--border-2); border-radius:10px; width:42px;height:42px; cursor:pointer; color:var(--text);}
+.nav-toggle svg{width:20px;height:20px; margin:auto;}
+
+/* Mobile menu */
+.mobile-menu{
+  position:fixed; inset:var(--nav-h) 0 auto 0; z-index:49;
+  background:rgba(12,12,15,.97); backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border); padding:16px 20px 26px;
+  transform:translateY(-120%); transition:transform .4s cubic-bezier(.4,0,.2,1); visibility:hidden;
+}
+.mobile-menu.open{transform:translateY(0); visibility:visible;}
+.mobile-menu a{display:block; padding:14px 8px; font-family:var(--font-display); font-size:17px; border-bottom:1px solid var(--border); color:var(--text-soft);}
+.mobile-menu a:hover{color:var(--text)}
+.mobile-menu .btn{width:100%; margin-top:18px;}
+
+/* =====================================================================
+   HERO
+   ===================================================================== */
+.hero{padding-top:calc(var(--nav-h) + clamp(48px,8vw,96px)); padding-bottom:clamp(56px,8vw,96px); overflow:hidden;}
+.hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center;}
+.hero h1{font-size:clamp(38px,6vw,68px); font-weight:700;}
+.hero .lead{color:var(--text-soft); font-size:clamp(17px,2.2vw,20px); margin-top:24px; max-width:56ch;}
+.hero .support{color:var(--text-dim); margin-top:14px; max-width:52ch;}
+.hero-cta{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px;}
+.trust{display:flex; flex-wrap:wrap; gap:10px; margin-top:38px;}
+.trust .chip{
+  display:inline-flex; align-items:center; gap:9px; font-size:13.5px; color:var(--text-soft);
+  padding:9px 15px; border:1px solid var(--border); border-radius:100px; background:rgba(255,255,255,.025);
+}
+.trust .chip svg{width:15px;height:15px; color:var(--accent-2);}
+
+/* Portrait — founder image, blended into the theme with a soft blue glow */
+.portrait-wrap{position:relative; width:100%; max-width:460px; margin-inline:auto;}
+
+/* Ambient blue / violet glow sitting behind the portrait */
+.portrait-glow{
+  position:absolute; z-index:0; inset:1% -12% 0 -12%; pointer-events:none;
+  background:
+    radial-gradient(44% 40% at 60% 32%, rgba(34,211,238,.30), transparent 72%),
+    radial-gradient(62% 54% at 40% 60%, rgba(109,94,246,.32), transparent 74%);
+  filter:blur(36px); opacity:.85;
+}
+
+/* The figure floats gently; the bottom edge feathers into the page (no hard border) */
+.portrait-figure{
+  position:relative; z-index:1; margin:0; border-radius:22px 22px 18px 18px;
+  will-change:transform; animation:portraitFloat 7.5s ease-in-out infinite;
+}
+.portrait-figure img{
+  width:100%; height:auto; display:block; border-radius:inherit;
+  -webkit-mask-image:linear-gradient(to bottom,#000 82%,transparent 99.5%);
+          mask-image:linear-gradient(to bottom,#000 82%,transparent 99.5%);
+  filter:drop-shadow(0 34px 56px rgba(0,0,0,.55));
+}
+/* whisper-soft top highlight so it reads as a crafted frame, not a hard box */
+.portrait-figure::after{
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),transparent 20%);
+  -webkit-mask-image:linear-gradient(to bottom,#000 82%,transparent 99.5%);
+          mask-image:linear-gradient(to bottom,#000 82%,transparent 99.5%);
+}
+@keyframes portraitFloat{0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)}}
+
+.portrait-badge{
+  position:absolute; left:-14px; bottom:13%; z-index:3;
+  background:rgba(14,14,18,.82); backdrop-filter:blur(10px); border:1px solid var(--border-2);
+  border-radius:16px; padding:13px 17px; display:flex; align-items:center; gap:12px; box-shadow:var(--shadow);
+}
+.portrait-badge .dot{width:10px;height:10px;border-radius:50%; background:#34d399; box-shadow:0 0 0 4px rgba(52,211,153,.18);}
+.portrait-badge small{display:block; color:var(--text-dim); font-size:11.5px; letter-spacing:.04em; text-transform:uppercase;}
+.portrait-badge strong{font-family:var(--font-display); font-size:14.5px; font-weight:500;}
+
+/* About section photo — lighter, framed treatment so the hero stays the hero */
+.about-photo{
+  position:relative; max-width:380px; border-radius:var(--r-lg); overflow:hidden;
+  border:1px solid var(--border-2); box-shadow:var(--shadow-lg);
+}
+.about-photo img{width:100%; height:auto; display:block; aspect-ratio:4/5; object-fit:cover; object-position:50% 20%;}
+.about-photo::after{content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,transparent 58%,rgba(8,8,11,.5));}
+
+/* =====================================================================
+   MARQUEE / TRUST STRIP
+   ===================================================================== */
+.strip{border-block:1px solid var(--border); padding:26px 0; background:rgba(255,255,255,.012);}
+.strip-inner{display:flex; align-items:center; justify-content:center; gap:clamp(24px,5vw,64px); flex-wrap:wrap;}
+.strip-inner span{font-family:var(--font-display); font-size:clamp(15px,2vw,19px); color:var(--text-dim); font-weight:500; opacity:.85; transition:color .3s;}
+.strip-inner span:hover{color:var(--text-soft)}
+
+/* =====================================================================
+   SERVICES / WHY GRIDS
+   ===================================================================== */
+.grid{display:grid; gap:20px;}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.svc-icon{
+  width:50px;height:50px;border-radius:14px; display:grid; place-items:center; margin-bottom:20px;
+  background:var(--grad-soft); border:1px solid var(--border-2); color:var(--accent-2);
+}
+.svc-icon svg{width:24px;height:24px}
+.card h3{font-size:19px; margin-bottom:10px;}
+.card p{color:var(--text-soft); font-size:14.5px;}
+.card .outcome{margin-top:14px; display:inline-flex; align-items:center; gap:7px; font-size:12.5px; color:var(--accent-2); font-family:var(--font-display); letter-spacing:.02em;}
+.card .outcome svg{width:14px;height:14px}
+.card .corner{position:absolute; top:0; right:0; width:120px;height:120px; background:var(--grad-soft); filter:blur(30px); opacity:0; transition:opacity .35s;}
+.card:hover .corner{opacity:1}
+
+.why-item{display:flex; gap:14px; align-items:flex-start; padding:20px; border:1px solid var(--border); border-radius:var(--r); background:rgba(255,255,255,.02); transition:border-color .3s, transform .3s;}
+.why-item:hover{border-color:var(--border-2); transform:translateY(-3px);}
+.why-item .tick{flex:0 0 auto; width:34px;height:34px;border-radius:10px; background:var(--grad-soft); border:1px solid var(--border-2); display:grid; place-items:center; color:var(--accent-2);}
+.why-item .tick svg{width:17px;height:17px}
+.why-item h4{font-size:15.5px; margin-bottom:4px;}
+.why-item p{color:var(--text-dim); font-size:13.5px;}
+
+/* Industries pills */
+.pill-grid{display:flex; flex-wrap:wrap; gap:12px; justify-content:center;}
+.pill{display:inline-flex; align-items:center; gap:9px; font-family:var(--font-display); font-size:14.5px; color:var(--text-soft); padding:12px 20px; border:1px solid var(--border); border-radius:100px; background:rgba(255,255,255,.025); transition:transform .3s, border-color .3s, background .3s, color .3s;}
+.pill svg{width:15px; height:15px; color:var(--accent-2); flex:0 0 auto;}
+.pill:hover{color:var(--text); border-color:var(--accent); background:var(--grad-soft); transform:translateY(-3px);}
+
+/* Technology chips */
+.tech-grid{display:flex; flex-wrap:wrap; gap:12px; justify-content:center;}
+.tech-chip{display:inline-flex; align-items:center; gap:10px; font-family:var(--font-display); font-size:15px; color:var(--text); padding:13px 22px; border:1px solid var(--border); border-radius:14px; background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015)); transition:transform .3s, border-color .3s, box-shadow .3s;}
+.tech-chip .dot{width:8px;height:8px;border-radius:50%; background:var(--grad); box-shadow:0 0 10px rgba(109,94,246,.7); flex:0 0 auto;}
+.tech-chip:hover{border-color:var(--border-2); transform:translateY(-3px); box-shadow:var(--shadow);}
+
+/* Contact info as links */
+.contact-info a.info-item{text-decoration:none;}
+.contact-info a.info-item:hover strong{color:var(--accent-2);}
+
+/* =====================================================================
+   PORTFOLIO
+   ===================================================================== */
+.filters{display:flex; flex-wrap:wrap; gap:9px; margin-bottom:34px;}
+.filter{
+  font-family:var(--font-display); font-size:13.5px; color:var(--text-soft); cursor:pointer;
+  padding:9px 16px; border:1px solid var(--border); border-radius:100px; background:transparent; transition:all .25s;
+}
+.filter:hover{color:var(--text); border-color:var(--border-2);}
+.filter.active{color:#08080B; background:var(--grad); border-color:transparent;}
+.portfolio-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+.proj{
+  border:1px solid var(--border); border-radius:var(--r-lg); overflow:hidden; background:var(--bg-elev);
+  transition:transform .4s ease, border-color .4s ease, box-shadow .4s ease;
+}
+.proj{position:relative;}
+.proj:hover{transform:translateY(-7px); border-color:var(--border-2); box-shadow:var(--shadow-lg);}
+/* The preview thumbnail is a link that opens the live demo in a new tab */
+a.proj-thumb{text-decoration:none; color:inherit; cursor:pointer;}
+a.proj-thumb:focus-visible{outline:2px solid var(--accent-2); outline-offset:-3px;}
+.proj-thumb{aspect-ratio:16/11; position:relative; overflow:hidden; display:grid; place-items:center;}
+.proj-shot{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; transition:transform .6s cubic-bezier(.2,.7,.2,1);}
+.proj:hover .proj-shot{transform:scale(1.06);}
+.proj-thumb .proj-type,.proj-thumb .label,.proj-thumb .proj-live{z-index:3;}
+.proj-thumb .label{position:absolute; top:14px; left:14px; z-index:2; font-family:var(--font-display); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; padding:6px 12px; border-radius:100px; background:rgba(8,8,11,.6); backdrop-filter:blur(6px); border:1px solid var(--border-2); color:var(--text);}
+.proj-thumb .mock{font-family:var(--font-display); font-weight:600; font-size:26px; color:rgba(255,255,255,.92); text-shadow:0 2px 20px rgba(0,0,0,.35); z-index:1; padding:0 16px; text-align:center;}
+.proj-body{padding:22px;}
+.proj-body h3{font-size:18px; margin-bottom:8px;}
+.proj-body p{color:var(--text-soft); font-size:14px; min-height:42px;}
+.tech{display:flex; flex-wrap:wrap; gap:7px; margin:16px 0 18px;}
+.tech span{font-size:11.5px; color:var(--text-dim); padding:5px 10px; border:1px solid var(--border); border-radius:8px; background:rgba(255,255,255,.02);}
+.proj-actions{display:flex; gap:10px;}
+.proj-actions .btn{--pad:11px 18px; font-size:13.5px; flex:1;}
+
+/* Project type badge (Concept / Demo) */
+.proj-type{
+  position:absolute; top:14px; right:14px; z-index:2;
+  font-family:var(--font-display); font-size:11px; letter-spacing:.05em; text-transform:uppercase;
+  padding:5px 11px; border-radius:100px; color:#08080B; font-weight:600;
+  background:rgba(255,255,255,.92); box-shadow:0 6px 18px -8px rgba(0,0,0,.6);
+}
+.proj-type.is-demo{background:var(--grad);}
+
+/* Live demo badge on card */
+.proj-live{
+  position:absolute; bottom:14px; left:14px; z-index:2; display:inline-flex; align-items:center; gap:7px;
+  font-family:var(--font-display); font-size:11.5px; letter-spacing:.05em; font-weight:600; color:#08080B;
+  padding:6px 12px; border-radius:100px; background:rgba(255,255,255,.94); box-shadow:0 6px 18px -8px rgba(0,0,0,.6);
+}
+.proj-live .lv-dot{width:8px;height:8px;border-radius:50%; background:#16a34a; box-shadow:0 0 0 3px rgba(22,163,74,.25); animation:lvPulse 2s ease-in-out infinite;}
+@keyframes lvPulse{0%,100%{opacity:1}50%{opacity:.5}}
+
+/* =====================================================================
+   PROCESS TIMELINE
+   ===================================================================== */
+.timeline{position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+.step{position:relative; padding:26px 22px; border:1px solid var(--border); border-radius:var(--r-lg); background:rgba(255,255,255,.02); transition:border-color .3s, transform .3s;}
+.step:hover{border-color:var(--border-2); transform:translateY(-4px);}
+.step .num{font-family:var(--font-display); font-weight:700; font-size:15px; width:44px;height:44px; border-radius:12px; display:grid; place-items:center; background:var(--grad-soft); border:1px solid var(--border-2); color:var(--accent-2); margin-bottom:18px;}
+.step h4{font-size:17px; margin-bottom:8px;}
+.step p{color:var(--text-dim); font-size:13.5px;}
+
+/* =====================================================================
+   TESTIMONIALS
+   ===================================================================== */
+.testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+.testi{display:flex; flex-direction:column;}
+.stars{display:flex; gap:3px; margin-bottom:16px; color:#FBBF24;}
+.stars svg{width:16px;height:16px}
+.testi .quote{color:var(--text); font-size:15px; line-height:1.7; flex:1;}
+.testi .who{display:flex; align-items:center; gap:13px; margin-top:22px; padding-top:20px; border-top:1px solid var(--border);}
+.avatar{width:46px;height:46px;border-radius:50%; background:var(--grad); display:grid; place-items:center; font-family:var(--font-display); font-weight:600; color:#08080B; flex:0 0 auto;}
+.who strong{display:block; font-family:var(--font-display); font-size:14.5px; font-weight:500;}
+.who small{color:var(--text-dim); font-size:12.5px;}
+.placeholder-note{margin-top:26px; text-align:center; font-size:13px; color:var(--text-dim);}
+
+/* =====================================================================
+   FAQ
+   ===================================================================== */
+.faq-list{max-width:820px; margin-inline:auto;}
+.faq-item{border:1px solid var(--border); border-radius:var(--r); margin-bottom:12px; background:rgba(255,255,255,.02); overflow:hidden;}
+.faq-q{width:100%; text-align:left; background:none; border:none; cursor:pointer; color:var(--text); padding:20px 22px; font-family:var(--font-display); font-size:16.5px; font-weight:500; display:flex; align-items:center; justify-content:space-between; gap:16px;}
+.faq-q .ico{flex:0 0 auto; width:26px;height:26px; border-radius:8px; border:1px solid var(--border-2); display:grid; place-items:center; transition:transform .3s, background .3s; color:var(--accent-2);}
+.faq-item.open .faq-q .ico{transform:rotate(45deg); background:var(--grad-soft);}
+.faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease;}
+.faq-a p{padding:0 22px 22px; color:var(--text-soft); font-size:14.5px;}
+
+/* =====================================================================
+   FINAL CTA
+   ===================================================================== */
+.cta-band{
+  position:relative; border:1px solid var(--border-2); border-radius:var(--r-lg); overflow:hidden;
+  padding:clamp(44px,7vw,80px) clamp(24px,5vw,64px); text-align:center;
+  background:
+    radial-gradient(90% 120% at 50% 0%, rgba(109,94,246,.28), transparent 60%),
+    radial-gradient(80% 120% at 50% 120%, rgba(34,211,238,.20), transparent 55%),
+    linear-gradient(160deg,#14141b,#0b0b10);
+}
+.cta-band h2{font-size:clamp(30px,4.6vw,50px); max-width:16ch; margin:0 auto 18px;}
+.cta-band p{color:var(--text-soft); font-size:18px; max-width:52ch; margin:0 auto 32px;}
+
+/* =====================================================================
+   CONTACT
+   ===================================================================== */
+.contact-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:44px; align-items:start;}
+.contact-info .info-item{display:flex; gap:15px; align-items:flex-start; padding:18px 0; border-bottom:1px solid var(--border);}
+.contact-info .info-item:last-child{border-bottom:none;}
+.contact-info .ico{flex:0 0 auto; width:44px;height:44px; border-radius:12px; background:var(--grad-soft); border:1px solid var(--border-2); display:grid; place-items:center; color:var(--accent-2);}
+.contact-info .ico svg{width:20px;height:20px}
+.contact-info small{color:var(--text-dim); font-size:12px; letter-spacing:.05em; text-transform:uppercase; display:block; margin-bottom:3px;}
+.contact-info strong{font-family:var(--font-display); font-weight:500; font-size:15.5px;}
+.socials{display:flex; gap:11px; margin-top:26px;}
+.socials a{width:44px;height:44px;border-radius:12px; border:1px solid var(--border-2); display:grid; place-items:center; color:var(--text-soft); background:rgba(255,255,255,.02); transition:all .25s;}
+.socials a:hover{color:var(--text); border-color:var(--accent); transform:translateY(-3px); background:var(--grad-soft);}
+.socials svg{width:19px;height:19px}
+
+form.contact{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015)); border:1px solid var(--border); border-radius:var(--r-lg); padding:30px;}
+.field{margin-bottom:18px;}
+.field label{display:block; font-size:13.5px; color:var(--text-soft); margin-bottom:8px; font-family:var(--font-display);}
+.field input,.field select,.field textarea{
+  width:100%; background:rgba(0,0,0,.25); border:1px solid var(--border); border-radius:12px;
+  padding:13px 15px; color:var(--text); font-family:var(--font-body); font-size:14.5px; transition:border-color .25s, box-shadow .25s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(109,94,246,.18);}
+.field textarea{resize:vertical; min-height:130px;}
+.field .err{color:#f87171; font-size:12.5px; margin-top:6px; display:none;}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#f87171;}
+.field.invalid .err{display:block;}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+form.contact .btn{width:100%; margin-top:6px;}
+.form-success{display:none; text-align:center; padding:26px 10px;}
+.form-success.show{display:block;}
+.form-error{display:none; margin-top:14px; color:#fca5a5; background:rgba(248,113,113,.08); border:1px solid rgba(248,113,113,.32); padding:12px 15px; border-radius:12px; font-size:13.5px; line-height:1.5;}
+.form-error.show{display:block;}
+#submitBtn.loading{opacity:.75; cursor:progress;}
+.form-success .check{width:64px;height:64px;border-radius:50%; background:var(--grad-soft); border:1px solid var(--border-2); display:grid; place-items:center; margin:0 auto 18px; color:var(--accent-2);}
+.form-success .check svg{width:30px;height:30px}
+.form-success h3{font-size:22px; margin-bottom:10px;}
+.form-success p{color:var(--text-soft);}
+
+/* =====================================================================
+   FOOTER
+   ===================================================================== */
+footer.site{border-top:1px solid var(--border); padding:60px 0 30px; margin-top:20px; position:relative; z-index:1;}
+.foot-grid{display:grid; grid-template-columns:2fr 1fr 1fr 1.2fr; gap:36px; margin-bottom:44px;}
+.foot-grid h5{font-family:var(--font-display); font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-dim); margin-bottom:18px;}
+.foot-grid a{display:block; color:var(--text-soft); font-size:14px; padding:6px 0; transition:color .2s;}
+.foot-grid a:hover{color:var(--text)}
+.foot-about p{color:var(--text-soft); font-size:14px; max-width:34ch; margin-top:16px;}
+.foot-bottom{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-top:26px; border-top:1px solid var(--border); color:var(--text-dim); font-size:13px;}
+
+/* Back to top */
+.to-top{
+  position:fixed; right:24px; bottom:24px; z-index:40; width:48px;height:48px; border-radius:14px;
+  background:rgba(14,14,18,.8); backdrop-filter:blur(10px); border:1px solid var(--border-2); color:var(--text);
+  cursor:pointer; display:grid; place-items:center; opacity:0; transform:translateY(16px); pointer-events:none;
+  transition:opacity .3s, transform .3s, background .3s;
+}
+.to-top.show{opacity:1; transform:translateY(0); pointer-events:auto;}
+.to-top:hover{background:var(--grad-soft); border-color:var(--accent);}
+.to-top svg{width:20px;height:20px}
+
+/* =====================================================================
+   REVEAL ON SCROLL
+   ===================================================================== */
+.reveal{opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);}
+.reveal.in{opacity:1; transform:none;}
+.reveal.d1{transition-delay:.08s} .reveal.d2{transition-delay:.16s} .reveal.d3{transition-delay:.24s} .reveal.d4{transition-delay:.32s}
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media (max-width:1024px){
+  .grid-4{grid-template-columns:repeat(2,1fr);}
+  .portfolio-grid,.testi-grid{grid-template-columns:repeat(2,1fr);}
+  .timeline{grid-template-columns:repeat(2,1fr);}
+  .foot-grid{grid-template-columns:1fr 1fr; gap:30px;}
+}
+@media (max-width:860px){
+  .nav-links{display:none;}
+  .nav-cta .btn-secondary{display:none;}
+  .nav-toggle{display:grid;}
+  .hero-grid{grid-template-columns:1fr; gap:44px;}
+  .portrait-wrap{max-width:420px; margin-inline:auto; width:100%;}
+  .contact-grid{grid-template-columns:1fr; gap:30px;}
+}
+@media (max-width:620px){
+  .grid-4,.grid-3,.grid-2,.portfolio-grid,.testi-grid,.timeline,.foot-grid,.form-row{grid-template-columns:1fr;}
+  .section-head p{font-size:16px;}
+  .hero-cta .btn{flex:1;}
+  .portrait-badge{left:6px; bottom:11%; padding:11px 15px;}
+  .about-photo{margin-inline:auto;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
+  .reveal{opacity:1; transform:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ NAVBAR ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#home" class="logo" aria-label="Mustaisim Memon — home">
+      <svg class="brand-logo" viewBox="-9 -5 141 78" fill="none" role="img" aria-label="Mustaisim Memon MM monogram">
+        <defs><linearGradient id="mmA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F6BFF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+        <path d="M0 64 L0 6 L28 40 L56 6 L56 64" stroke="url(#mmA)" stroke-width="13" stroke-linejoin="miter"/>
+        <path d="M66 64 L66 6 L94 40 L122 6 L122 64" stroke="#E9EEFB" stroke-width="13" stroke-linejoin="miter"/>
+      </svg>
+      <span class="logo-text">
+        <span class="logo-name">Mustaisim Memon</span>
+        <span class="logo-sub">Premium Website Designer &amp; AI Web Developer</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#portfolio">Work</a>
+      <a href="#tech">Tech</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#industries">Industries</a>
+  <a href="#portfolio">Work</a>
+  <a href="#tech">Tech</a>
+  <a href="#process">Process</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact" class="btn btn-primary">Start Your Project</a>
+</div>
+
+<main id="home">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero section" aria-label="Introduction">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Premium Website Designer &amp; AI Web Developer</span>
+      <h1 class="reveal d1">Premium websites that <span class="grad-text">win trust</span> and grow your business.</h1>
+      <p class="lead reveal d2">I'm Mustaisim Memon — I design and build modern, responsive, SEO-friendly, high-converting websites for businesses, startups, and entrepreneurs, blending strategic design with AI-powered development.</p>
+      <p class="support reveal d2">From first impression to final launch, every detail is crafted to make your business look established, credible, and ready to win premium clients.</p>
+      <div class="hero-cta reveal d3">
+        <a href="#portfolio" class="btn btn-primary">View Portfolio
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary">Let's Build Your Website</a>
+      </div>
+      <div class="trust reveal d4">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg> Responsive Websites</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg> SEO Optimized</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg> Fast Performance</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.5"/></svg> AI-Powered Workflow</span>
+      </div>
+    </div>
+    <div class="portrait-wrap reveal d2">
+      <span class="portrait-glow" aria-hidden="true"></span>
+      <figure class="portrait-figure">
+        <picture>
+          <source type="image/webp"
+            srcset="assets/images/founder-portrait-400.webp 400w, assets/images/founder-portrait-600.webp 600w, assets/images/founder-portrait-800.webp 800w, assets/images/founder-portrait-1122.webp 1122w"
+            sizes="(max-width:620px) 84vw, (max-width:860px) 400px, (max-width:1024px) 40vw, 440px" />
+          <img
+            src="assets/images/founder-portrait-800.jpg"
+            srcset="assets/images/founder-portrait-400.jpg 400w, assets/images/founder-portrait-600.jpg 600w, assets/images/founder-portrait-800.jpg 800w, assets/images/founder-portrait-1122.jpg 1122w"
+            sizes="(max-width:620px) 84vw, (max-width:860px) 400px, (max-width:1024px) 40vw, 440px"
+            width="1122" height="1402" fetchpriority="high" decoding="async"
+            alt="Mustaisim Memon, Premium Website Designer and AI Web Developer, wearing a light grey blazer over a dark shirt against a dark blue studio backdrop" />
+        </picture>
+      </figure>
+      <div class="portrait-badge">
+        <span class="dot"></span>
+        <div><small>Availability</small><strong>Open for new projects</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TRUST STRIP ============================ -->
+<div class="strip">
+  <div class="wrap strip-inner reveal">
+    <span>Modern Design</span>
+    <span>Conversion-Focused</span>
+    <span>AI-Powered</span>
+    <span>Mobile-First</span>
+    <span>SEO Ready</span>
+    <span>Lightning Fast</span>
+  </div>
+</div>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="section" id="about" aria-label="About">
+  <div class="wrap">
+    <div class="contact-grid" style="align-items:center; gap:52px;">
+      <div class="reveal">
+        <figure class="about-photo">
+          <img
+            src="assets/images/founder-portrait-600.jpg"
+            srcset="assets/images/founder-portrait-400.jpg 400w, assets/images/founder-portrait-600.jpg 600w, assets/images/founder-portrait-800.jpg 800w"
+            sizes="(max-width:620px) 84vw, 380px"
+            width="1122" height="1402" loading="lazy" decoding="async"
+            alt="Portrait of Mustaisim Memon, Premium Website Designer and AI Web Developer" />
+        </figure>
+      </div>
+      <div class="reveal d1">
+        <span class="eyebrow">About Me</span>
+        <h2 style="font-size:clamp(28px,4vw,42px);">Premium, results-driven websites — designed to grow your business.</h2>
+        <p style="color:var(--text-soft); font-size:17px; margin-top:20px;">I'm Mustaisim Memon, a Premium Website Designer &amp; AI Web Developer focused on designing modern, responsive, fast, SEO-friendly, and high-converting websites for businesses, startups, and entrepreneurs.</p>
+        <p style="color:var(--text-soft); font-size:16px; margin-top:16px;">I combine strategic design thinking with AI-powered development workflows to deliver professional websites that help businesses establish a strong online presence and achieve measurable growth.</p>
+        <div class="grid grid-2" style="margin-top:26px; gap:14px;">
+          <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><h4>Design-Led</h4><p>Every pixel serves clarity, trust, and conversion.</p></div></div>
+          <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><h4>Business-Focused</h4><p>Websites built to grow revenue, not just look nice.</p></div></div>
+        </div>
+        <a href="#contact" class="btn btn-primary" style="margin-top:28px;">Work With Me
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SERVICES ============================ -->
+<section class="section" id="services" aria-label="Services">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Services</span>
+      <h2>Everything you need to <span class="grad-text">launch and grow</span> online.</h2>
+      <p>Premium web solutions designed around one goal — real business outcomes.</p>
+    </div>
+    <div class="grid grid-4" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ============================ WHY WORK WITH ME ============================ -->
+<section class="section" id="why" aria-label="Why work with me" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Why Work With Me</span>
+      <h2>A premium experience, <span class="grad-text">start to finish.</span></h2>
+    </div>
+    <div class="grid grid-4" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- ============================ INDUSTRIES ============================ -->
+<section class="section" id="industries" aria-label="Industries served" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Industries</span>
+      <h2>Premium websites for <span class="grad-text">every field.</span></h2>
+      <p>Design and development tailored to the goals and customers of your specific industry.</p>
+    </div>
+    <div class="pill-grid reveal d1" id="industriesGrid"></div>
+  </div>
+</section>
+
+<!-- ============================ PORTFOLIO ============================ -->
+<section class="section" id="portfolio" aria-label="Featured demo projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Case Studies</span>
+      <h2>Premium case studies across <span class="grad-text">industries.</span></h2>
+      <p>Concept and demo projects that show how I approach real business problems — the challenge, my solution, and the outcomes each is designed to drive. Clearly labelled as concept work until real client projects replace them. Open any card for the full case study.</p>
+    </div>
+    <div class="filters reveal d1" id="filters"></div>
+    <div class="portfolio-grid" id="portfolioGrid"></div>
+  </div>
+</section>
+
+<!-- ============================ TECHNOLOGY STACK ============================ -->
+<section class="section" id="tech" aria-label="Technology stack">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Technology</span>
+      <h2>Built with a <span class="grad-text">modern, powerful stack.</span></h2>
+      <p>Industry-leading tools and AI to design, build, and ship premium websites — fast and future-proof.</p>
+    </div>
+    <div class="tech-grid reveal d1" id="techGrid"></div>
+  </div>
+</section>
+
+<!-- ============================ PROCESS ============================ -->
+<section class="section" id="process" aria-label="My process">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">My Process</span>
+      <h2>A clear path from <span class="grad-text">idea to launch.</span></h2>
+      <p>A proven, transparent workflow that keeps your project on track and stress-free.</p>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- ============================ TESTIMONIALS (HIDDEN) ============================
+     Hidden until real client reviews are available — NO fake testimonials.
+     To enable: (1) add real reviews to `data.testimonials` in the script below,
+     (2) uncomment this section, (3) add a "Reviews" link back to the nav.
+<section class="section" id="testimonials" aria-label="Testimonials">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Testimonials</span>
+      <h2>What clients <span class="grad-text">say about the work.</span></h2>
+    </div>
+    <div class="testi-grid" id="testiGrid"></div>
+  </div>
+</section>
+============================================================================= -->
+
+<!-- ============================ FAQ ============================ -->
+<section class="section" id="faq" aria-label="Frequently asked questions">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Answers to <span class="grad-text">common questions.</span></h2>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="section" aria-label="Call to action">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <span class="eyebrow" style="margin-bottom:20px;">Custom Quotes · No Fixed Packages</span>
+      <h2>Let's build a website your business deserves.</h2>
+      <p>Every project is unique, so instead of one-size-fits-all pricing I give you a personalized quote built around your goals. Tell me what you need and I'll map out the plan and price.</p>
+      <a href="#contact" class="btn btn-primary" style="--pad:16px 34px; font-size:16px;">Request Your Free Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <p style="color:var(--text-dim); font-size:13.5px; margin-top:20px; max-width:44ch;">No pressure and no obligation — just a clear plan and honest pricing for your project.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="section" id="contact" aria-label="Contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Let's talk about <span class="grad-text">your project.</span></h2>
+      <p>Tell me a little about what you need and I'll get back to you within one business day.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a class="info-item" href="mailto:mustaisim.ecommerce@gmail.com">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <div><small>Email</small><strong>mustaisim.ecommerce@gmail.com</strong></div>
+        </a>
+        <a class="info-item" href="https://wa.me/923053443116" target="_blank" rel="noopener">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15.5a6.5 6.5 0 0 1-9 6l-4.5 1 1-4.5a6.5 6.5 0 1 1 12.5-2.5Z"/></svg></span>
+          <div><small>WhatsApp</small><strong>+92 305 3443116</strong></div>
+        </a>
+        <div class="info-item">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><small>Location</small><strong>Pakistan · Working Worldwide</strong></div>
+        </div>
+        <div class="socials" aria-label="Social links">
+          <a href="#" aria-label="GitHub (add your link)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a>
+          <a href="#" aria-label="LinkedIn (add your link)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 10v6M8 7v.01M12 16v-3a2 2 0 0 1 4 0v3"/></svg></a>
+          <a href="#" aria-label="Upwork (add your link)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></a>
+        </div>
+      </div>
+
+      <div class="reveal d1">
+        <form class="contact" id="contactForm" novalidate>
+          <!-- Honeypot anti-spam field: real users never see or fill this -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="user_name" placeholder="Your name" required />
+              <span class="err">Please enter your name.</span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="user_email" placeholder="you@email.com" required />
+              <span class="err">Please enter a valid email.</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="subject">Project Type</label>
+            <select id="subject" name="project_type" required>
+              <option value="">Select a project type…</option>
+              <option>Premium Website Design</option>
+              <option>Landing Page</option>
+              <option>Business Website</option>
+              <option>E-commerce Website</option>
+              <option>Website Redesign</option>
+              <option>AI-Powered Web Solution</option>
+              <option>Other</option>
+            </select>
+            <span class="err">Please choose a project type.</span>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project, goals, and timeline…" required></textarea>
+            <span class="err">Please add a short message.</span>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Send Message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z"/></svg>
+          </button>
+          <div class="form-error" id="formError" role="alert" aria-live="assertive"></div>
+        </form>
+        <div class="form-success" id="formSuccess" role="status">
+          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>Thank you!</h3>
+          <p>Your message has been received. I'll get back to you within one business day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site" aria-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <a href="#home" class="logo" aria-label="Mustaisim Memon — home">
+          <svg class="brand-logo" viewBox="-9 -5 141 78" fill="none" role="img" aria-label="Mustaisim Memon MM monogram">
+            <defs><linearGradient id="mmB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F6BFF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+            <path d="M0 64 L0 6 L28 40 L56 6 L56 64" stroke="url(#mmB)" stroke-width="13" stroke-linejoin="miter"/>
+            <path d="M66 64 L66 6 L94 40 L122 6 L122 64" stroke="#E9EEFB" stroke-width="13" stroke-linejoin="miter"/>
+          </svg>
+          <span class="logo-text"><span class="logo-name">Mustaisim Memon</span></span>
+        </a>
+        <p>Premium website design &amp; AI-powered development for businesses that want to stand out and grow.</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <a href="#services">Website Design</a>
+        <a href="#services">E-commerce</a>
+        <a href="#services">Redesign</a>
+        <a href="#services">SEO &amp; Performance</a>
+      </div>
+      <div>
+        <h5>Get in Touch</h5>
+        <a href="mailto:mustaisim.ecommerce@gmail.com">mustaisim.ecommerce@gmail.com</a>
+        <a href="https://wa.me/923053443116" target="_blank" rel="noopener">+92 305 3443116</a>
+        <a href="#contact">Pakistan · Worldwide</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Mustaisim Memon. All rights reserved.</span>
+      <span>Designed &amp; built with care · Ready for GitHub + Vercel</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<script>
+/* =====================================================================
+   CONTENT DATA  —  add / edit projects, services, reviews, faqs here.
+   Everything below renders from this object, so growing the site is
+   as simple as adding a new entry to the relevant array.
+   ===================================================================== */
+const data = {
+  services: [
+    { icon:'layout',   title:'Premium Website Design',        desc:'A polished, high-end presence that makes your brand instantly credible and worth premium rates.' },
+    { icon:'target',   title:'High-Converting Landing Pages', desc:'Focused, persuasive pages engineered to turn visitors into leads, bookings, and sales.' },
+    { icon:'building', title:'Business Websites',             desc:'Professional sites that build authority and win the trust of serious clients.' },
+    { icon:'cart',     title:'E-commerce Websites',           desc:'Conversion-optimized stores that make buying effortless and grow your revenue.' },
+    { icon:'bag',      title:'Shopify Landing Pages',         desc:'Fast, persuasive Shopify pages built to maximize product sales and return on ad spend.' },
+    { icon:'refresh',  title:'Website Redesign',              desc:'Transform an outdated site into a modern, high-performing asset that drives growth.' },
+    { icon:'spark',    title:'AI-Powered Website Development', desc:'Modern AI workflows for faster delivery and smarter features — more value, less waiting.' },
+    { icon:'pen',      title:'UI/UX Design',                  desc:'Intuitive, beautiful interfaces that keep visitors engaged and moving toward action.' },
+    { icon:'search',   title:'Technical SEO',                 desc:'Clean, search-optimized structure that helps the right customers find you on Google.' },
+    { icon:'gauge',    title:'Website Speed Optimization',    desc:'Faster load times that lift rankings, retention, and conversions.' },
+    { icon:'shield',   title:'Website Maintenance & Support', desc:'Reliable updates, fixes, and improvements that keep your site secure and current.' },
+  ],
+  // Industries — add or edit freely; renders as frosted pills.
+  industries: [
+    'Architecture & Interior Design','Construction','Real Estate','Restaurants','Medical Clinics',
+    'Law Firms','Gyms & Fitness','Beauty & Wellness','SaaS','E-commerce','Agencies','Coaches',
+    'Consultants','Small Businesses'
+  ],
+  // Technology stack — add or edit freely; renders as frosted chips.
+  tech: [
+    'Claude AI','ChatGPT','HTML5','CSS3','JavaScript','React','Next.js','Tailwind CSS',
+    'GitHub','Vercel','Shopify','WordPress','Figma'
+  ],
+  why: [
+    { icon:'gem',    title:'Premium Design',        desc:'Refined, high-end visuals that elevate your brand.' },
+    { icon:'chat',   title:'Fast Communication',    desc:'Clear, responsive updates at every stage.' },
+    { icon:'phone',  title:'Mobile-First',          desc:'Flawless on every screen size, by default.' },
+    { icon:'search', title:'SEO-Friendly',          desc:'Built on clean, search-optimized structure.' },
+    { icon:'gauge',  title:'Performance Optimized', desc:'Fast-loading, smooth, and efficient.' },
+    { icon:'layout', title:'Clean Modern UI',       desc:'Intuitive interfaces users love to use.' },
+    { icon:'eye',    title:'Attention to Detail',   desc:'Every pixel considered and polished.' },
+    { icon:'check',  title:'Reliable Delivery',     desc:'On-time, on-brief, no surprises.' },
+  ],
+  // To add a project: copy one entry and change the fields. `industry` must
+  // match a filter label. `demo` is the live-demo URL (use '#' as placeholder).
+  // Concept & demo case studies. `industry` must match a filter label.
+  // Each opens a full case-study modal. Replace with real client work as it goes live.
+  projects: [
+    { id:'aperture', name:'Aperture Architecture', industry:'Architecture', industryFull:'Architecture & Interior Design', type:'Concept Project',
+      demo:'projects/aperture-architecture/index.html',
+      role:'Lead Website Designer & AI Web Developer',
+      timeline:'Concept build · ~1 week',
+      tagline:'Premium architecture studio website designed to showcase modern residential and commercial projects while generating consultation requests.',
+      challenge:'High-end architecture studios need to signal craft and trust within seconds, yet most of their sites feel cluttered, generic, and slow — losing premium enquiries before the work is even seen.',
+      solution:'A concise, dark, glassmorphism landing page with elegant serif typography, architectural visuals, large whitespace, and smooth motion — every section earning its place and guiding visitors toward enquiry.',
+      features:['Cinematic hero with studio stats','Glassmorphism service cards','Featured-project showcase','Fully responsive, accessible & SEO-ready'],
+      tech:['HTML5','CSS3','JavaScript','Responsive Design','SEO'],
+      outcome:'Expected: an instantly premium first impression that builds trust and converts more visitors into qualified project enquiries.',
+      c1:'#2B2822', c2:'#6E665A' },
+    { id:'saffron', name:'Saffron & Oak', industry:'Restaurant', type:'Demo Project',
+      tagline:'An elegant dining experience with frictionless online reservations.',
+      challenge:'Fine-dining venues lose covers to clunky booking flows and menus that look dated on a phone.',
+      solution:'A warm, photography-led design with a one-tap reservation flow and a mobile-first menu that makes browsing effortless and appetising.',
+      features:['One-tap reservation flow','Mobile-first digital menu','Photography-led hero storytelling','Events & private-dining enquiry'],
+      tech:['UI/UX Design','React','Headless CMS','Booking API'],
+      outcome:'Expected: more direct reservations and fewer drop-offs from mobile diners.',
+      c1:'#F59E0B', c2:'#EF4444' },
+    { id:'whitmore', name:'Whitmore Legal', industry:'Law Firm', type:'Concept Project',
+      tagline:'An authoritative, trust-first presence for a modern law firm.',
+      challenge:'Prospective clients judge a firm’s credibility in seconds, yet many legal sites feel cold, generic, and hard to navigate.',
+      solution:'A confident, structured design that foregrounds practice areas, credentials, and clear next steps — built to convert anxious visitors into booked consultations.',
+      features:['Practice-area architecture','Attorney credibility profiles','Consultation booking flow','Accessible, readable typography'],
+      tech:['UI/UX Design','Next.js','Technical SEO','Accessibility'],
+      outcome:'Expected: stronger first-impression trust and more consultation requests.',
+      c1:'#0EA5E9', c2:'#6366F1' },
+    { id:'nova', name:'Nova Health Clinic', industry:'Medical', type:'Concept Project',
+      tagline:'A calm, accessible clinic site with effortless appointment booking.',
+      challenge:'Healthcare sites must feel reassuring and be usable by everyone — including older and less tech-confident patients.',
+      solution:'A gentle, high-contrast, WCAG-minded interface with a simple appointment flow, clear service information, and calming visual pacing.',
+      features:['Accessible WCAG-minded UI','Online appointment booking','Clear service & department pages','Reassuring, calm visual tone'],
+      tech:['UI/UX Design','React','Accessibility','Responsive'],
+      outcome:'Expected: easier bookings for all patients and a more trustworthy brand.',
+      c1:'#10B981', c2:'#22D3EE' },
+    { id:'skyline', name:'Skyline Realty', industry:'Real Estate', type:'Demo Project',
+      tagline:'A premium property showcase with rich, filterable listings.',
+      challenge:'Buyers scroll past bland listing sites; agencies need to make properties feel aspirational and easy to explore.',
+      solution:'A high-end listing experience with map search, rich media property pages, and saved-favourites — designed to keep buyers engaged and enquiring.',
+      features:['Map-based property search','Rich media listing pages','Filter & saved favourites','Lead-capture enquiry forms'],
+      tech:['UI/UX Design','Next.js','Maps API','CRO'],
+      outcome:'Expected: longer sessions and more qualified buyer enquiries.',
+      c1:'#8B5CF6', c2:'#EC4899' },
+    { id:'ironforge', name:'Ironforge Gym', industry:'Gym', type:'Concept Project',
+      tagline:'A bold, high-energy fitness brand with live class schedules.',
+      challenge:'Gyms struggle to convert website visitors into trial members and to keep class information current.',
+      solution:'An energetic, motion-rich design with a dynamic class schedule, membership comparison, and a prominent free-trial call-to-action.',
+      features:['Dynamic class schedule','Membership comparison','Free-trial conversion flow','High-energy motion design'],
+      tech:['UI/UX Design','React','GSAP Motion','Responsive'],
+      outcome:'Expected: more free-trial sign-ups and fewer schedule enquiries.',
+      c1:'#F97316', c2:'#EAB308' },
+    { id:'meridian', name:'Meridian Build', industry:'Construction', type:'Concept Project',
+      tagline:'A solid, credible construction site built around project proof.',
+      challenge:'Construction firms win contracts on trust and track record, but rarely present their completed projects convincingly online.',
+      solution:'A structured, credibility-led design with detailed project case studies, capability statements, and a clear tender/quote enquiry path.',
+      features:['Project case-study showcase','Capability & services overview','Quote / tender enquiry flow','Safety & certification highlights'],
+      tech:['UI/UX Design','Webflow','CMS','Technical SEO'],
+      outcome:'Expected: stronger credibility and more qualified quote requests.',
+      c1:'#64748B', c2:'#0EA5E9' },
+    { id:'lumiere', name:'Lumière Beauty', industry:'Beauty', type:'Demo Project',
+      tagline:'A luxurious salon brand with an elegant booking flow.',
+      challenge:'Beauty and wellness brands live or die on aesthetics, yet many booking journeys feel cheap and break the premium spell.',
+      solution:'A refined, tactile design with a smooth service-and-time booking flow, treatment menus, and gift-card upsells that protect the luxury feel.',
+      features:['Elegant service booking flow','Treatment menu & pricing','Gift-card & upsell modules','Refined, tactile visual design'],
+      tech:['UI/UX Design','React','Booking API','Responsive'],
+      outcome:'Expected: more online bookings and a stronger premium perception.',
+      c1:'#EC4899', c2:'#8B5CF6' },
+    { id:'flowbase', name:'Flowbase SaaS', industry:'SaaS', type:'Concept Project',
+      tagline:'A conversion-focused SaaS marketing site with a crisp product story.',
+      challenge:'SaaS startups get one shot to explain their value; weak messaging and cluttered pages kill trial sign-ups.',
+      solution:'A sharp, benefit-led narrative with a clear feature architecture, social-proof modules, and a frictionless trial call-to-action.',
+      features:['Benefit-led messaging hierarchy','Feature & pricing architecture','Social-proof & logo modules','Frictionless trial conversion'],
+      tech:['UI/UX Design','Next.js','Framer Motion','CRO'],
+      outcome:'Expected: clearer positioning and a higher trial sign-up rate.',
+      c1:'#6366F1', c2:'#22D3EE' },
+    { id:'cartly', name:'Cartly Store', industry:'E-commerce', type:'Demo Project',
+      tagline:'A fast, modern store engineered to maximise checkout conversions.',
+      challenge:'Online stores lose revenue to slow pages, confusing navigation, and high checkout abandonment.',
+      solution:'A performance-first storefront with clean product discovery, trust signals, and a streamlined checkout tuned to reduce abandonment.',
+      features:['Fast, performance-first storefront','Streamlined product discovery','Trust signals & reviews','Optimised, low-friction checkout'],
+      tech:['UI/UX Design','Shopify','Speed Optimization','CRO'],
+      outcome:'Expected: faster load times, lower abandonment, and higher conversion.',
+      c1:'#14B8A6', c2:'#6D5EF6' },
+  ],
+  process: [
+    { title:'Discovery',   desc:'Understand your goals, audience, and what success looks like.' },
+    { title:'Research',    desc:'Analyze competitors and market to find your edge.' },
+    { title:'Strategy',    desc:'Define structure, messaging, and conversion strategy.' },
+    { title:'Design',      desc:'Craft a premium, on-brand visual experience.' },
+    { title:'Development', desc:'Build clean, fast, responsive, production-ready code.' },
+    { title:'Testing',     desc:'Test across devices, browsers, speed, and accessibility.' },
+    { title:'Launch',      desc:'Deploy smoothly and go live with confidence.' },
+    { title:'Support',     desc:'Ongoing maintenance, updates, and improvements.' },
+  ],
+  // Clearly-labeled PLACEHOLDERS — replace with real client reviews.
+  testimonials: [
+    { quote:'“Placeholder review — describe how the project transformed the client’s business and what the experience was like. Replace with a real testimonial.”', name:'Client Name', role:'Founder, Company', stars:5 },
+    { quote:'“Placeholder review — highlight communication, quality, and results. Swap this for an authentic client quote once available.”', name:'Client Name', role:'CEO, Brand', stars:5 },
+    { quote:'“Placeholder review — mention the outcome, e.g. more leads, a premium look, faster site. Replace with a genuine review.”', name:'Client Name', role:'Owner, Business', stars:5 },
+  ],
+  faqs: [
+    { q:'How long does a website take?', a:'Most projects take between 2 and 5 weeks depending on scope and page count. Landing pages are faster; larger business or e-commerce sites take a bit longer. You’ll get a clear timeline before we begin.' },
+    { q:'Do you redesign websites?', a:'Yes. Redesigns are one of my core services — I can transform an outdated or underperforming site into a modern, fast, high-converting one while keeping what already works.' },
+    { q:'Can you redesign an existing website?', a:'Absolutely. I’ll audit your current site, keep your strengths, and rebuild it with premium design, better performance, and a structure built to convert.' },
+    { q:'Will my website work on mobile?', a:'Always. Every site I build is mobile-first and fully responsive, so it looks and works beautifully on phones, tablets, and desktops.' },
+    { q:'Do you provide ongoing support?', a:'Yes — I offer maintenance and support packages for updates, fixes, and improvements after launch, so your site stays fast, secure, and current.' },
+    { q:'How much does a website cost?', a:'Pricing depends on scope, but projects typically start from a set base and scale with features. Reach out with your goals and I’ll send a clear, no-obligation quote.' },
+  ],
+};
+
+/* ---- SVG icon set ---- */
+const I = {
+  layout:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',
+  target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>',
+  building:'<rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 8h.01M15 8h.01M9 12h.01M15 12h.01M9 16h.01M15 16h.01"/>',
+  cart:'<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.5 13h11l1.5-8H6"/>',
+  refresh:'<path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5"/>',
+  spark:'<path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/><circle cx="12" cy="12" r="2.5"/>',
+  gauge:'<path d="M12 14 15 9"/><path d="M4 20a9 9 0 1 1 16 0"/><circle cx="12" cy="14" r="1.2"/>',
+  search:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/>',
+  gem:'<path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M12 3 8 9l4 12 4-12-4-6"/>',
+  chat:'<path d="M21 12a8 8 0 0 1-11.5 7.2L3 21l1.8-6.5A8 8 0 1 1 21 12Z"/>',
+  phone:'<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/>',
+  eye:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
+  check:'<path d="M20 6 9 17l-5-5"/>',
+  bag:'<path d="M6 7h12l1 13H5L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/>',
+  pen:'<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
+  shield:'<path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9.4 12l1.8 1.8 3.4-3.6"/>',
+};
+const svg = (p,sw=2) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+
+/* IntersectionObserver handle — declared early so reveals can be observed
+   from the first render onward (avoids temporal-dead-zone reference). */
+let io = null;
+
+/* ---- Render Services ---- */
+document.getElementById('servicesGrid').innerHTML = data.services.map((s,i)=>`
+  <article class="card reveal d${(i%4)}">
+    <span class="corner"></span>
+    <div class="svc-icon">${svg(I[s.icon]||I.layout)}</div>
+    <h3>${s.title}</h3>
+    <p>${s.desc}</p>
+    <span class="outcome">${svg(I.check,2.5)} Built for results</span>
+  </article>`).join('');
+
+/* ---- Render Why ---- */
+document.getElementById('whyGrid').innerHTML = data.why.map((w,i)=>`
+  <div class="why-item reveal d${(i%4)}">
+    <span class="tick">${svg(I[w.icon]||I.check)}</span>
+    <div><h4>${w.title}</h4><p>${w.desc}</p></div>
+  </div>`).join('');
+
+/* ---- Render Industries ---- */
+document.getElementById('industriesGrid').innerHTML = data.industries.map((ind,i)=>`
+  <span class="pill reveal d${(i%4)}">${svg(I.check,2.5)}${ind}</span>`).join('');
+
+/* ---- Render Technology Stack ---- */
+document.getElementById('techGrid').innerHTML = data.tech.map((t,i)=>`
+  <div class="tech-chip reveal d${(i%4)}"><span class="dot"></span>${t}</div>`).join('');
+
+/* ---- Render Portfolio + filters ---- */
+const escHtml = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* Live demo folders + card preview images (real hero shots from each project site).
+   Set once here so every card links to its demo and shows a real preview. */
+const DEMO_DIRS = { aperture:'aperture-architecture', saffron:'saffron-oak', whitmore:'whitmore-legal', nova:'nova-health', skyline:'skyline-realty', ironforge:'ironforge-gym', meridian:'meridian-build', lumiere:'lumiere-beauty', flowbase:'flowbase-saas', cartly:'cartly-store' };
+const PREVIEW_IDS = { aperture:'1487958449943-2429e8be8625', saffron:'1414235077428-338989a2e8c0', whitmore:'1589829545856-d10d557cf95f', nova:'1631217868264-e5b90bb7e133', skyline:'1512917774080-9991f1c4c750', ironforge:'1534438327276-14e5300c3a48', meridian:'1504307651254-35680f356dfd', lumiere:'1560750588-73207b1ef5b8', flowbase:'1551288049-bebda4e38f71', cartly:'1523275335684-37898b6baf30' };
+data.projects.forEach(p=>{
+  if(!p.demo && DEMO_DIRS[p.id]) p.demo = 'projects/'+DEMO_DIRS[p.id]+'/index.html';
+  if(!p.preview && PREVIEW_IDS[p.id]) p.preview = 'https://images.unsplash.com/photo-'+PREVIEW_IDS[p.id]+'?auto=format&fit=crop&q=72';
+});
+
+const industries = ['All', ...new Set(data.projects.map(p=>p.industry))];
+const filtersEl = document.getElementById('filters');
+filtersEl.innerHTML = industries.map((ind,i)=>`<button class="filter${i===0?' active':''}" data-f="${escHtml(ind)}" aria-pressed="${i===0}">${escHtml(ind)}</button>`).join('');
+const pGrid = document.getElementById('portfolioGrid');
+function renderProjects(filter='All'){
+  const list = data.projects.filter(p=>filter==='All'||p.industry===filter);
+  pGrid.innerHTML = list.map((p,i)=>{
+    const badges = `
+        ${p.preview?`<img class="proj-shot" src="${p.preview}&w=760" srcset="${p.preview}&w=500 500w, ${p.preview}&w=800 800w" sizes="(max-width:620px) 92vw, (max-width:1024px) 46vw, 380px" alt="${escHtml(p.name)} — website preview" loading="lazy" decoding="async" onerror="this.style.display='none'" />`:''}
+        <span class="proj-type${p.type==='Demo Project'?' is-demo':''}">${escHtml(p.type)}</span>
+        <span class="label">${escHtml(p.industry)}</span>
+        <span class="mock">${escHtml(p.name)}</span>
+        ${p.demo?'<span class="proj-live"><span class="lv-dot"></span>Live Demo</span>':''}`;
+    const thumbStyle = `background:linear-gradient(135deg,${p.c1},${p.c2});`;
+    const thumb = p.demo
+      ? `<a class="proj-thumb demo-link" href="${escHtml(p.demo)}" target="_blank" rel="noopener noreferrer" style="${thumbStyle}" aria-label="Open the ${escHtml(p.name)} live demo in a new tab">${badges}</a>`
+      : `<div class="proj-thumb" style="${thumbStyle}">${badges}</div>`;
+    return `
+    <article class="proj reveal d${(i%3)}">
+      ${thumb}
+      <div class="proj-body">
+        <h3>${escHtml(p.name)}</h3>
+        <p>${escHtml(p.tagline)}</p>
+        <div class="tech">${p.tech.slice(0,4).map(t=>`<span>${escHtml(t)}</span>`).join('')}</div>
+        ${p.demo?`<div class="proj-actions">
+          <a class="btn btn-secondary demo-link" href="${escHtml(p.demo)}" target="_blank" rel="noopener noreferrer">View Live Demo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+        </div>`:''}
+      </div>
+    </article>`;
+  }).join('');
+  observeReveals();
+}
+renderProjects();
+filtersEl.addEventListener('click', e=>{
+  const b = e.target.closest('.filter'); if(!b) return;
+  filtersEl.querySelectorAll('.filter').forEach(f=>{f.classList.remove('active'); f.setAttribute('aria-pressed','false');});
+  b.classList.add('active'); b.setAttribute('aria-pressed','true');
+  renderProjects(b.dataset.f);
+});
+
+/* Live-demo links open natively in a new tab (each anchor already has
+   target="_blank" rel="noopener noreferrer"). The only JS below is for the
+   optional single-file build, where each demo is embedded as base64 in
+   window.__DEMOS_B64 and opened from a Blob. On the normal/deployed site that
+   map is absent, so the anchors behave as plain native links — no interception,
+   no modal, no duplicate action. */
+document.addEventListener('click', function(e){
+  const map = window.__DEMOS_B64;
+  if(!map) return;                                    // deployed/folder build: native links only
+  const d = e.target.closest('a.demo-link'); if(!d) return;
+  if(e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return; // respect modified/middle-click
+  const b64 = map[d.getAttribute('href')]; if(!b64) return;
+  e.preventDefault();
+  try{
+    const bin = atob(b64), bytes = new Uint8Array(bin.length);
+    for(let i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+    const url = URL.createObjectURL(new Blob([bytes], { type:'text/html' }));
+    // Open in ONE new tab via a temporary anchor. (Avoids window.open('noopener')
+    // returning null, which previously triggered a current-tab navigation too.)
+    const a = document.createElement('a');
+    a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+    document.body.appendChild(a); a.click(); a.remove();
+  }catch(err){ /* fall back to the native link */ }
+});
+
+/* ---- Render Process ---- */
+document.getElementById('timeline').innerHTML = data.process.map((s,i)=>`
+  <div class="step reveal d${(i%4)}">
+    <div class="num">${String(i+1).padStart(2,'0')}</div>
+    <h4>${s.title}</h4>
+    <p>${s.desc}</p>
+  </div>`).join('');
+
+/* ---- Render Testimonials (only if the section is enabled) ---- */
+const testiGridEl = document.getElementById('testiGrid');
+if (testiGridEl) testiGridEl.innerHTML = data.testimonials.map((t,i)=>{
+  const initials = t.name.split(' ').map(n=>n[0]).slice(0,2).join('');
+  const stars = Array.from({length:5},(_,k)=>`<svg viewBox="0 0 24 24" fill="${k<t.stars?'currentColor':'none'}" stroke="currentColor" stroke-width="1.5"><path d="m12 2 3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg>`).join('');
+  return `<article class="card testi reveal d${(i%3)}">
+    <div class="stars" aria-label="${t.stars} out of 5 stars">${stars}</div>
+    <p class="quote">${t.quote}</p>
+    <div class="who"><span class="avatar">${initials}</span><div><strong>${t.name}</strong><small>${t.role}</small></div></div>
+  </article>`;
+}).join('');
+
+/* ---- Render FAQ (accessible accordion) ---- */
+const faqList = document.getElementById('faqList');
+faqList.innerHTML = data.faqs.map((f,i)=>`
+  <div class="faq-item reveal">
+    <button class="faq-q" aria-expanded="false" aria-controls="faq-a-${i}" id="faq-q-${i}">
+      ${f.q}
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+    </button>
+    <div class="faq-a" id="faq-a-${i}" role="region" aria-labelledby="faq-q-${i}"><p>${f.a}</p></div>
+  </div>`).join('');
+faqList.addEventListener('click', e=>{
+  const q = e.target.closest('.faq-q'); if(!q) return;
+  const item = q.parentElement;
+  const a = item.querySelector('.faq-a');
+  const open = item.classList.toggle('open');
+  q.setAttribute('aria-expanded', open);
+  a.style.maxHeight = open ? a.scrollHeight + 'px' : 0;
+});
+
+/* ---- Navbar scroll state + back-to-top ---- */
+const nav = document.getElementById('nav');
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', ()=>{
+  const y = window.scrollY;
+  nav.classList.toggle('scrolled', y>10);
+  toTop.classList.toggle('show', y>600);
+}, {passive:true});
+toTop.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ---- Mobile menu ---- */
+const toggle = document.getElementById('navToggle');
+const menu = document.getElementById('mobileMenu');
+toggle.addEventListener('click', ()=>{
+  const open = menu.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', open);
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+  menu.classList.remove('open'); toggle.setAttribute('aria-expanded', false);
+}));
+
+/* =====================================================================
+   CONTACT FORM  —  EmailJS integration (no backend required)
+   ---------------------------------------------------------------------
+   👉 REPLACE the three placeholders below with YOUR OWN EmailJS values.
+      Nothing else needs to change. See the step-by-step setup guide.
+
+      EMAILJS_PUBLIC_KEY  →  EmailJS dashboard ▸ Account ▸ General ▸ "Public Key"
+      EMAILJS_SERVICE_ID  →  EmailJS dashboard ▸ Email Services ▸ your service ID
+      EMAILJS_TEMPLATE_ID →  EmailJS dashboard ▸ Email Templates ▸ your template ID
+
+   Your email template should reference these variables (they match the
+   form field names): {{name}}, {{email}}, {{subject}}, {{message}}.
+   Set the template's "Reply To" to {{email}} so you can reply directly.
+   ===================================================================== */
+const EMAILJS_PUBLIC_KEY  = '4iCYgh5-gIWAS_IcS';
+const EMAILJS_SERVICE_ID  = 'service_zlskcib';
+const EMAILJS_TEMPLATE_ID = 'template_i9ggepc';
+
+const form = document.getElementById('contactForm');
+const success = document.getElementById('formSuccess');
+const errorBox = document.getElementById('formError');
+const submitBtn = document.getElementById('submitBtn');
+
+// True only when the SDK has loaded AND real credentials have been added.
+const emailjsReady = () =>
+  (typeof emailjs !== 'undefined') &&
+  EMAILJS_PUBLIC_KEY.indexOf('YOUR_')  === -1 &&
+  EMAILJS_SERVICE_ID.indexOf('YOUR_')  === -1 &&
+  EMAILJS_TEMPLATE_ID.indexOf('YOUR_') === -1;
+
+// Initialise once (safe to skip until credentials are set).
+if (emailjsReady()) { try { emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY }); } catch (e) {} }
+
+let isSending = false;            // guards against duplicate / concurrent submits
+let lastSentAt = 0;               // basic client-side rate limiting
+const MIN_INTERVAL_MS = 20000;    // minimum 20s between successful sends
+
+const showError = msg => { errorBox.textContent = msg; errorBox.classList.add('show'); };
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  errorBox.classList.remove('show');
+  if (isSending) return;          // prevent duplicate submissions
+
+  // ---- Client-side validation ----
+  let ok = true;
+  const check = (id, valid) => {
+    const el = document.getElementById(id);
+    el.setAttribute('aria-invalid', valid ? 'false' : 'true');
+    el.closest('.field').classList.toggle('invalid', !valid);
+    if (!valid) ok = false;
+  };
+  const val = id => document.getElementById(id).value.trim();
+  check('name', val('name').length > 1);
+  check('email', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email')));
+  check('subject', val('subject') !== '');
+  check('message', val('message').length > 4);
+  if (!ok) {
+    const first = form.querySelector('.field.invalid input,.field.invalid select,.field.invalid textarea');
+    if (first) first.focus();
+    return;
+  }
+
+  // ---- Honeypot: silently drop bot submissions ----
+  const hp = form.querySelector('[name="_gotcha"]');
+  if (hp && hp.value) { form.reset(); form.style.display = 'none'; success.classList.add('show'); return; }
+
+  // ---- Rate limiting ----
+  if (Date.now() - lastSentAt < MIN_INTERVAL_MS) {
+    showError('You just sent a message — please wait a moment before sending another.');
+    return;
+  }
+
+  // ---- Not configured yet: guide instead of failing silently ----
+  if (!emailjsReady()) {
+    showError('The form isn’t connected yet. Add your EmailJS credentials near the top of the contact-form script in index.html (see the setup guide).');
+    return;
+  }
+
+  // ---- Send via EmailJS ----
+  isSending = true;
+  const originalHTML = submitBtn.innerHTML;
+  submitBtn.disabled = true;
+  submitBtn.classList.add('loading');
+  submitBtn.setAttribute('aria-busy', 'true');
+  submitBtn.textContent = 'Sending…';
+  try {
+    await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, { publicKey: EMAILJS_PUBLIC_KEY });
+    lastSentAt = Date.now();
+    form.reset();                 // clear fields after success
+    form.style.display = 'none';
+    success.classList.add('show');
+  } catch (err) {
+    showError('Something went wrong sending your message. Please try again in a moment, or email me directly at mustaisim.ecommerce@gmail.com.');
+  } finally {
+    isSending = false;
+    submitBtn.disabled = false;
+    submitBtn.classList.remove('loading');
+    submitBtn.removeAttribute('aria-busy');
+    submitBtn.innerHTML = originalHTML;
+  }
+});
+
+/* ---- Reveal on scroll ---- */
+function observeReveals(){
+  const els = document.querySelectorAll('.reveal:not(.in)');
+  if(!('IntersectionObserver' in window)){ els.forEach(el=>el.classList.add('in')); return; }
+  io = io || new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(el=>io.observe(el));
+}
+observeReveals();
+
+/* ---- Year ---- */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

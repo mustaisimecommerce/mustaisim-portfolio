@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian Build — Commercial &amp; Residential Construction Since 2004</title>
+<meta name="description" content="Meridian Build delivers commercial and residential construction with precision, safety and on-time completion. Design-build, renovations, project management and civil works.">
+<meta name="keywords" content="construction company, commercial construction, residential builds, design-build, renovations, project management, civil works, general contractor">
+<meta name="author" content="Meridian Build">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1E293B">
+<link rel="canonical" href="https://meridianbuild.example.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meridian Build — Building with Precision Since 2004">
+<meta property="og:description" content="Commercial and residential construction delivered safely and on time. Design-build, renovations, project management and civil works.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=72&w=1200">
+<meta property="og:url" content="https://meridianbuild.example.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meridian Build — Commercial &amp; Residential Construction">
+<meta name="twitter:description" content="Building with precision since 2004. Safety-first, on-time construction across commercial and residential projects.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=72&w=1200">
+
+<!-- Favicon: orange/steel hard-hat chevron monogram -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231E293B'/%3E%3Cpath d='M12 40h40v6H12z' fill='%2394A3B8'/%3E%3Cpath d='M32 16c9 0 15 7 15 18H17c0-11 6-18 15-18z' fill='%23EA580C'/%3E%3Crect x='30' y='12' width='4' height='10' rx='2' fill='%23EA580C'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Meridian Build",
+  "description": "Commercial and residential construction company delivering design-build, renovations, project management and civil works since 2004.",
+  "foundingDate": "2004",
+  "url": "https://meridianbuild.example.com/",
+  "telephone": "+1-555-0142",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1400 Ironworks Drive",
+    "addressLocality": "Denver",
+    "addressRegion": "CO",
+    "postalCode": "80216",
+    "addressCountry": "US"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --slate-900:#1E293B;
+    --slate-700:#334155;
+    --steel:#94A3B8;
+    --orange:#EA580C;
+    --orange-600:#c94e0b;
+    --off-white:#F1F5F9;
+    --white:#ffffff;
+    --ink:#0f172a;
+    --shadow:0 18px 40px -18px rgba(15,23,42,.55);
+    --maxw:1200px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    color:var(--slate-900);
+    background:var(--off-white);
+    line-height:1.65;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.brand{font-family:'Archivo','Inter',sans-serif;line-height:1.05;letter-spacing:-.01em}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+
+  .wrap{width:min(100% - 2.5rem, var(--maxw));margin-inline:auto}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.6rem;
+    font-family:'Archivo',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.22em;
+    font-size:.72rem;color:var(--orange);
+  }
+  .eyebrow::before{content:"";width:26px;height:3px;background:var(--orange);display:inline-block}
+  .section-title{
+    font-weight:900;
+    font-size:clamp(1.9rem,4.5vw,3rem);
+    text-transform:uppercase;
+    margin:.6rem 0 1rem;
+    color:var(--slate-900);
+  }
+  .section-lead{max-width:60ch;color:var(--slate-700);font-size:clamp(1rem,2vw,1.12rem)}
+
+  section{padding:clamp(3.5rem,8vw,6.5rem) 0}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:.55rem;
+    font-family:'Archivo',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;font-size:.85rem;
+    padding:.85rem 1.5rem;border:0;cursor:pointer;
+    transition:transform .2s ease, background .2s ease, box-shadow .2s ease;
+    clip-path:polygon(0 0,100% 0,100% 100%,10px 100%,0 calc(100% - 10px));
+  }
+  .btn-primary{background:var(--orange);color:#fff}
+  .btn-primary:hover{background:var(--orange-600);transform:translateY(-2px);box-shadow:0 12px 24px -10px rgba(234,88,12,.7)}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+  .btn-ghost:hover{border-color:#fff;transform:translateY(-2px)}
+  .btn-dark{background:var(--slate-900);color:#fff}
+  .btn-dark:hover{background:var(--slate-700);transform:translateY(-2px)}
+
+  /* Nav */
+  header.nav{
+    position:sticky;top:0;z-index:100;
+    transition:background .3s ease, box-shadow .3s ease, padding .3s ease;
+    padding:.4rem 0;
+  }
+  header.nav.scrolled{
+    background:rgba(30,41,59,.97);
+    box-shadow:0 8px 30px -12px rgba(15,23,42,.6);
+    backdrop-filter:blur(6px);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 0}
+  .brand{
+    display:flex;align-items:center;gap:.65rem;
+    font-weight:900;text-transform:uppercase;letter-spacing:.04em;
+    font-size:1.02rem;color:#fff;
+  }
+  .brand .mark{
+    width:34px;height:34px;flex:0 0 auto;
+    background:var(--orange);
+    clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
+    display:grid;place-items:center;
+  }
+  .brand .mark span{display:block;width:12px;height:12px;background:var(--slate-900);clip-path:polygon(50% 15%,100% 100%,0 100%)}
+  .brand small{display:block;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.18em;font-size:.56rem;color:var(--steel)}
+  .nav-links{display:flex;align-items:center;gap:1.6rem}
+  .nav-links a{
+    color:#e2e8f0;font-weight:600;font-size:.9rem;position:relative;padding:.2rem 0;
+  }
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--orange);transition:width .25s ease}
+  .nav-links a:hover{color:#fff}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{margin-left:.4rem}
+  .hamburger{
+    display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:.4rem;
+  }
+  .hamburger span{width:26px;height:3px;background:#fff;transition:transform .3s ease, opacity .3s ease}
+  .hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+  /* Image container helper */
+  .img-box{position:relative;overflow:hidden;background:var(--slate-900)}
+  .img-box img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;padding:0;overflow:hidden;min-height:88vh;display:flex;align-items:center}
+  .hero .img-box{position:absolute;inset:0}
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(105deg,rgba(30,41,59,.94) 0%,rgba(30,41,59,.82) 45%,rgba(51,65,85,.55) 100%);
+    z-index:1;
+  }
+  .hero-overlay::after{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--orange);
+  }
+  .hero-content{position:relative;z-index:2;padding:clamp(4rem,10vw,7rem) 0}
+  .hero h1{
+    font-weight:900;text-transform:uppercase;
+    font-size:clamp(2.4rem,6.5vw,4.6rem);
+    max-width:16ch;margin:1.2rem 0 1rem;
+  }
+  .hero h1 em{color:var(--orange);font-style:normal}
+  .hero p.sub{max-width:52ch;font-size:clamp(1.05rem,2.2vw,1.28rem);color:#cbd5e1}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+  .stats-strip{
+    position:relative;z-index:2;
+    display:grid;grid-template-columns:repeat(3,1fr);
+    border-top:2px solid rgba(148,163,184,.35);
+    margin-top:clamp(2.5rem,6vw,4rem);
+  }
+  .stats-strip .stat{padding:1.4rem 1rem 0}
+  .stats-strip .stat:not(:last-child){border-right:2px solid rgba(148,163,184,.25)}
+  .stats-strip .num{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(1.7rem,4.5vw,2.6rem);color:#fff}
+  .stats-strip .num em{color:var(--orange);font-style:normal}
+  .stats-strip .lbl{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--steel);font-weight:600}
+
+  /* Concept badge */
+  .concept-badge{
+    position:fixed;right:14px;bottom:14px;z-index:90;
+    background:var(--slate-900);color:#fff;border:1px solid var(--slate-700);
+    font-family:'Archivo',sans-serif;font-weight:700;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+    padding:.5rem .8rem;box-shadow:var(--shadow);
+    display:flex;align-items:center;gap:.5rem;
+  }
+  .concept-badge::before{content:"";width:8px;height:8px;background:var(--orange);border-radius:50%}
+
+  /* Services */
+  .services{background:var(--white)}
+  .grid-services{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));
+    gap:1.4rem;margin-top:2.8rem;
+  }
+  .service-card{
+    background:var(--off-white);
+    border:1px solid #e2e8f0;
+    border-top:4px solid var(--slate-700);
+    padding:1.9rem 1.6rem;
+    transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    position:relative;
+  }
+  .service-card:hover{transform:translateY(-6px);border-top-color:var(--orange);box-shadow:var(--shadow)}
+  .service-card .ico{
+    width:52px;height:52px;display:grid;place-items:center;
+    background:var(--slate-900);color:var(--orange);margin-bottom:1.1rem;
+  }
+  .service-card .ico svg{width:26px;height:26px}
+  .service-card h3{font-size:1.16rem;text-transform:uppercase;font-weight:800;margin-bottom:.5rem}
+  .service-card p{color:var(--slate-700);font-size:.95rem}
+  .service-card .no{position:absolute;top:1.2rem;right:1.4rem;font-family:'Archivo',sans-serif;font-weight:900;color:#cbd5e1;font-size:1.1rem}
+
+  /* About */
+  .about{background:var(--off-white)}
+  .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+  .about-media{position:relative}
+  .about-media .img-box{aspect-ratio:4/5;box-shadow:var(--shadow)}
+  .about-media .badge-years{
+    position:absolute;left:-14px;bottom:-14px;
+    background:var(--orange);color:#fff;padding:1.1rem 1.4rem;
+    font-family:'Archivo',sans-serif;box-shadow:var(--shadow);
+  }
+  .about-media .badge-years b{display:block;font-weight:900;font-size:2.1rem;line-height:1}
+  .about-media .badge-years span{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em}
+  .about-list{margin-top:1.6rem;display:grid;gap:1rem}
+  .about-list li{display:flex;gap:.9rem;align-items:flex-start}
+  .about-list .tick{flex:0 0 auto;width:26px;height:26px;background:var(--slate-900);color:var(--orange);display:grid;place-items:center;font-weight:900;font-family:'Archivo',sans-serif;margin-top:2px}
+  .about-list strong{display:block;text-transform:uppercase;font-family:'Archivo',sans-serif;font-size:.95rem}
+  .about-list p{color:var(--slate-700);font-size:.94rem}
+
+  /* Projects */
+  .projects{background:var(--slate-900);color:#fff}
+  .projects .section-title{color:#fff}
+  .projects .section-lead{color:#cbd5e1}
+  .grid-projects{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
+    gap:1.4rem;margin-top:2.8rem;
+  }
+  .project-card{position:relative;overflow:hidden;background:var(--slate-700)}
+  .project-card .img-box{aspect-ratio:4/3}
+  .project-card:hover img{transform:scale(1.08)}
+  .project-card .meta{
+    position:absolute;left:0;right:0;bottom:0;z-index:2;
+    padding:1.4rem 1.3rem;
+    background:linear-gradient(to top,rgba(15,23,42,.94),rgba(15,23,42,.15) 80%,transparent);
+  }
+  .project-card .type{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--orange);font-weight:700}
+  .project-card h3{font-size:1.28rem;text-transform:uppercase;font-weight:800;margin-top:.25rem}
+  .project-card .loc{font-size:.85rem;color:var(--steel)}
+
+  /* Why Meridian */
+  .why{background:var(--white)}
+  .why-numbers{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));
+    gap:1.4rem;margin-top:2.8rem;
+  }
+  .why-num{
+    background:var(--slate-900);color:#fff;padding:2rem 1.6rem;position:relative;overflow:hidden;
+  }
+  .why-num::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--orange)}
+  .why-num b{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(2.4rem,6vw,3.4rem);display:block;line-height:1}
+  .why-num b em{color:var(--orange);font-style:normal}
+  .why-num span{text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;color:var(--steel);font-weight:600}
+  .why-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1.4rem;margin-top:2rem}
+  .why-point{border-left:3px solid var(--orange);padding-left:1.1rem}
+  .why-point h3{text-transform:uppercase;font-size:1.05rem;font-weight:800;margin-bottom:.35rem}
+  .why-point p{color:var(--slate-700);font-size:.94rem}
+
+  /* Testimonials */
+  .testi{background:var(--off-white)}
+  .grid-testi{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1.4rem;margin-top:2.8rem}
+  .quote-card{background:#fff;border:1px solid #e2e8f0;padding:1.9rem 1.7rem;position:relative}
+  .quote-card::before{content:"“";position:absolute;top:.2rem;right:1rem;font-family:'Archivo',sans-serif;font-size:4rem;color:var(--orange);opacity:.25;line-height:1}
+  .quote-card p{font-size:1rem;color:var(--slate-700);font-style:italic}
+  .quote-card .who{display:flex;align-items:center;gap:.9rem;margin-top:1.3rem}
+  .quote-card .avatar{width:44px;height:44px;flex:0 0 auto;background:var(--slate-900);color:var(--orange);display:grid;place-items:center;font-family:'Archivo',sans-serif;font-weight:900;border-radius:50%}
+  .quote-card .who b{display:block;font-family:'Archivo',sans-serif;text-transform:uppercase;font-size:.92rem}
+  .quote-card .who span{font-size:.8rem;color:var(--steel)}
+  .illus{display:inline-block;margin-top:1.4rem;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);font-weight:600}
+
+  /* Quote CTA band + form */
+  .quote-band{background:var(--slate-900);color:#fff;position:relative;overflow:hidden}
+  .quote-band::before{content:"";position:absolute;inset:0;background:
+    repeating-linear-gradient(135deg,rgba(148,163,184,.06) 0 22px,transparent 22px 44px)}
+  .quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start;position:relative;z-index:2}
+  .quote-copy h2{color:#fff}
+  .quote-copy p{color:#cbd5e1;max-width:46ch;margin-top:1rem}
+  .quote-contact{margin-top:1.8rem;display:grid;gap:.7rem}
+  .quote-contact a{display:flex;align-items:center;gap:.7rem;color:#e2e8f0;font-weight:600}
+  .quote-contact .qc{width:34px;height:34px;flex:0 0 auto;background:var(--slate-700);color:var(--orange);display:grid;place-items:center}
+  form{background:#fff;color:var(--slate-900);padding:clamp(1.6rem,4vw,2.3rem);box-shadow:var(--shadow)}
+  form h3{text-transform:uppercase;font-size:1.2rem;margin-bottom:1.2rem}
+  .field{margin-bottom:1rem}
+  .field label{display:block;font-family:'Archivo',sans-serif;font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem}
+  .field input,.field select,.field textarea{
+    width:100%;padding:.8rem .9rem;border:1px solid #cbd5e1;background:var(--off-white);
+    font-family:inherit;font-size:.95rem;color:var(--slate-900);transition:border .2s ease, box-shadow .2s ease;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:0;border-color:var(--orange);box-shadow:0 0 0 3px rgba(234,88,12,.16);background:#fff;
+  }
+  .field textarea{resize:vertical;min-height:96px}
+  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  form .btn{width:100%;justify-content:center;margin-top:.4rem}
+  .form-success{
+    display:none;background:#052e16;color:#dcfce7;border-left:4px solid #22c55e;
+    padding:1.1rem 1.2rem;font-size:.95rem;margin-top:1rem;
+  }
+  .form-success.show{display:block}
+  .form-success b{color:#fff;font-family:'Archivo',sans-serif}
+
+  /* Footer */
+  footer{background:#0f172a;color:#cbd5e1;padding:3.5rem 0 2rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}
+  .foot-brand p{margin-top:1rem;max-width:38ch;font-size:.9rem;color:var(--steel)}
+  footer h4{color:#fff;text-transform:uppercase;font-size:.85rem;letter-spacing:.1em;margin-bottom:1rem}
+  footer li{margin-bottom:.55rem}
+  footer a{color:#cbd5e1;font-size:.92rem;transition:color .2s ease}
+  footer a:hover{color:var(--orange)}
+  .foot-bottom{border-top:1px solid var(--slate-700);margin-top:2.6rem;padding-top:1.6rem;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:space-between;align-items:center;font-size:.82rem;color:var(--steel)}
+  .foot-bottom a{color:var(--orange);font-weight:600}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* Responsive */
+  @media(max-width:900px){
+    .about-grid,.quote-grid{grid-template-columns:1fr}
+    .about-media{max-width:440px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:720px){
+    .nav-links{
+      position:fixed;inset:64px 0 auto 0;
+      flex-direction:column;align-items:stretch;gap:0;
+      background:rgba(30,41,59,.99);
+      padding:1rem 1.25rem 1.6rem;
+      transform:translateY(-140%);transition:transform .35s ease;
+      box-shadow:0 20px 40px -20px rgba(0,0,0,.6);
+    }
+    .nav-links.open{transform:translateY(0)}
+    .nav-links a{padding:.9rem 0;border-bottom:1px solid var(--slate-700)}
+    .nav-links a::after{display:none}
+    .nav-cta{margin:.9rem 0 0}
+    .nav-cta .btn{width:100%;justify-content:center}
+    header.nav{background:rgba(30,41,59,.97)}
+    .hamburger{display:flex}
+    .stats-strip{grid-template-columns:1fr;gap:0}
+    .stats-strip .stat{border-right:0!important;border-bottom:2px solid rgba(148,163,184,.2);padding-bottom:1.2rem}
+    .row-2{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+    .reveal{opacity:1;transform:none}
+    .project-card:hover img,.img-box img{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand" aria-label="Meridian Build home">
+      <span class="mark"><span></span></span>
+      <span>MERIDIAN BUILD<small>General Contractors • Est. 2004</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#why">Why Us</a>
+      <a href="#testimonials">Clients</a>
+      <span class="nav-cta"><a href="#quote" class="btn btn-primary">Request a Quote</a></span>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="img-box">
+    <img
+      src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=72&w=1600"
+      srcset="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=72&w=1000 1000w, https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=72&w=1900 1900w"
+      sizes="100vw"
+      alt="Steel-frame commercial building under construction against an open sky"
+      fetchpriority="high" decoding="async"
+      onerror="this.style.display='none'">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-content">
+    <span class="eyebrow">Commercial &amp; Residential Construction</span>
+    <h1>Building with <em>precision</em> since 2004</h1>
+    <p class="sub">From ground-up commercial developments to custom residential builds, Meridian Build delivers structures engineered to last — safely, on schedule, and on budget.</p>
+    <div class="hero-actions">
+      <a href="#quote" class="btn btn-primary">Request a Quote</a>
+      <a href="#projects" class="btn btn-ghost">View Our Work</a>
+    </div>
+    <div class="stats-strip">
+      <div class="stat">
+        <div class="num">340<em>+</em></div>
+        <div class="lbl">Projects Delivered</div>
+      </div>
+      <div class="stat">
+        <div class="num">20<em>+</em></div>
+        <div class="lbl">Years In Business</div>
+      </div>
+      <div class="stat">
+        <div class="num">98<em>%</em></div>
+        <div class="lbl">On-Time Completion</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <span class="eyebrow reveal">What We Build</span>
+    <h2 class="section-title reveal">Full-Scope Construction Services</h2>
+    <p class="section-lead reveal">One accountable team from first drawing to final handover. Meridian self-performs core trades and manages every phase in-house for tighter control over quality, cost and schedule.</p>
+
+    <div class="grid-services">
+      <article class="service-card reveal">
+        <span class="no">01</span>
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+        <h3>Commercial Construction</h3>
+        <p>Offices, retail, warehouses and mixed-use developments built to spec, code and deadline for developers and owners.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="no">02</span>
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7M5 10v10h14V10M9 20v-6h6v6"/></svg></div>
+        <h3>Residential Builds</h3>
+        <p>Custom homes and multi-unit residences crafted with premium finishes and durable, energy-efficient construction.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="no">03</span>
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3l7 7-9 9-7 1 1-7 8-8zM12 5l7 7"/></svg></div>
+        <h3>Renovations</h3>
+        <p>Structural remodels, tenant fit-outs and adaptive reuse that modernize existing spaces without the guesswork.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="no">04</span>
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8M4 4h9M4 9h5M4 14h5M4 19h9"/></svg></div>
+        <h3>Project Management</h3>
+        <p>Dedicated managers coordinating trades, procurement and inspections to keep your build tracking to plan.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="no">05</span>
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M6 20V8l6-4 6 4v12M10 12h4M10 16h4"/></svg></div>
+        <h3>Design-Build</h3>
+        <p>A single contract for design and construction — faster delivery, fewer surprises and one point of accountability.</p>
+      </article>
+      <article class="service-card reveal">
+        <span class="no">06</span>
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M4 20v-6l4-3 4 3M12 14l4-4 4 3v7M7 20v-3M17 20v-4"/></svg></div>
+        <h3>Civil Works</h3>
+        <p>Site preparation, grading, foundations and infrastructure engineered for the loads and conditions of your site.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-media reveal">
+      <div class="img-box">
+        <img
+          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=72&w=800"
+          srcset="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=72&w=600 600w, https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=72&w=1000 1000w"
+          sizes="(max-width:900px) 90vw, 45vw"
+          alt="Construction site engineer reviewing plans in front of a modern building frame"
+          loading="lazy" decoding="async"
+          onerror="this.style.display='none'">
+      </div>
+      <div class="badge-years"><b>0</b><span>Lost-Time Injuries in 2024</span></div>
+    </div>
+    <div>
+      <span class="eyebrow reveal">Who We Are</span>
+      <h2 class="section-title reveal">Safety First. On Time. Every Build.</h2>
+      <p class="section-lead reveal">Founded in 2004, Meridian Build has grown from a two-person crew into a full-service general contractor trusted by developers, business owners and homeowners across the region. Our reputation rests on two promises we never compromise: nobody gets hurt, and we finish when we say we will.</p>
+      <ul class="about-list">
+        <li class="reveal"><span class="tick">✓</span><div><strong>Safety-First Culture</strong><p>OSHA-aligned protocols, daily toolbox talks and full-time site supervision protect our crews and your project.</p></div></li>
+        <li class="reveal"><span class="tick">✓</span><div><strong>Schedule Discipline</strong><p>Detailed critical-path scheduling and weekly owner reporting keep every milestone visible and accountable.</p></div></li>
+        <li class="reveal"><span class="tick">✓</span><div><strong>Craftsmanship That Lasts</strong><p>Quality checks at every phase and self-performed core trades mean fewer defects and longer-lasting results.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="wrap">
+    <span class="eyebrow reveal">Selected Work</span>
+    <h2 class="section-title reveal">Projects We're Proud Of</h2>
+    <p class="section-lead reveal">A snapshot of recent commercial and residential builds delivered by the Meridian team.</p>
+
+    <div class="grid-projects">
+      <article class="project-card reveal">
+        <div class="img-box">
+          <img
+            src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&q=72&w=800"
+            srcset="https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&q=72&w=600 600w, https://images.unsplash.com/photo-1590674899484-d5640e854abe?auto=format&fit=crop&q=72&w=1000 1000w"
+            sizes="(max-width:720px) 90vw, 40vw"
+            alt="Modern multi-storey commercial office building with glass facade"
+            loading="lazy" decoding="async"
+            onerror="this.style.display='none'">
+        </div>
+        <div class="meta">
+          <div class="type">Commercial Construction</div>
+          <h3>Ironworks Office Park</h3>
+          <div class="loc">Denver, CO • 84,000 sq ft</div>
+        </div>
+      </article>
+      <article class="project-card reveal">
+        <div class="img-box">
+          <img
+            src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=72&w=800"
+            srcset="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=72&w=600 600w, https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=72&w=1000 1000w"
+            sizes="(max-width:720px) 90vw, 40vw"
+            alt="Engineers on an industrial construction site inspecting steel structure"
+            loading="lazy" decoding="async"
+            onerror="this.style.display='none'">
+        </div>
+        <div class="meta">
+          <div class="type">Civil Works</div>
+          <h3>Cedar Junction Logistics Hub</h3>
+          <div class="loc">Aurora, CO • Site + Foundations</div>
+        </div>
+      </article>
+      <article class="project-card reveal">
+        <div class="img-box">
+          <img
+            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=72&w=800"
+            srcset="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=72&w=600 600w, https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=72&w=1000 1000w"
+            sizes="(max-width:720px) 90vw, 40vw"
+            alt="Contemporary residential building exterior with clean architectural lines"
+            loading="lazy" decoding="async"
+            onerror="this.style.display='none'">
+        </div>
+        <div class="meta">
+          <div class="type">Residential Builds</div>
+          <h3>Meridian Row Residences</h3>
+          <div class="loc">Boulder, CO • 12 Custom Units</div>
+        </div>
+      </article>
+      <article class="project-card reveal">
+        <div class="img-box">
+          <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=72&w=800"
+            srcset="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=72&w=600 600w, https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=72&w=1000 1000w"
+            sizes="(max-width:720px) 90vw, 40vw"
+            alt="Large steel-frame structure mid-construction with cranes on site"
+            loading="lazy" decoding="async"
+            onerror="this.style.display='none'">
+        </div>
+        <div class="meta">
+          <div class="type">Design-Build</div>
+          <h3>Summit Trade Center</h3>
+          <div class="loc">Fort Collins, CO • Design-Build</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY MERIDIAN -->
+<section class="why" id="why">
+  <div class="wrap">
+    <span class="eyebrow reveal">Why Meridian</span>
+    <h2 class="section-title reveal">The Numbers Behind the Name</h2>
+    <p class="section-lead reveal">Two decades of building has earned us the metrics that matter most to owners and developers.</p>
+
+    <div class="why-numbers">
+      <div class="why-num reveal"><b>1.2<em>M</em></b><span>Safe Work Hours in 2024</span></div>
+      <div class="why-num reveal"><b>98<em>%</em></b><span>On-Time Delivery Rate</span></div>
+      <div class="why-num reveal"><b>72<em>%</em></b><span>Repeat &amp; Referral Clients</span></div>
+      <div class="why-num reveal"><b>340<em>+</em></b><span>Projects Completed</span></div>
+    </div>
+
+    <div class="why-points">
+      <div class="why-point reveal">
+        <h3>Fixed Bids, No Surprises</h3>
+        <p>Transparent, itemized pricing locked before we break ground — with change-order discipline that protects your budget.</p>
+      </div>
+      <div class="why-point reveal">
+        <h3>Self-Performing Crews</h3>
+        <p>We staff and manage core trades in-house, giving us direct control over quality, safety and timeline.</p>
+      </div>
+      <div class="why-point reveal">
+        <h3>One Point of Contact</h3>
+        <p>A dedicated project lead owns your build end-to-end, so you always know exactly where things stand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi" id="testimonials">
+  <div class="wrap">
+    <span class="eyebrow reveal">Client Voices</span>
+    <h2 class="section-title reveal">Trusted by Developers &amp; Owners</h2>
+
+    <div class="grid-testi">
+      <figure class="quote-card reveal">
+        <blockquote><p>Meridian brought our office park in three weeks ahead of schedule without cutting a single corner. Their reporting was so clear I never had to chase an update.</p></blockquote>
+        <figcaption class="who"><span class="avatar">DK</span><span><b>Daniel Keller</b><span>Principal, Keller Development Group</span></span></figcaption>
+      </figure>
+      <figure class="quote-card reveal">
+        <blockquote><p>We've handed Meridian four builds now. Same crews, same standards, same on-time delivery every time. That consistency is why we keep coming back.</p></blockquote>
+        <figcaption class="who"><span class="avatar">MR</span><span><b>Maria Reyes</b><span>Owner, Reyes Retail Properties</span></span></figcaption>
+      </figure>
+      <figure class="quote-card reveal">
+        <blockquote><p>Their safety record is genuinely impressive, and it shows in how tidy and controlled the site stays. Our residents were thrilled with the finish quality.</p></blockquote>
+        <figcaption class="who"><span class="avatar">JT</span><span><b>James Thornton</b><span>Director, Thornton Residential Partners</span></span></figcaption>
+      </figure>
+    </div>
+    <span class="illus">Illustrative testimonials — concept demo</span>
+  </div>
+</section>
+
+<!-- QUOTE CTA + FORM -->
+<section class="quote-band" id="quote">
+  <div class="wrap quote-grid">
+    <div class="quote-copy reveal">
+      <span class="eyebrow">Start Your Project</span>
+      <h2 class="section-title">Request a Quote</h2>
+      <p>Tell us about your build and we'll get back to you within one business day with next steps and a preliminary estimate. No obligation — just a clear conversation about what's possible.</p>
+      <div class="quote-contact">
+        <a href="tel:+15550142"><span class="qc" aria-hidden="true">✆</span> (555) 014-2000</a>
+        <a href="mailto:hello@meridianbuild.example.com"><span class="qc" aria-hidden="true">✉</span> hello@meridianbuild.example.com</a>
+        <a href="#top"><span class="qc" aria-hidden="true">⚑</span> 1400 Ironworks Drive, Denver, CO</a>
+      </div>
+    </div>
+
+    <form id="quoteForm" class="reveal" novalidate>
+      <h3>Get Your Estimate</h3>
+      <div class="row-2">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="Jane Doe" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="jane@company.com" required autocomplete="email">
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="(555) 000-0000" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="service">Project Type</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option>Commercial Construction</option>
+            <option>Residential Builds</option>
+            <option>Renovations</option>
+            <option>Project Management</option>
+            <option>Design-Build</option>
+            <option>Civil Works</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="details">Project Details</label>
+        <textarea id="details" name="details" placeholder="Tell us about location, size, timeline and budget range…"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Request</button>
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+        <b>Thanks — your request is in.</b><br>A Meridian project lead will reach out within one business day. (Demo form — no data is sent.)
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand"><span class="mark"><span></span></span><span>MERIDIAN BUILD<small>General Contractors • Est. 2004</small></span></a>
+        <p>Commercial and residential construction delivered with precision, safety and schedule discipline since 2004.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Commercial Construction</a></li>
+          <li><a href="#services">Residential Builds</a></li>
+          <li><a href="#services">Renovations</a></li>
+          <li><a href="#services">Design-Build</a></li>
+          <li><a href="#services">Civil Works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#why">Why Meridian</a></li>
+          <li><a href="#testimonials">Clients</a></li>
+          <li><a href="#quote">Request a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2004–2026 Meridian Build. Concept project for portfolio demonstration.</span>
+      <span>Designed &amp; developed by <a href="../../index.html">Mustaisim Memon</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="concept-badge" aria-label="Concept project">Concept Project</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // Sticky nav background on scroll
+  var nav = document.getElementById('nav');
+  function onScroll(){
+    if(window.scrollY > 40){ nav.classList.add('scrolled'); }
+    else{ nav.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Mobile menu
+  var burger = document.getElementById('hamburger');
+  var links = document.getElementById('navLinks');
+  function closeMenu(){
+    links.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+  }
+  burger.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  links.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ closeMenu(); }
+  });
+
+  // Reveal on scroll
+  var reveals = document.querySelectorAll('.reveal');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce || !('IntersectionObserver' in window)){
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.classList.add('in');
+          obs.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.14, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ obs.observe(el); });
+  }
+
+  // Quote form
+  var form = document.getElementById('quoteForm');
+  var success = document.getElementById('formSuccess');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+    success.classList.add('show');
+    form.querySelector('button[type="submit"]').textContent = 'Request Sent ✓';
+    var fields = ['name','email','phone','service','details'];
+    fields.forEach(function(id){
+      var f = document.getElementById(id);
+      if(f) f.value = '';
+    });
+    setTimeout(function(){ success.scrollIntoView({behavior: reduce ? 'auto':'smooth', block:'center'}); }, 60);
+  });
+})();
+</script>
+</body>
+</html>
