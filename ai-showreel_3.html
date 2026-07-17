@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ============================ SEO ============================ -->
+<title>AI Showreel — Mustaisim Memon · Premium AI Video Production</title>
+<meta name="description" content="Cinematic AI video production by Mustaisim Memon — luxury commercials, product ads, and brand films crafted with Veo 3, Higgsfield, and CapCut. Watch the AI showreel." />
+<meta name="author" content="Mustaisim Memon" />
+<meta name="theme-color" content="#0A0A0B" />
+<link rel="canonical" href="https://yourdomain.com/ai-showreel.html" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-9 -5 141 78' fill='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232F6BFF'/%3E%3Cstop offset='1' stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 64 L0 6 L28 40 L56 6 L56 64' stroke='url(%23g)' stroke-width='13'/%3E%3Cpath d='M66 64 L66 6 L94 40 L122 6 L122 64' stroke='%23E9EEFB' stroke-width='13'/%3E%3C/svg%3E" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AI Showreel — Mustaisim Memon · Premium AI Video Production" />
+<meta property="og:description" content="Cinematic AI video production — luxury commercials, product ads, and brand films." />
+<meta property="og:url" content="https://yourdomain.com/ai-showreel.html" />
+<meta property="og:site_name" content="Mustaisim Memon" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Fonts (identical to main site) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* =====================================================================
+   Shared design tokens — identical to the main site (index.html)
+   ===================================================================== */
+:root{
+  --bg:#0A0A0B; --bg-2:#0E0E11; --bg-elev:#131318; --navy:#0B1220;
+  --text:#F4F5F7; --text-soft:#A7ADBB; --text-dim:#6B7180;
+  --border:rgba(255,255,255,0.08); --border-2:rgba(255,255,255,0.14);
+  --accent:#6D5EF6; --accent-2:#22D3EE;
+  --grad:linear-gradient(135deg,#6D5EF6 0%,#22D3EE 100%);
+  --grad-soft:linear-gradient(135deg,rgba(109,94,246,.16),rgba(34,211,238,.10));
+  --font-display:"Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body:"Inter", ui-sans-serif, system-ui, sans-serif;
+  --r-sm:12px; --r:18px; --r-lg:26px;
+  --shadow:0 20px 50px -20px rgba(0,0,0,.7); --shadow-lg:0 40px 90px -30px rgba(0,0,0,.85);
+  --glow:0 0 0 1px rgba(109,94,246,.35), 0 20px 60px -15px rgba(109,94,246,.45);
+  --maxw:1200px; --nav-h:72px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 12px);}
+body{margin:0; background:var(--bg); color:var(--text); font-family:var(--font-body);
+  font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+body::before{content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+  background:
+    radial-gradient(60% 40% at 50% -8%, rgba(109,94,246,.18), transparent 70%),
+    radial-gradient(40% 30% at 85% 10%, rgba(34,211,238,.10), transparent 70%);}
+h1,h2,h3,h4,h5{font-family:var(--font-display); font-weight:600; line-height:1.08; letter-spacing:-0.02em; margin:0;}
+p{margin:0} a{color:inherit; text-decoration:none} img{max-width:100%; display:block}
+ul{margin:0; padding:0; list-style:none}
+:focus-visible{outline:2px solid var(--accent-2); outline-offset:3px; border-radius:6px;}
+
+.wrap{width:min(100% - 40px, var(--maxw)); margin-inline:auto; position:relative; z-index:1;}
+.section{padding:clamp(56px,8vw,110px) 0; position:relative; z-index:1;}
+.eyebrow{display:inline-flex; align-items:center; gap:8px; font-family:var(--font-display);
+  font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent-2);
+  padding:7px 14px; border:1px solid var(--border-2); border-radius:100px;
+  background:rgba(255,255,255,.03); margin-bottom:22px;}
+.eyebrow::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--grad);}
+.section-head{max-width:680px; margin-bottom:40px;}
+.section-head.center{margin-inline:auto; text-align:center;}
+.section-head h2{font-size:clamp(30px,4.4vw,46px);}
+.section-head p{color:var(--text-soft); font-size:18px; margin-top:16px;}
+.grad-text{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+
+/* Buttons — identical to main site */
+.btn{--pad:14px 26px; display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  font-family:var(--font-display); font-weight:500; font-size:15px; padding:var(--pad);
+  border-radius:100px; border:1px solid transparent; cursor:pointer; white-space:nowrap;
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease;}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--grad); color:#08080B; box-shadow:0 10px 30px -10px rgba(109,94,246,.6);}
+.btn-primary:hover{transform:translateY(-2px); box-shadow:0 18px 44px -12px rgba(109,94,246,.75);}
+.btn-secondary{background:rgba(255,255,255,.04); color:var(--text); border-color:var(--border-2); backdrop-filter:blur(8px);}
+.btn-secondary:hover{background:rgba(255,255,255,.09); transform:translateY(-2px);}
+.play-ic{width:20px;height:20px;border-radius:50%;background:var(--grad);color:#08080B;
+  display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.play-ic svg{width:11px;height:11px;margin-left:1px;}
+
+/* Navbar — identical structure to main site */
+.nav{position:sticky; top:0; z-index:40; height:var(--nav-h); display:flex; align-items:center;
+  background:rgba(10,10,11,.6); backdrop-filter:blur(14px); border-bottom:1px solid var(--border);}
+.nav.scrolled{background:rgba(10,10,11,.86);}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:20px;}
+.logo{display:inline-flex; align-items:center; gap:12px;}
+.brand-logo{width:38px; height:auto;}
+.logo-text{display:flex; flex-direction:column; line-height:1.05;}
+.logo-name{font-family:var(--font-display); font-weight:600; font-size:15px;}
+.logo-sub{font-size:11px; color:var(--text-dim); letter-spacing:.02em;}
+.nav-links{display:flex; gap:26px;}
+.nav-links a{font-size:14.5px; color:var(--text-soft); transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-cta{display:flex; align-items:center; gap:12px;}
+.nav-toggle{display:none; background:none; border:0; color:var(--text); cursor:pointer;}
+.nav-toggle svg{width:26px;height:26px;}
+.mobile-menu{display:none; position:fixed; inset:var(--nav-h) 0 auto 0; z-index:39;
+  background:rgba(12,12,15,.97); backdrop-filter:blur(14px); border-bottom:1px solid var(--border);
+  padding:18px 20px; flex-direction:column; gap:6px;}
+.mobile-menu a{padding:12px 10px; color:var(--text-soft); border-radius:10px;}
+.mobile-menu a:hover{background:rgba(255,255,255,.05); color:var(--text);}
+.mobile-menu.open{display:flex;}
+
+/* Reveal animation — identical to main site (fade + slide up) */
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1; transform:none;}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}
+.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+/* ---------- Showreel hero ---------- */
+.sr-hero{padding:clamp(56px,8vw,104px) 0 clamp(24px,4vw,44px); text-align:center;}
+.sr-hero h1{font-size:clamp(38px,6.2vw,74px); max-width:16ch; margin-inline:auto;}
+.sr-hero .lead{color:var(--text-soft); font-size:clamp(17px,2vw,20px); max-width:60ch; margin:22px auto 0;}
+.sr-cta{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:32px;}
+.sr-sub{font-family:var(--font-display); font-weight:500; font-size:clamp(16px,2vw,20px);
+  color:var(--text); max-width:56ch; margin:20px auto 0; line-height:1.5;}
+.sr-stats{display:flex; flex-wrap:wrap; gap:34px; justify-content:center; margin-top:44px;}
+.sr-stat b{font-family:var(--font-display); font-size:30px; display:block; background:var(--grad);
+  -webkit-background-clip:text; background-clip:text; color:transparent;}
+.sr-stat span{font-size:13.5px; color:var(--text-dim); letter-spacing:.04em;}
+
+/* ---------- Statistics cards (animated count-up) ---------- */
+.stats{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+.stat-card{border:1px solid var(--border); border-radius:var(--r); background:var(--bg-elev);
+  padding:28px 22px; text-align:center; box-shadow:var(--shadow);
+  transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;}
+.stat-card:hover{transform:translateY(-5px); border-color:rgba(109,94,246,.4); box-shadow:var(--glow);}
+.stat-card b{font-family:var(--font-display); font-weight:700; font-size:clamp(30px,4vw,46px); display:block;
+  background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; line-height:1;
+  font-variant-numeric:tabular-nums;}
+.stat-card span{display:block; margin-top:12px; font-size:13.5px; color:var(--text-soft); letter-spacing:.03em;}
+@media (max-width:820px){ .stats{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:380px){ .stats{grid-template-columns:1fr;} }
+
+/* ---------- Gallery controls: search + filters ---------- */
+.gallery-controls{display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; margin-bottom:30px;}
+.search{position:relative; flex:1 1 260px; max-width:420px;}
+.search svg{position:absolute; left:16px; top:50%; transform:translateY(-50%); width:18px; height:18px; color:var(--text-dim); pointer-events:none;}
+.search input{width:100%; padding:13px 16px 13px 44px; border-radius:100px; border:1px solid var(--border-2);
+  background:rgba(255,255,255,.04); color:var(--text); font-family:var(--font-body); font-size:15px;
+  backdrop-filter:blur(8px); transition:border-color .25s ease, background .25s ease;}
+.search input::placeholder{color:var(--text-dim);}
+.search input:focus{outline:none; border-color:rgba(109,94,246,.55); background:rgba(255,255,255,.06);}
+.filters{display:flex; flex-wrap:wrap; gap:10px;}
+.chip-btn{font-family:var(--font-display); font-size:13.5px; font-weight:500; color:var(--text-soft);
+  padding:9px 16px; border-radius:100px; border:1px solid var(--border-2); background:rgba(255,255,255,.03);
+  cursor:pointer; transition:color .25s ease, border-color .25s ease, background .25s ease, transform .2s ease;}
+.chip-btn:hover{color:var(--text); border-color:rgba(109,94,246,.4); transform:translateY(-1px);}
+.chip-btn.active{color:#08080B; background:var(--grad); border-color:transparent;}
+.result-note{color:var(--text-dim); font-size:14px; margin:-8px 0 22px;}
+
+/* ---------- Video gallery grid (4 / 2 / 1) ---------- */
+.vgrid{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+@media (max-width:1024px){ .vgrid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:600px){ .vgrid{grid-template-columns:1fr;} }
+
+.vcard{position:relative; border-radius:var(--r); overflow:hidden; border:1px solid var(--border);
+  background:var(--bg-elev); box-shadow:var(--shadow); cursor:pointer;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease, border-color .35s ease, opacity .4s ease;
+  display:flex; flex-direction:column;}
+.vcard:hover, .vcard:focus-visible{transform:translateY(-8px) scale(1.015); border-color:rgba(109,94,246,.5); box-shadow:var(--glow); outline:none;}
+.vcard.hide{display:none;}
+.vthumb{position:relative; aspect-ratio:16/10; overflow:hidden; background:#0b1220;}
+/* Real video acts as its own poster (frame at #t) + optional muted hover preview */
+.vthumb video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  transition:transform .5s cubic-bezier(.2,.7,.2,1); background:#0b1220;}
+.vcard:hover .vthumb video{transform:scale(1.08);}
+/* Cinematic, category-graded poster (shown until/if a video frame is available) */
+.vthumb .fallback{position:absolute; inset:0; display:none; place-items:center; color:rgba(255,255,255,.92);
+  background:linear-gradient(135deg,#141826,#0e1b2e 55%,#0b2230);}
+.vthumb .fallback::before{content:""; position:absolute; inset:0;
+  background:radial-gradient(120% 90% at 28% 8%, rgba(255,255,255,.12), transparent 55%),
+            radial-gradient(90% 85% at 85% 105%, rgba(0,0,0,.5), transparent 60%);}
+.vthumb .fallback svg{width:52px;height:52px;opacity:.92; position:relative; z-index:1; filter:drop-shadow(0 8px 20px rgba(0,0,0,.55));}
+.fallback.cat-beauty{background:linear-gradient(135deg,#3a1030,#7a244f 55%,#c98aa0);}
+.fallback.cat-kitchen{background:linear-gradient(135deg,#08303a,#0e5a5a 55%,#79c9b6);}
+.fallback.cat-lifestyle{background:linear-gradient(135deg,#3a2413,#8a5a24 55%,#e0b070);}
+.fallback.cat-healthcare{background:linear-gradient(135deg,#0b2340,#1e5a86 55%,#8fd3f0);}
+.fallback.cat-avatar{background:linear-gradient(135deg,#241154,#4a2fb0 55%,#9f8bff);}
+.fallback.cat-agriculture{background:linear-gradient(135deg,#12331a,#2a6d3a 55%,#8fd08f);}
+.fallback.cat-education{background:linear-gradient(135deg,#0d2233,#155a6e 55%,#6fd0d8);}
+.fallback.cat-ai{background:linear-gradient(135deg,#1a1140,#3a2a8a 55%,#22d3ee);}
+.fallback.cat-commercial-ads,.fallback.cat-default,.fallback.cat-travel{background:linear-gradient(135deg,#141826,#26406a 55%,#7fa2d8);}
+.vcard.novid .vthumb video{display:none;}
+.vcard.novid .vthumb .fallback{display:grid;}
+.vthumb::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 40%, rgba(6,7,12,.55));}
+.vthumb .play{position:absolute; z-index:2; left:50%; top:50%; transform:translate(-50%,-50%) scale(1);
+  width:60px;height:60px;border-radius:50%; background:rgba(10,10,11,.42); border:1px solid rgba(255,255,255,.6);
+  backdrop-filter:blur(6px); display:grid;place-items:center; color:#fff; transition:transform .3s ease, background .3s ease;}
+.vcard:hover .play{transform:translate(-50%,-50%) scale(1.14); background:rgba(109,94,246,.5);}
+.vthumb .play svg{width:24px;height:24px;margin-left:3px;}
+.vthumb .badge{position:absolute; z-index:2; top:12px; left:12px; font-family:var(--font-display);
+  font-size:11.5px; letter-spacing:.04em; padding:5px 11px; border-radius:100px; color:#fff;
+  background:rgba(10,10,11,.5); border:1px solid rgba(255,255,255,.22); backdrop-filter:blur(6px);}
+.vthumb .dur{position:absolute; z-index:2; bottom:12px; right:12px; font-size:12px; font-variant-numeric:tabular-nums;
+  padding:4px 9px; border-radius:8px; color:#fff; background:rgba(10,10,11,.6); border:1px solid rgba(255,255,255,.18);}
+.vbody{padding:16px 16px 18px; display:flex; flex-direction:column; gap:10px;}
+.vbody h3{font-size:16.5px; line-height:1.2;}
+.vbody .cat{font-size:13px; color:var(--accent-2); font-family:var(--font-display); letter-spacing:.02em;}
+.tools{display:flex; flex-wrap:wrap; gap:7px; margin-top:2px;}
+.tools .lbl{width:100%; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--text-dim);}
+.tool-badge{font-size:11.5px; font-family:var(--font-display); font-weight:500; color:var(--text);
+  padding:4px 10px; border-radius:100px; background:var(--grad-soft); border:1px solid var(--border-2);}
+
+/* ---------- Tools stack ---------- */
+.stack{display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:14px;}
+.stack .tool{display:flex; align-items:center; gap:12px; border:1px solid var(--border); border-radius:14px;
+  background:var(--bg-elev); padding:15px 16px; transition:border-color .25s ease, transform .25s ease;}
+.stack .tool:hover{border-color:rgba(34,211,238,.45); transform:translateY(-3px);}
+.stack .dot{width:34px;height:34px;border-radius:9px; display:grid;place-items:center; flex:0 0 auto;
+  background:var(--grad-soft); border:1px solid var(--border-2); font-family:var(--font-display); font-weight:700; font-size:14px; color:var(--accent-2);}
+.stack b{font-family:var(--font-display); font-weight:600; font-size:14.5px;}
+.stack span{display:block; font-size:12px; color:var(--text-dim);}
+
+/* ---------- Why ---------- */
+.why{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px;}
+.card{border:1px solid var(--border); border-radius:var(--r); background:var(--bg-elev); padding:26px;
+  transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;}
+.card:hover{transform:translateY(-5px); border-color:rgba(109,94,246,.4); box-shadow:var(--glow);}
+.card .ic{width:46px;height:46px;border-radius:12px; display:grid;place-items:center; margin-bottom:16px;
+  background:var(--grad-soft); border:1px solid var(--border-2); color:var(--accent-2);}
+.card .ic svg{width:22px;height:22px;} .card h3{font-size:19px;} .card p{color:var(--text-soft); font-size:14.5px; margin-top:9px;}
+
+/* ---------- Final CTA ---------- */
+.cta-wrap{border:1px solid var(--border-2); border-radius:var(--r-lg); padding:clamp(36px,6vw,64px);
+  text-align:center; background:var(--grad-soft);}
+.cta-wrap h2{font-size:clamp(28px,4.4vw,44px);}
+.cta-wrap p{color:var(--text-soft); font-size:18px; margin:16px auto 30px; max-width:56ch;}
+
+/* ---------- Footer (identical to main site) ---------- */
+footer.site{border-top:1px solid var(--border); padding:64px 0 34px; margin-top:20px;}
+.foot-grid{display:grid; grid-template-columns:1.6fr 1fr 1fr 1.2fr; gap:34px;}
+.foot-about p{color:var(--text-soft); font-size:14.5px; margin-top:16px; max-width:34ch;}
+footer.site h5{font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-dim); margin-bottom:16px;}
+footer.site .foot-grid a{display:block; color:var(--text-soft); font-size:14.5px; padding:5px 0; transition:color .2s;}
+footer.site .foot-grid a:hover{color:var(--text);}
+.foot-bottom{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center;
+  margin-top:44px; padding-top:22px; border-top:1px solid var(--border); color:var(--text-dim); font-size:13px;}
+
+/* ---------- Video modal (fullscreen player) ---------- */
+.modal{position:fixed; inset:0; z-index:90; display:none; align-items:center; justify-content:center; padding:24px;
+  background:rgba(5,5,7,.86); backdrop-filter:blur(10px); opacity:0; transition:opacity .3s ease;}
+.modal.open{display:flex;}
+.modal.show{opacity:1;}
+.modal-inner{width:min(100%,1000px); transform:translateY(14px) scale(.98); transition:transform .35s cubic-bezier(.2,.7,.2,1); position:relative;}
+.modal.show .modal-inner{transform:none;}
+.modal-head{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:14px;}
+.modal-head h3{font-size:clamp(17px,2.2vw,22px);}
+.modal-head .m-cat{font-size:13px; color:var(--accent-2); margin-top:3px;}
+.m-stage{position:relative; border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--border-2);
+  background:#000; box-shadow:var(--shadow-lg); aspect-ratio:16/9;}
+.m-stage video{width:100%; height:100%; display:block; background:#000;}
+.m-nav{position:absolute; top:50%; transform:translateY(-50%); width:52px; height:52px; border-radius:50%;
+  background:rgba(10,10,11,.55); border:1px solid var(--border-2); color:#fff; cursor:pointer; display:grid;place-items:center;
+  backdrop-filter:blur(6px); transition:background .25s ease, transform .25s ease; z-index:3;}
+.m-nav:hover{background:rgba(109,94,246,.55);}
+.m-prev{left:14px;} .m-next{right:14px;} .m-nav svg{width:24px;height:24px;}
+.m-close{width:44px;height:44px;border-radius:50%; background:rgba(255,255,255,.06); border:1px solid var(--border-2);
+  color:#fff; cursor:pointer; display:grid;place-items:center; flex:0 0 auto;}
+.m-close svg{width:22px;height:22px;}
+.m-count{color:var(--text-dim); font-size:13px; margin-top:12px; text-align:center;}
+@media (max-width:600px){ .m-nav{width:42px;height:42px;} .m-prev{left:6px;} .m-next{right:6px;} }
+
+/* ---------- To-top ---------- */
+.to-top{position:fixed; right:22px; bottom:22px; z-index:35; width:46px;height:46px;border-radius:50%;
+  border:1px solid var(--border-2); background:rgba(19,19,24,.8); color:var(--text); cursor:pointer;
+  display:grid;place-items:center; opacity:0; pointer-events:none; transition:opacity .3s ease;}
+.to-top svg{width:20px;height:20px;} .to-top.show{opacity:1; pointer-events:auto;}
+
+@media (max-width:900px){
+  .foot-grid{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;} .nav-cta .btn-secondary{display:none;} .nav-toggle{display:inline-flex;}
+}
+@media (max-width:560px){ .foot-grid{grid-template-columns:1fr;} .sr-cta .btn{flex:1;} }
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
+  .reveal{opacity:1; transform:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ NAVBAR (identical to main site) ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html#home" class="logo" aria-label="Mustaisim Memon — home">
+      <svg class="brand-logo" viewBox="-9 -5 141 78" fill="none" role="img" aria-label="Mustaisim Memon MM monogram">
+        <defs><linearGradient id="mmA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F6BFF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+        <path d="M0 64 L0 6 L28 40 L56 6 L56 64" stroke="url(#mmA)" stroke-width="13" stroke-linejoin="miter"/>
+        <path d="M66 64 L66 6 L94 40 L122 6 L122 64" stroke="#E9EEFB" stroke-width="13" stroke-linejoin="miter"/>
+      </svg>
+      <span class="logo-text">
+        <span class="logo-name">Mustaisim Memon</span>
+        <span class="logo-sub">Premium Website Designer &amp; AI Web Developer</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#portfolio">Work</a>
+      <a href="#gallery">AI Videos</a>
+      <a href="#stack">Tools</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="index.html#contact" class="btn btn-secondary">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#about">About</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#portfolio">Work</a>
+  <a href="#gallery">AI Videos</a>
+  <a href="#stack">Tools</a>
+  <a href="index.html#contact" class="btn btn-primary">Start Your Project</a>
+</div>
+
+<main>
+
+<!-- ============================ HERO ============================ -->
+<section class="section sr-hero" aria-label="AI Showreel introduction">
+  <div class="wrap">
+    <span class="eyebrow reveal">AI Video Production</span>
+    <h1 class="reveal d1">Cinematic <span class="grad-text">AI commercials</span> for brands that want to stand out.</h1>
+    <p class="sr-sub reveal d2">AI-Powered Commercials Crafted with Veo 3, Higgsfield &amp; CapCut — Built for Brands That Want to Stand Out.</p>
+    <p class="lead reveal d3">I direct and produce premium AI video — luxury commercials, product ads, and brand films — crafted with the newest generative tools and a real editor's eye for story, pacing, and polish.</p>
+    <div class="sr-cta reveal d4">
+      <a href="#gallery" class="btn btn-primary">
+        <span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        Watch the Reel
+      </a>
+      <a href="index.html#contact" class="btn btn-secondary">Start a Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STATISTICS ============================ -->
+<section class="section sr-statsec" aria-label="AI production statistics" style="padding-top:0;">
+  <div class="wrap">
+    <div class="stats reveal" id="statGrid">
+      <div class="stat-card"><b class="stat-num" data-target="17" data-suffix="">0</b><span>AI Commercials Created</span></div>
+      <div class="stat-card"><b class="stat-num" id="statTools" data-target="0" data-suffix="+">0</b><span>AI Tools Used</span></div>
+      <div class="stat-card"><b class="stat-num" id="statCats" data-target="0" data-suffix="">0</b><span>Categories</span></div>
+      <div class="stat-card"><b id="statAvg">—</b><span>Average Duration</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ VIDEO GALLERY ============================ -->
+<section class="section" id="gallery" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">AI Video Portfolio</span>
+      <h2>Commercials crafted with AI</h2>
+      <p>Real AI-produced spots across beauty, kitchen, lifestyle, healthcare and more. Search, filter, and click any video to play it fullscreen.</p>
+    </div>
+
+    <!-- Search + category filters -->
+    <div class="gallery-controls reveal">
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+        <input type="search" id="searchInput" placeholder="Search videos by title…" aria-label="Search videos by title" autocomplete="off" />
+      </label>
+      <div class="filters" id="filters" role="group" aria-label="Filter videos by category"><!-- chips injected --></div>
+    </div>
+    <p class="result-note" id="resultNote" aria-live="polite"></p>
+
+    <!-- Grid -->
+    <div class="vgrid" id="vgrid"><!-- cards injected --></div>
+  </div>
+</section>
+
+<!-- ============================ TOOLS STACK ============================ -->
+<section class="section" id="stack" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">AI Tools I Use</span>
+      <h2>My production stack</h2>
+      <p>Best-in-class generative and post-production tools, chosen per shot.</p>
+    </div>
+    <div class="stack">
+      <div class="tool reveal"><span class="dot">V3</span><div><b>Veo 3</b><span>Text-to-video</span></div></div>
+      <div class="tool reveal"><span class="dot">Hi</span><div><b>Higgsfield</b><span>Cinematic motion</span></div></div>
+      <div class="tool reveal"><span class="dot">Cc</span><div><b>CapCut</b><span>Editing &amp; finish</span></div></div>
+      <div class="tool reveal"><span class="dot">Kl</span><div><b>Kling</b><span>Realistic motion</span></div></div>
+      <div class="tool reveal"><span class="dot">Ru</span><div><b>Runway</b><span>Gen &amp; VFX</span></div></div>
+      <div class="tool reveal"><span class="dot">El</span><div><b>ElevenLabs</b><span>AI voiceover</span></div></div>
+      <div class="tool reveal"><span class="dot">Pr</span><div><b>Premiere Pro</b><span>Edit &amp; color</span></div></div>
+      <div class="tool reveal"><span class="dot">Ps</span><div><b>Photoshop</b><span>Design &amp; assets</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHY ============================ -->
+<section class="section" id="why" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Why Work With Me</span>
+      <h2>Agency quality, without the agency overhead</h2>
+    </div>
+    <div class="why">
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Fast turnaround</h3><p>Concepts in days, not weeks — AI moves at the speed of your marketing.</p></div>
+      <div class="card reveal d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.9 6.3L22 9.3l-5 4.7 1.2 6.9L12 17.8 5.8 20.9 7 14 2 9.3l7.1-1z"/></svg></div><h3>Premium quality</h3><p>Every frame is directed and graded — never a raw, generic AI clip.</p></div>
+      <div class="card reveal d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Conversion-first</h3><p>Built to sell — strong hooks, clear messaging, platform-ready formats.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="3.5"/></svg></div><h3>Full-stack creative</h3><p>Design, web, and video under one roof — a cohesive brand everywhere.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="section" id="cta" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta-wrap reveal">
+      <h2>Need AI Commercials <span class="grad-text">Like These?</span></h2>
+      <p>Let's Create Something Exceptional — tell me about your product and audience, and I'll turn it into an AI commercial that looks premium and sells.</p>
+      <div class="sr-cta" style="justify-content:center;">
+        <a href="index.html#contact" class="btn btn-primary">Contact Me
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="index.html#home" class="btn btn-secondary">Return Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER (identical to main site) ============================ -->
+<footer class="site" aria-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <a href="index.html#home" class="logo" aria-label="Mustaisim Memon — home">
+          <svg class="brand-logo" viewBox="-9 -5 141 78" fill="none" role="img" aria-label="Mustaisim Memon MM monogram">
+            <defs><linearGradient id="mmB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F6BFF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+            <path d="M0 64 L0 6 L28 40 L56 6 L56 64" stroke="url(#mmB)" stroke-width="13" stroke-linejoin="miter"/>
+            <path d="M66 64 L66 6 L94 40 L122 6 L122 64" stroke="#E9EEFB" stroke-width="13" stroke-linejoin="miter"/>
+          </svg>
+          <span class="logo-text"><span class="logo-name">Mustaisim Memon</span></span>
+        </a>
+        <p>Premium website design &amp; AI-powered development and video for businesses that want to stand out and grow.</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <a href="index.html#about">About</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <a href="index.html#services">Website Design</a>
+        <a href="#gallery">AI Video</a>
+        <a href="index.html#services">Redesign</a>
+        <a href="index.html#services">SEO &amp; Performance</a>
+      </div>
+      <div>
+        <h5>Get in Touch</h5>
+        <a href="mailto:mustaisim.ecommerce@gmail.com">mustaisim.ecommerce@gmail.com</a>
+        <a href="https://wa.me/923053443116" target="_blank" rel="noopener">+92 305 3443116</a>
+        <a href="index.html#contact">Pakistan · Worldwide</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Mustaisim Memon. All rights reserved.</span>
+      <span>Designed &amp; built with care · Ready for GitHub + Vercel</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<!-- ============================ FULLSCREEN VIDEO MODAL ============================ -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="modal-inner">
+    <div class="modal-head">
+      <div><h3 id="mTitle">Video</h3><div class="m-cat" id="mCat"></div></div>
+      <button class="m-close" id="mClose" aria-label="Close video (Esc)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="m-stage">
+      <button class="m-nav m-prev" id="mPrev" aria-label="Previous video (Left arrow)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <video id="mVideo" controls controlslist="nodownload" playsinline preload="auto"></video>
+      <button class="m-nav m-next" id="mNext" aria-label="Next video (Right arrow)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="m-count" id="mCount"></div>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   VIDEO DATA  —  EDIT THIS LIST to match your real files in assets/videos/
+   Each entry: { file, title, category, tools? }
+   • file      = filename inside assets/videos/  (only thing that must match your real file)
+   • title     = client-facing title
+   • category  = one of your category names (chips are generated from these)
+   • tools     = optional; defaults to Veo 3 / Higgsfield / CapCut
+   Poster frame + duration are read AUTOMATICALLY from each real video — no manual work.
+   ===================================================================== */
+var DEFAULT_TOOLS = ["Veo 3","Higgsfield","CapCut"];
+/* Fixed category order for the filter chips (spec-defined). Chips render in this
+   order for any category that has at least one video. */
+var CATEGORY_ORDER = ["All","Beauty","Kitchen","Healthcare","Lifestyle","Education","Avatar","Agriculture","Travel","AI"];
+/* One data array drives the entire gallery. Filenames are the EXACT real files in
+   assets/videos/ (do not rename). Titles are client-facing; raw filenames never shown. */
+var VIDEOS = [
+  { file:"AI American Ad Content.mp4",                 title:"American AI Commercial",          category:"AI" },
+  { file:"AI Avatar Content Ad Commercial.mp4",        title:"AI Avatar Commercial",            category:"Avatar" },
+  { file:"AI Avatar Pharmaceutical Ad Commercial.mp4", title:"AI Pharmaceutical Commercial",    category:"Healthcare" },
+  { file:"AI China Farmers AI Ad Commercial.mp4",      title:"China Farmers Commercial",        category:"Agriculture" },
+  { file:"Basket Holder Ad Commercial.mp4",            title:"Premium Basket Holder Commercial",category:"Kitchen" },
+  { file:"Coffee Ad Commercial.mp4",                   title:"Coffee Advertisement",            category:"Lifestyle" },
+  { file:"Dispenser Bottle Ad Commercial.mp4",         title:"Bottle Dispenser Commercial",     category:"Kitchen" },
+  { file:"English Language AI Ad Commercial.mp4",      title:"English Learning Commercial",     category:"Education" },
+  { file:"Jar Set Ad Commercial.mp4",                  title:"Premium Jar Set Commercial",      category:"Kitchen" },
+  { file:"Luxury Perfume Ad Commercial.mp4",           title:"Luxury Perfume Commercial",       category:"Beauty" },
+  { file:"Passport AI Ad Commercial.mp4",              title:"Passport & Travel Commercial",    category:"Travel" },
+  { file:"Perfumae Ad Commercial.mp4",                 title:"Perfume Commercial",              category:"Beauty" },
+  { file:"Royal Zafran Perfume Commercial.mp4",        title:"Royal Zafran Perfume Commercial", category:"Beauty" },
+  { file:"Serum Ad Commercial.mp4",                    title:"Serum Commercial",                category:"Beauty" },
+  { file:"Serum Bottle Ad Commercial.mp4",             title:"Serum Bottle Commercial",         category:"Beauty" },
+  { file:"Truhr Burst Glass Ad.mp4",                   title:"Truhr Burst Glass Commercial",    category:"Lifestyle" },
+  { file:"Walking Person AI Ad Commercial.mp4",        title:"Walking Person Commercial",       category:"Avatar" }
+];
+var VIDEO_DIR = "assets/videos/";
+
+/* ---- helpers ---- */
+function fmtTime(s){ if(!isFinite(s)||s<=0) return ""; s=Math.round(s); var m=Math.floor(s/60), r=s%60; return (m<10?"0":"")+m+":"+(r<10?"0":"")+r; }
+function esc(t){ return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+/* category → cinematic poster class + subject icon (used for the designed fallback poster) */
+function catSlug(c){ return 'cat-'+String(c).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
+var CAT_ICON={
+  beauty:'<path d="M10 2h4v3l1 3v12a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1V8l1-3z"/><path d="M9 12h6"/>',
+  kitchen:'<path d="M8 2h8l-1 8H9z"/><path d="M10 10v10"/><path d="M9 22h6"/>',
+  lifestyle:'<path d="M12 2l2.6 6.3 6.8.5-5.2 4.4 1.6 6.6L12 16.8 6.2 20.4l1.6-6.6L2.6 8.8l6.8-.5z"/>',
+  healthcare:'<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/>',
+  avatar:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>',
+  agriculture:'<path d="M12 22V9"/><path d="M12 9C8 9 5 6 5 2c4 0 7 3 7 7z"/><path d="M12 12c4 0 7-3 7-7-4 0-7 3-7 7z"/>',
+  travel:'<path d="M2 12l20-7-7 20-3-8z"/>',
+  education:'<path d="M3 8l9-4 9 4-9 4z"/><path d="M7 10.5V15c0 1.5 2.5 3 5 3s5-1.5 5-3v-4.5"/>',
+  ai:'<circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>',
+  "default":'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 9l5 3-5 3z"/>'
+};
+function catIcon(c){ var k=String(c).toLowerCase().split(/[ /]/)[0]; return CAT_ICON[k]||CAT_ICON["default"]; }
+
+/* ---- build category chips: fixed spec order, showing only categories that have videos ---- */
+var present = {}; VIDEOS.forEach(function(v){ present[v.category]=true; });
+var cats = CATEGORY_ORDER.filter(function(c){ return c==="All" || present[c]; });
+/* Append any category found in data but missing from the fixed order (safety net) */
+VIDEOS.forEach(function(v){ if(cats.indexOf(v.category)===-1) cats.push(v.category); });
+var filtersEl = document.getElementById('filters');
+filtersEl.innerHTML = cats.map(function(c,i){
+  return '<button class="chip-btn'+(i===0?' active':'')+'" data-cat="'+esc(c)+'" aria-pressed="'+(i===0?'true':'false')+'">'+esc(c)+'</button>';
+}).join('');
+
+/* ---- build cards ---- */
+var grid = document.getElementById('vgrid');
+grid.innerHTML = VIDEOS.map(function(v,i){
+  var tools = (v.tools||DEFAULT_TOOLS).map(function(t){return '<span class="tool-badge">'+esc(t)+'</span>';}).join('');
+  return ''
+  + '<article class="vcard reveal" data-i="'+i+'" data-title="'+esc(v.title.toLowerCase())+'" data-cat="'+esc(v.category)+'" tabindex="0" role="button" aria-label="Play '+esc(v.title)+'">'
+  +   '<div class="vthumb">'
+  +     '<video muted loop playsinline preload="none" data-src="'+VIDEO_DIR+encodeURIComponent(v.file)+'"></video>'
+  +     '<div class="fallback '+catSlug(v.category)+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">'+catIcon(v.category)+'</svg></div>'
+  +     '<span class="badge">'+esc(v.category)+'</span>'
+  +     '<span class="dur" data-dur>—</span>'
+  +     '<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>'
+  +   '</div>'
+  +   '<div class="vbody">'
+  +     '<h3>'+esc(v.title)+'</h3>'
+  +     '<span class="cat">'+esc(v.category)+'</span>'
+  +     '<div class="tools"><span class="lbl">Generated with</span>'+tools+'</div>'
+  +   '</div>'
+  + '</article>';
+}).join('');
+/* ---- STATISTICS: fill targets from real data ---- */
+var uniqueCats = {}; VIDEOS.forEach(function(v){ uniqueCats[v.category]=true; });
+var toolSet = {}; VIDEOS.forEach(function(v){ (v.tools||DEFAULT_TOOLS).forEach(function(t){ toolSet[t]=true; }); });
+document.querySelectorAll('.stack .tool b').forEach(function(b){ toolSet[b.textContent.trim()]=true; }); // include full production stack
+var statToolsEl = document.getElementById('statTools'), statCatsEl = document.getElementById('statCats');
+statToolsEl.setAttribute('data-target', String(Object.keys(toolSet).length));
+statCatsEl.setAttribute('data-target', String(Object.keys(uniqueCats).length));
+
+/* ---- LAZY LOAD: only attach video src (preload metadata) when a card nears the viewport ---- */
+var cardEls = Array.prototype.slice.call(grid.querySelectorAll('.vcard'));
+function loadThumb(card){
+  var vid = card.querySelector('video'); if(!vid || vid.dataset.loaded) return;
+  vid.dataset.loaded = "1";
+  vid.preload = "metadata";
+  // seek to a frame so the element shows a real poster; read real duration
+  vid.src = vid.dataset.src + "#t=0.5";
+  function setDur(){ var d=card.querySelector('[data-dur]'); var t=fmtTime(vid.duration); if(d && t) d.textContent=t; }
+  vid.addEventListener('loadedmetadata', function(){
+    setDur();
+    try{ vid.currentTime = Math.min(0.5, (vid.duration||1)*0.1); }catch(e){}
+  });
+  vid.addEventListener('durationchange', setDur);
+  vid.addEventListener('error', function(){ card.classList.add('novid'); var d=card.querySelector('[data-dur]'); if(d) d.textContent=""; });
+}
+if('IntersectionObserver' in window){
+  var io = new IntersectionObserver(function(en){ en.forEach(function(x){ if(x.isIntersecting){ loadThumb(x.target); io.unobserve(x.target); } }); }, {rootMargin:'300px 0px'});
+  cardEls.forEach(function(c){ io.observe(c); });
+} else { cardEls.forEach(loadThumb); }
+
+/* ---- hover preview: play muted inline on hover, reset on leave (desktop only) ---- */
+cardEls.forEach(function(card){
+  var vid = card.querySelector('video');
+  card.addEventListener('mouseenter', function(){ if(card.classList.contains('novid')) return; try{ vid.play().catch(function(){}); }catch(e){} });
+  card.addEventListener('mouseleave', function(){ try{ vid.pause(); vid.currentTime = Math.min(0.5,(vid.duration||1)*0.1); }catch(e){} });
+});
+
+/* ---- SEARCH + FILTER (work together, animated) ---- */
+var searchInput = document.getElementById('searchInput');
+var resultNote = document.getElementById('resultNote');
+var activeCat = "All", query = "";
+function applyFilters(){
+  var shown = 0;
+  cardEls.forEach(function(card){
+    var okCat = (activeCat==="All" || card.dataset.cat===activeCat);
+    var okQ = (!query || card.dataset.title.indexOf(query)!==-1);
+    var show = okCat && okQ;
+    card.classList.toggle('hide', !show);
+    if(show){ shown++; }
+  });
+  resultNote.textContent = shown + (shown===1?" video":" videos") + (activeCat!=="All"?(" in "+activeCat):"") + (query?(' matching "'+query+'"'):"");
+}
+filtersEl.addEventListener('click', function(e){
+  var b = e.target.closest('.chip-btn'); if(!b) return;
+  filtersEl.querySelectorAll('.chip-btn').forEach(function(x){ x.classList.remove('active'); x.setAttribute('aria-pressed','false'); });
+  b.classList.add('active'); b.setAttribute('aria-pressed','true');
+  activeCat = b.dataset.cat; applyFilters();
+});
+searchInput.addEventListener('input', function(){ query = searchInput.value.trim().toLowerCase(); applyFilters(); });
+applyFilters();
+
+/* ---- FULLSCREEN MODAL PLAYER with prev/next/esc/click-outside ---- */
+var modal=document.getElementById('modal'), mVideo=document.getElementById('mVideo'),
+    mTitle=document.getElementById('mTitle'), mCat=document.getElementById('mCat'),
+    mCount=document.getElementById('mCount'), lastFocus=null, current=-1;
+
+function visibleIndices(){ return cardEls.filter(function(c){return !c.classList.contains('hide');}).map(function(c){return +c.dataset.i;}); }
+function openModal(i){
+  current=i; var v=VIDEOS[i];
+  mTitle.textContent=v.title; mCat.textContent=v.category;
+  mVideo.src=VIDEO_DIR+encodeURIComponent(v.file);
+  mVideo.currentTime=0; mVideo.play().catch(function(){});
+  var vis=visibleIndices(), pos=vis.indexOf(i);
+  mCount.textContent=(pos+1)+" / "+vis.length;
+  lastFocus=document.activeElement;
+  modal.classList.add('open'); requestAnimationFrame(function(){ modal.classList.add('show'); });
+  document.body.style.overflow='hidden'; document.getElementById('mClose').focus();
+}
+function closeModal(){
+  modal.classList.remove('show');
+  setTimeout(function(){ if(modal.classList.contains('show')) return; /* reopened during the animation — keep the new video */ modal.classList.remove('open'); mVideo.pause(); mVideo.removeAttribute('src'); mVideo.load(); }, 260);
+  document.body.style.overflow='';
+  if(lastFocus) try{ lastFocus.focus(); }catch(e){}
+}
+function step(dir){
+  var vis=visibleIndices(); if(!vis.length) return;
+  var pos=vis.indexOf(current); if(pos===-1) pos=0;
+  pos=(pos+dir+vis.length)%vis.length; openModal(vis[pos]);
+}
+grid.addEventListener('click', function(e){ var c=e.target.closest('.vcard'); if(c) openModal(+c.dataset.i); });
+grid.addEventListener('keydown', function(e){ var c=e.target.closest('.vcard'); if(c && (e.key==='Enter'||e.key===' ')){ e.preventDefault(); openModal(+c.dataset.i); } });
+document.getElementById('mClose').addEventListener('click', closeModal);
+document.getElementById('mPrev').addEventListener('click', function(){ step(-1); });
+document.getElementById('mNext').addEventListener('click', function(){ step(1); });
+modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+document.addEventListener('keydown', function(e){
+  if(!modal.classList.contains('open')) return;
+  if(e.key==='Escape') closeModal();
+  else if(e.key==='ArrowLeft') step(-1);
+  else if(e.key==='ArrowRight') step(1);
+});
+
+/* ---- STATISTICS: count-up animation + live average duration ---- */
+(function(){
+  var statGrid = document.getElementById('statGrid');
+  var avgEl = document.getElementById('statAvg');
+  if(!statGrid) return;
+
+  /* Count-up for numeric stat cards (respects reduced motion) */
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function countUp(el){
+    var target = parseInt(el.getAttribute('data-target'),10) || 0;
+    var suffix = el.getAttribute('data-suffix') || "";
+    if(reduce || target<=0){ el.textContent = target + suffix; return; }
+    var start = null, dur = 1100;
+    function tick(ts){
+      if(start===null) start = ts;
+      var p = Math.min((ts-start)/dur, 1);
+      var eased = 1 - Math.pow(1-p, 3);
+      el.textContent = Math.round(eased*target) + suffix;
+      if(p<1) requestAnimationFrame(tick); else el.textContent = target + suffix;
+    }
+    requestAnimationFrame(tick);
+  }
+  var fired = false;
+  function runCounts(){
+    if(fired) return; fired = true;
+    statGrid.querySelectorAll('.stat-num').forEach(countUp);
+  }
+  if('IntersectionObserver' in window){
+    var so = new IntersectionObserver(function(en){ en.forEach(function(x){ if(x.isIntersecting){ runCounts(); so.disconnect(); } }); }, {threshold:.4});
+    so.observe(statGrid);
+  } else { runCounts(); }
+
+  /* Average duration — probe each real video's metadata (lightweight) and update live */
+  var durs = [];
+  function refreshAvg(){
+    if(!durs.length){ return; }
+    var avg = durs.reduce(function(a,b){return a+b;},0) / durs.length;
+    avgEl.textContent = fmtTime(avg);
+  }
+  VIDEOS.forEach(function(v){
+    var probe = document.createElement('video');
+    probe.preload = "metadata"; probe.muted = true;
+    probe.addEventListener('loadedmetadata', function(){
+      if(isFinite(probe.duration) && probe.duration>0){ durs.push(probe.duration); refreshAvg(); }
+      probe.removeAttribute('src'); probe.load();
+    });
+    probe.addEventListener('error', function(){ probe.removeAttribute('src'); });
+    probe.src = VIDEO_DIR + encodeURIComponent(v.file);
+  });
+})();
+
+/* ---- Reveal on scroll (identical behavior to main site) ---- */
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in');}); return; }
+  var io=new IntersectionObserver(function(en){ en.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); } }); },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+/* ---- Nav scrolled state + mobile menu + year + to-top ---- */
+var nav=document.getElementById('nav'), toTop=document.getElementById('toTop');
+window.addEventListener('scroll', function(){ var y=window.scrollY; nav.classList.toggle('scrolled',y>10); toTop.classList.toggle('show',y>600); }, {passive:true});
+toTop.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+var tgl=document.getElementById('navToggle'), mm=document.getElementById('mobileMenu');
+tgl.addEventListener('click', function(){ var o=mm.classList.toggle('open'); tgl.setAttribute('aria-expanded', o?'true':'false'); });
+mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.remove('open'); tgl.setAttribute('aria-expanded','false'); }); });
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
