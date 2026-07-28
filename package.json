@@ -1,0 +1,20 @@
+{
+  "name": "mustaisim-portfolio",
+  "version": "1.0.0",
+  "description": "Premium Website Designer & AI Web Developer Portfolio",
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": [
+    "portfolio",
+    "web-design",
+    "ai-developer"
+  ],
+  "author": "Mustaisim Memon",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
