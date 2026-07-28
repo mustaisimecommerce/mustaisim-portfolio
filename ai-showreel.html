@@ -756,5 +756,10 @@ tgl.addEventListener('click', function(){ var o=mm.classList.toggle('open'); tgl
 mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.remove('open'); tgl.setAttribute('aria-expanded','false'); }); });
 document.getElementById('year').textContent=new Date().getFullYear();
 </script>
+<!-- Vercel Speed Insights -->
+<script type="module">
+import { injectSpeedInsights } from './node_modules/@vercel/speed-insights/dist/index.mjs';
+injectSpeedInsights();
+</script>
 </body>
 </html>
